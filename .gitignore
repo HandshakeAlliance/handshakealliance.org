@@ -1,0 +1,4 @@
+node_modules/
+.publish/
+dest/
+.DS_Store/

@@ -1,0 +1,87 @@
+.mainFocusSections {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.focusSection {
+  padding: 20px;
+  width: 90%;
+  margin: 25px 0 75px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  @media (max-width: 1024px) {
+    padding: 0;
+    margin: 60px 0 0 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* pull to config css */
+.textBackground {
+  width: 100%;
+  background: rgba(216, 216, 216, 0.04);
+  border-radius: 20px;
+  padding: 30px;
+  color: #fff;
+}
+
+/* pull to global */
+.focusTitle {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* pull to global */
+.focusBody {
+  line-height: 1.75;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.planetSection {
+  width: 400px;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.planetContainer {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.planet {
+  max-width: 325px;
+}
+
+.spacer {
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}

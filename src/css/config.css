@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito";
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #1f2c37;
+  background-image: url("../img/stars.svg");
+  background-attachment: fixed;
+}
+
+.row {
+  margin: 0;
+  width: 100%;
+}
+
+.textLayering {
+  background-color: #1f2c37;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 320px) and (max-width: 1023px) {
+    background-color: rgba(31, 44, 55, 0.9);
+    margin: 0;
+    padding: 0;
+  }
+}

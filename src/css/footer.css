@@ -1,0 +1,122 @@
+.footer {
+  min-height: 150px;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 75px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  margin-top: 50px;
+  /* border: 1px solid red; */
+}
+
+.footerLogoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.textAndCopyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(31, 44, 55, 0.9);
+  align-items: center;
+  margin: 10px 0 0 5px;
+}
+
+.footerLogo {
+  height: 50px;
+  width: 50px;
+}
+
+.footerCopyright {
+  color: rgb(165, 165, 165);
+  font-size: 11px;
+  margin-top: 10px;
+  background-color: #1f2c37;
+}
+
+.languageWrapper {
+  margin-top: 75px;
+}
+
+/* Right Half */
+.footerListTitle {
+  color: rgb(189, 189, 189);
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footerLinkList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    text-align: left;
+  }
+}
+
+.footerListItem {
+  margin: 5px;
+  text-transform: none;
+  font-size: 14px;
+  color: #fff;
+
+  &:first-child {
+    margin-top: 10px;
+  }
+}
+
+.mediaLinks {
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  color: rgb(189, 189, 189);
+
+  @media (max-width: 1024px) {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: rgb(189, 189, 189);
+  }
+}
+
+.links {
+  border: 1.5px solid rgb(189, 189, 189);
+  padding: 6px;
+  color: rgb(189, 189, 189);
+  background-color: rgba(31, 44, 55, 0.9);
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 50px;
+  margin: 0 10px;
+
+  @media (max-width: 1024px) {
+    border: 1.5px solid rgb(189, 189, 189);
+    display: flex;
+    align-items: center;
+    color: rgb(189, 189, 189);
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 50px;
+    margin: 0 15px;
+  }
+}
+
+.links:hover {
+  color: #fff;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+.links:visited {
+  color: rgb(189, 189, 189);
+  border-color: rgb(189, 189, 189);
+}
