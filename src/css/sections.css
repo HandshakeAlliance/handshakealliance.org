@@ -38,6 +38,10 @@
   border-radius: 20px;
   padding: 30px;
   color: #fff;
+
+  @media (max-width: 768px) {
+    padding: 25px 25px 30px 25px;
+  }
 }
 
 /* pull to global */

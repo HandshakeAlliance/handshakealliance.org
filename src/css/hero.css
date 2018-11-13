@@ -1,8 +1,6 @@
 /* ------ CUSTOM MEDIA QUERIES ------- */
 @media screen and (min-width: 1200px) {
-  .heroMarsSlide {
-    height: 90vh;
-  }
+  .heroMarsSlide { height: 90vh; }
 
   .missionContainerSlide {
     top: 32%;
@@ -11,9 +9,7 @@
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1199px) {
-  .heroMarsSlide {
-    height: 84vh;
-  }
+  .heroMarsSlide { height: 84vh; }
 
   .missionContainerSlide {
     top: 30%;
@@ -23,76 +19,42 @@
 
 /* ---------- ANIMATION BEGIN ----------- */
 @-webkit-keyframes slideLeft {
-  from {
-    left: calc(48% - 44vh);
-  }
+  from { left: calc(48% - 44vh); }
 
-  to {
-    left: calc(29% - 44vh);
-  }
+  to { left: calc(29% - 44vh); }
 }
 @keyframes slideLeft {
-  from {
-    left: calc(48% - 44vh);
-  }
+  from { left: calc(48% - 44vh); }
 
-  to {
-    left: calc(29% - 44vh);
-  }
+  to { left: calc(29% - 44vh); }
 }
 
 @-webkit-keyframes slideIn {
-  100% {
-    left: 52%;
-  }
+  100% { left: 52%; }
 }
 
 @keyframes slideIn {
-  100% {
-    left: 52%;
-  }
+  100% { left: 52%; }
 }
 
-.slideIn {
-  -webkit-animation: slideIn 1s linear forwards;
-          animation: slideIn 1s linear forwards;
-}
+.slideIn { animation: slideIn 1s linear forwards; }
 
-.slideLeft {
-  -webkit-animation: slideLeft 1s linear;
-          animation: slideLeft 1s linear;
-}
+.slideLeft { animation: slideLeft 1s linear; }
 
 /* ---------- ANIMATION END ----------- */
 /* ------ CONTENT STYLING BEGIN------- */
 .heroContainer {
   height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 
   @media (max-width: 1024px) {
     height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
@@ -110,7 +72,7 @@
   @media (max-width: 1024px) {
     width: 60%;
     margin: 50px 0 75px 0;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -121,33 +83,20 @@
   @media (max-width: 1024px) {
     height: auto;
     position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
 .missionContainer {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 
   @media (max-width: 1024px) {
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     margin-top: 60px;
   }
 }
@@ -160,7 +109,7 @@
 
   @media (max-width: 1024px) {
     position: static;
-    height: 70vh;
+    height: 60vh;
   }
 }
 
@@ -178,8 +127,6 @@
 
   @media (max-width: 1024px) {
     position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     max-width: 85%;
   }
@@ -189,15 +136,9 @@
   display: none;
 
   @media (max-width: 1024px) {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     letter-spacing: 1px;
   }
 }
@@ -206,16 +147,6 @@
   line-height: 1.75;
   text-align: center;
   letter-spacing: 1px;
-  font-size: 18px;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-    padding: 0 20px 20px 20px;
-    width: 95%;
-    margin-left: 2.5%;
-    line-height: 1.5;
-    letter-spacing: 1px;
-  }
 }
 
 /* ------ CONTENT STYLING END------- */

@@ -30,24 +30,6 @@
   text-align: center;
 }
 
-.button {
-  border-radius: 10px;
-  width: 175px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  height: 40px;
-  text-align: center;
-  background-color: #693afa;
-  outline: none;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #5630cd;
-  }
-}
-
 .titleContainer {
   padding-top: 75px;
   width: 100%;
