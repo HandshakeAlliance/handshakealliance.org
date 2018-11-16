@@ -161,19 +161,19 @@
 }
 
 #HNSimpleLogo {
-  width: auto;
+  width: 150px;
   height: 90px;
   /* border: 1px solid red; */
 }
 
 #namebaseLogo {
-  width: auto;
+  width: 90px;
   height: 90px;
   /* border: 1px solid red; */
 }
 
 #urkelLogo {
-  width: auto;
+  width: 110px;
   height: 110px;
   /* border: 1px solid red; */
 }
