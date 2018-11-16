@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="50px" viewBox="0 0 49 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Namebase_svg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="1.46315029%" y1="1.46315029%" x2="98.2229949%" y2="98.2229949%" id="linearGradient-1">
+            <stop stop-color="#FF5980" offset="0%"></stop>
+            <stop stop-color="#FFA882" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Namebase_svg">
+            <circle id="Oval-5" fill="url(#linearGradient-1)" cx="44" cy="5" r="5"></circle>
+            <path d="M22,6 C19.3333333,15.3333333 19.3333333,20 22,20 C26,20 29,22 29,26 C29,28.6666667 29,36.6666667 29,50 L44,50 L44,25 C44,19 41.6666667,14.3333333 37,11 C32.3333333,7.6666667 27.3333333,6 22,6 Z" id="Path-17" fill="#007FFF"></path>
+            <path d="M22,20 C18,20 15,22 15,26 C15,28.6666667 15,36.6666667 15,50 L0,50 L0,25 C0,19 2.33333333,14.3333333 7,11 C11.6666667,7.6666667 16.6666667,6 22,6 L23,6 L23,20 L22,20 Z" id="Combined-Shape" fill="#FFB700"></path>
+        </g>
+    </g>
+</svg>
