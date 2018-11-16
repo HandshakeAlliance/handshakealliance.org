@@ -21,6 +21,12 @@
 /* ----------- Footer ----------- */
 @import "footer.css";
 
+/* wrapper for hidden overflow */
+.overflowContainer {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* Move these to global */
 .sectionTitle {
   padding: 20px;

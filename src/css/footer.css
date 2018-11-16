@@ -161,7 +161,7 @@
 }
 
 #HNSimpleLogo {
-  width: 150px;
+  width: 90px;
   height: 90px;
   /* border: 1px solid red; */
 }
@@ -175,5 +175,10 @@
 #urkelLogo {
   width: 110px;
   height: 110px;
+  margin-top: 50px;
+
+  @media (min-width: 48rem) {
+    margin-top: 0;
+  }
   /* border: 1px solid red; */
 }
