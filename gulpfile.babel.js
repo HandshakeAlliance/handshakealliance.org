@@ -43,7 +43,7 @@ const paths = {
     dest: "dest/"
   },
   misc: {
-    src: "src/misc/**.*",
+    src: "src/misc/**",
     dest: "dest/"
   }
 };
