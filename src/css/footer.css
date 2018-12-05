@@ -186,6 +186,7 @@
   width: 100%;
   max-width: 80px;
   height: auto;
+  cursor: default;
 }
 
 #namebaseLogo {
@@ -196,6 +197,6 @@
 
 #urkelLogo {
   width: 100%;
-  max-width: 150px;
+  max-width: 90px;
   height: auto;
 }
