@@ -85,3 +85,8 @@
     display: none;
   }
 }
+
+.sectionLink {
+  color: #fff;
+  text-decoration: underline;
+}
