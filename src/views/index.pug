@@ -13,3 +13,10 @@ html
       //- Footer
       include includes/footer.pug
     script(src="scripts/main.min.js" async)
+    script.
+      var code = "UA-133243722-1";
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', code);
