@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import * as Navbar from './styled-components';
-import AllianceLogo from './AllianceDesktop.jsx';
+import AllianceDesktopLogo from './AllianceDesktopLogo.jsx';
+// import AllianceMobileLogo from './AllianceMobileLogo.jsx';
 
 export default class NavbarComponent extends Component {
   render() {
     return (
       <Navbar.Wrapper>
         <Navbar.LogoLeft>
-          <AllianceLogo />
+          <AllianceDesktopLogo />
+          {/* <AllianceMobileLogo /> */}
         </Navbar.LogoLeft>
       </Navbar.Wrapper>
     )
