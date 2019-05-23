@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   align-items: center;
-  background: red;
   display: flex;
   height: 60px;
   justify-content: space-between;
@@ -14,15 +13,6 @@ export const Wrapper = styled.div`
 `;
 
 export const LogoLeft = styled.div`
-  background: blue;
   height: 40px;
-  width: 40px;
+  width: auto;
 `;
-
-export const LogoRight = styled.div`
-  background: #262626;
-  background: blue;
-  height: 40px;
-  width: 40px;
-`;
-
