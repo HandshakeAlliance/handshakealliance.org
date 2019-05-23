@@ -7,6 +7,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
+    "react-simple-maps": "^0.12.1",
     "styled-components": "^4.2.0"
   },
   "scripts": {
