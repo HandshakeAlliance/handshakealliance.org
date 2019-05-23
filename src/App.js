@@ -5,6 +5,7 @@ import {ThemeProvider} from 'styled-components';
 
 import NavbarComponent from './components/Navbar/Navbar.jsx';
 import HeroComponent from './components/Hero/Hero.jsx';
+import ObjectiveComponent from './components/Objective/Objective.jsx';
 
 import themes from './theme-variable.js';
 import { breakpoints } from './breakpoint-variables.js';
@@ -20,6 +21,7 @@ function App() {
       <div className="App">
         <NavbarComponent />
         <HeroComponent />
+        <ObjectiveComponent />
       </div>
     </ThemeProvider>
   );
