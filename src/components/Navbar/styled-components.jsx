@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   align-items: center;
+  background: #262626;
   display: flex;
   height: 60px;
   justify-content: space-between;
