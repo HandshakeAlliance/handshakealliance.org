@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  /* background: #fff; */
   background: #202020;
   height: calc(100vh - ${props => props.theme.breakpoint.navbarHeightMobile});
   overflow: hidden;

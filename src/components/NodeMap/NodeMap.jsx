@@ -8,8 +8,11 @@ import {
   Markers,
   Marker
 } from "react-simple-maps";
+import PulsingMarker from './PulsingMarker';
 import * as NodeMap from './styled-components';
 import data from '../../map-of-world.json';
+import rootNodes from './root-nodes.json';
+import PulsingCircle from './PulsingCircle';
 
 export default class NodeMapComponent extends Component {
   constructor(props) {
@@ -31,6 +34,20 @@ export default class NodeMapComponent extends Component {
       world.objects[Object.keys(world.objects)[0]]
     ).features
     this.setState({ geographyPaths })
+  }
+
+  allMarkers = () => {
+    let result = [];
+    let index = 0;
+    for(let el of rootNodes) {
+      result.push(
+        <Marker marker={{ coordinates: el.coord }} tabable={false} style={{ outline: "none" }} key={index}>
+          <PulsingCircle />
+        </Marker>
+      );
+      index++;
+    }
+    return result;
   }
 
   render() {
@@ -82,59 +99,15 @@ export default class NodeMapComponent extends Component {
                 )}
             </Geographies>
             <Markers>
-              {/* Reston, Virgina - Verisign */}
-              <Marker marker={{ coordinates: [-77.3421, 38.9567] }} tabable={false} style={{outline: "none"}}>
+              {this.allMarkers()}
+              {/* <Marker marker={{ coordinates: [1,2] }} tabable={false} style={{ outline: "none" }}>
+                <PulsingCircle />
+              </Marker> */}
+              {/* <PulsingMarker coordinates={[2,3]} /> */}
+              {/* <Marker marker={{ coordinates: [-83.0128, 39.9664] }} tabable={false} style={{ outline: "none" }}>
                 <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
                 <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
-              {/* Marina del Rey, California - USC-ISI */}
-              <Marker marker={{ coordinates: [-118.4532, 33.9855] }} tabable={false} style={{outline: "none"}}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
-              {/* D.C., Virginia - Cogent Communications Inc. */}
-              <Marker marker={{ coordinates: [-77.0364, 	38.8951] }} tabable={false} style={{outline: "none"}}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
-              <Marker marker={{ coordinates: [-95.3633, 29.7633] }} tabable={false} style={{outline: "none"}}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
-              {/* College Park, Maryland - U of Maryland */}
-              <Marker marker={{ coordinates: [-76.9528, 38.9921] }} tabable={false} style={{outline: "none"}}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
-              <Marker marker={{ coordinates: [-86.6546, 34.6333] }} tabable={false} style={{outline: "none"}}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
-              {/* Mountain View, California - NASA Research Center */}
-              <Marker marker={{ coordinates: [-122.2042, 37.4915] }} tabable={false} style={{outline: "none"}}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
-              <Marker marker={{ coordinates: [-83.0128, 39.9664] }} tabable={false} style={{outline: "none"}}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
-              <Marker marker={{ coordinates: [-110.3506, 31.5565] }} tabable={false} style={{outline: "none"}}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
-              <Marker marker={{ coordinates: [18.0649, 59.3326] }} tabable={false} style={{outline: "none"}}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
-              <Marker marker={{ coordinates: [4.8897, 52.3740] }} tabable={false} style={{outline: "none"}}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
-              <Marker marker={{ coordinates: [139.6917, 35.6895] }} tabable={false} style={{outline: "none"}}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker>
+              </Marker> */}
             </Markers>
           </ZoomableGroup>
         </ComposableMap>
