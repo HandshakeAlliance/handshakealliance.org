@@ -8,7 +8,6 @@ import {
   Markers,
   Marker
 } from "react-simple-maps";
-import PulsingMarker from './PulsingMarker';
 import * as NodeMap from './styled-components';
 import data from '../../map-of-world.json';
 import rootNodes from './root-nodes.json';
@@ -100,14 +99,6 @@ export default class NodeMapComponent extends Component {
             </Geographies>
             <Markers>
               {this.allMarkers()}
-              {/* <Marker marker={{ coordinates: [1,2] }} tabable={false} style={{ outline: "none" }}>
-                <PulsingCircle />
-              </Marker> */}
-              {/* <PulsingMarker coordinates={[2,3]} /> */}
-              {/* <Marker marker={{ coordinates: [-83.0128, 39.9664] }} tabable={false} style={{ outline: "none" }}>
-                <circle stroke="#693afa" fill="none" cx={0} cy={0} r={10} />
-                <circle fill="#5021E1" cx={0} cy={0} r={5} />
-              </Marker> */}
             </Markers>
           </ZoomableGroup>
         </ComposableMap>
