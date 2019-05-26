@@ -41,7 +41,7 @@ export default class NodeMapComponent extends Component {
     for(let el of rootNodes) {
       result.push(
         <Marker marker={{ coordinates: el.coord }} tabable={false} style={{ outline: "none" }} key={index}>
-          <PulsingCircle />
+          <PulsingCircle color={"#EC8C44"}/>
         </Marker>
       );
       index++;
@@ -64,7 +64,7 @@ export default class NodeMapComponent extends Component {
             height: "auto",
           }}
         >
-          <ZoomableGroup>
+          <ZoomableGroup disablePanning={true}>
             <Geographies geography={this.state.geographyPaths} disableOptimization>
               {(geographies, projection) =>
                 geographies.map((geography, i) =>
