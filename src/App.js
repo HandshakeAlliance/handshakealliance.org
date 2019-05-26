@@ -6,6 +6,9 @@ import {ThemeProvider} from 'styled-components';
 import NavbarComponent from './components/Navbar/Navbar.jsx';
 import HeroComponent from './components/Hero/Hero.jsx';
 import ObjectiveComponent from './components/Objective/Objective.jsx';
+import ProjectsComponent from './components/Projects/Projects.jsx';
+import PartnersComponent from './components/Partners/Partners.jsx';
+import FooterComponent from './components/Footer/Footer.jsx';
 
 import themes from './theme-variable.js';
 import { breakpoints } from './breakpoint-variables.js';
@@ -22,6 +25,9 @@ function App() {
         <NavbarComponent />
         <HeroComponent />
         <ObjectiveComponent />
+        <ProjectsComponent />
+        <PartnersComponent />
+        <FooterComponent />
       </div>
     </ThemeProvider>
   );
