@@ -6,10 +6,6 @@ export const Wrapper = styled.div`
   flex-direction: column;
   height: auto;
   padding: 72px 24px;
-
-  @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
-    height: 80vh;
-  }
 `;
 
 export const Header = styled.h2`
@@ -31,7 +27,7 @@ export const Card = styled.a`
   color: #3f3f44;
   flex-grow: 1;
   height: 260px;
-  padding: 12px 24px;
+  padding: 24px;
   text-decoration: none;
   transition: all .2s ease-in-out;
   width: 30%;

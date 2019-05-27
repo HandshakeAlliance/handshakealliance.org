@@ -17,7 +17,7 @@ export default class ProjectsComponent extends Component {
         <Projects.CardContainer>
           <Projects.Card href="https://hnscan.com" target="_blank">
             <Projects.Brand><HNScan /></Projects.Brand>
-            The unofficial Handshake block explorer. Find your airdrop claims or delve into the chain here.
+            The unofficial Handshake block explorer. Claim your airdrops or delve into the chain here.
           </Projects.Card>
 
           <Projects.Card href="https://handshakehash.com/" target="_blank">
