@@ -41,7 +41,7 @@ export default class NodeMapComponent extends Component {
     for(let el of rootNodes) {
       result.push(
         <Marker marker={{ coordinates: el.coord }} tabable={false} style={{ outline: "none" }} key={index}>
-          <PulsingCircle color={"#EC8C44"}/>
+          <PulsingCircle color={"#693AFA"}/>
         </Marker>
       );
       index++;
@@ -82,14 +82,14 @@ export default class NodeMapComponent extends Component {
                         outline: "none",
                       },
                       hover: {
-                        fill: "#464646",
-                        stroke: "#3607C7",
+                        fill: "#3e3e3e",
+                        stroke: "#121212",
                         strokeWidth: 0.75,
                         outline: "none",
                       },
                       pressed: {
-                        fill: "#FF5722",
-                        stroke: "#607D8B",
+                        fill: "#3e3e3e",
+                        stroke: "#121212",
                         strokeWidth: 0.75,
                         outline: "none",
                       },
