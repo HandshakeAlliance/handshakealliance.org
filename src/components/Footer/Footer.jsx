@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import HA from '../Logos/HA';
+import AllianceDesktopLogo from '../Logos/AllianceDesktopLogo';
 import * as Footer from './styled-components';
-
-
 
 export default class FooterComponent extends Component {
   render() {
@@ -11,7 +9,7 @@ export default class FooterComponent extends Component {
         <Footer.ActionContainer>
 
           <Footer.BlockColumn>
-            <HA color="#fff" />
+            <AllianceDesktopLogo height="40px" />
             <Footer.SubscribeLabel>Want to save the internet? Subscribe for notifications.</Footer.SubscribeLabel>
             <Footer.SubscribeInput />
             <Footer.SubscribeButton>Join Us</Footer.SubscribeButton>
@@ -54,7 +52,6 @@ export default class FooterComponent extends Component {
             <i className="fab fa-medium-m fa-2x"></i>
           </Footer.Fa>
         </Footer.IconContainer>
-
 
       </Footer.Wrapper>
     )

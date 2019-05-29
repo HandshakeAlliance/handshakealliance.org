@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class AllianceDesktopLogo extends Component {
   render() {
     return (
-      <svg width="100%" height="100%" viewBox="0 0 207 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+      <svg height={(this.props.height || "100%")} viewBox="0 0 207 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
           <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g id="AlliianceDesktopLogo">
                   <rect id="Rectangle" stroke="#fff" fill="#fff" transform="translate(48.500000, 16.500000) scale(-1, 1) translate(-48.500000, -16.500000) " x="48.5" y="7.5" width="1" height="18" rx="0.5"></rect>

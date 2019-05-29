@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as Navbar from './styled-components';
-import AllianceDesktopLogo from './AllianceDesktopLogo.jsx';
+import AllianceDesktopLogo from '../Logos/AllianceDesktopLogo.jsx';
 // import AllianceMobileLogo from './AllianceMobileLogo.jsx';
 
 export default class NavbarComponent extends Component {
