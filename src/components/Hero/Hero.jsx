@@ -7,7 +7,11 @@ export default class HeroComponent extends Component {
   render() {
     return (
       <Hero.Wrapper>
-        <NodeMapComponent />
+
+        <Hero.Description>Decentralization is only the beginning</Hero.Description>
+        <Hero.Map>
+          <NodeMapComponent />
+        </Hero.Map>
       </Hero.Wrapper>
     )
   }

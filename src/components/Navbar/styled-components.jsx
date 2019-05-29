@@ -6,12 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   height: 60px;
   justify-content: space-between;
-  /* padding: 0 12px; */
-  /* position: fixed;
-  left: 0;
-  right: 0;
-  top: 0; */
-  /* z-index: 1; */
+  padding: 0 12px;
 
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
     height: 80px;

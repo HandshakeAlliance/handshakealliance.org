@@ -54,10 +54,12 @@ export default class NodeMapComponent extends Component {
       <NodeMap.Wrapper>
         <ComposableMap
           projectionConfig={{
-            scale: 160,
+            scale: 190,
             rotation: [0, 0, 0],
+            xOffset: -10,
+            yOffset: 30
           }}
-          width={980}
+          width={850}
           height={491}
           style={{
             width: "100%",
