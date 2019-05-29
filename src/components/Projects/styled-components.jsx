@@ -29,9 +29,10 @@ export const Card = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   flex-grow: 1;
   height: 260px;
-  padding: 30px 50px;
+  padding: 10px 50px 20px 50px;
   margin: 8px;
   text-decoration: none;
   transition: all .2s ease-in-out;
@@ -53,5 +54,7 @@ export const Brand = styled.div`
   display: flex;
   justify-content: center;
   font-size: 20px;
-  margin: 20px 0 40px 0;
+  margin-bottom: 40px;
+
+
 `;

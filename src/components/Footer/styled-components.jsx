@@ -84,17 +84,17 @@ export const Header = styled.div`
 `;
 
 export const Link = styled.a`
+  color: #f2f2f2;
   font-size: 14px;
   font-weight: 300px;
-
-  &:hover {
-    color: #693afa;
-    cursor: pointer;
-  }
+  padding: 5px 0;
+  text-decoration: none;
 
   &:visited {
     color: #f2f2f2;
-    text-decoration-line: none;
+  }
+  &:hover {
+    color: #693afa;
   }
 `;
 
