@@ -9,29 +9,36 @@ export const ActionContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
 
-  @media(min-width: ${props => props.theme.breakpoint.desktopMin}) {
+  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     flex-direction: row;
   }
 `;
 
 export const BlockColumn = styled.div`
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
+  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+    align-items: flex-start;
+  }
 `;
 
 export const BlockRow = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
 
-  @media(min-width: ${props => props.theme.breakpoint.desktopMin}) {
-    flex-direction: row;
+  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+    justify-content: flex-start;
   }
 `;
 
 export const SubscribeLabel = styled.div`
   font-size: 14px;
-  margin-bottom: 4px;
+  margin: 12px 0 4px;
+  text-align: left;
 `;
 
 export const SubscribeInput = styled.input`
@@ -39,8 +46,12 @@ export const SubscribeInput = styled.input`
   border: 1.5px solid #696969;
   color: #fafafa;
   font-size: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  min-width: 220px;
+  max-width: 350px;
   outline: none;
+  padding: 8px;
+  width: 100%;
 `;
 
 export const SubscribeButton = styled.button`
@@ -52,8 +63,9 @@ export const SubscribeButton = styled.button`
   padding: 8px;
 
   &:hover {
-    background: #fafafa;
-    color: #262626;
+    background: #693afa;
+    color: #f2f2f2;
+    cursor: pointer;
   }
 `;
 
