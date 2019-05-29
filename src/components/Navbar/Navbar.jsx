@@ -8,7 +8,7 @@ export default class NavbarComponent extends Component {
     return (
       <Navbar.Wrapper>
         <Navbar.LogoLeft>
-          <AllianceDesktopLogo />
+          <AllianceDesktopLogo height="32px" />
           {/* <AllianceMobileLogo /> */}
         </Navbar.LogoLeft>
       </Navbar.Wrapper>

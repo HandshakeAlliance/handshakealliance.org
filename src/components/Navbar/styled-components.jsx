@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
     height: 80px;
+    padding: 0 20px;
   }
 `;
 

@@ -9,7 +9,7 @@ export default class FooterComponent extends Component {
         <Footer.ActionContainer>
 
           <Footer.BlockColumn>
-            <AllianceDesktopLogo height="40px" />
+            <AllianceDesktopLogo height="36px" />
             <Footer.SubscribeLabel>Want to save the internet? Subscribe for notifications.</Footer.SubscribeLabel>
             <Footer.SubscribeInput />
             <Footer.SubscribeButton>Join Us</Footer.SubscribeButton>
@@ -18,17 +18,16 @@ export default class FooterComponent extends Component {
           <Footer.BlockRow>
             <Footer.LinkContainer>
               <Footer.Header>Resources</Footer.Header>
-              <Footer.Link href="https://hnscan.com/">HNScan</Footer.Link>
-              <Footer.Link href="https://nameian.com/">Nameian</Footer.Link>
-              <Footer.Link href="https://handshakeacademy.org/en/">Academy</Footer.Link>
-              <Footer.Link href="https://handshake.community/">Community</Footer.Link>
+              <Footer.Link href="https://hnscan.com/" target="_blank" rel="noopener noreferrer">HNScan</Footer.Link>
+              <Footer.Link href="https://nameian.com/" target="_blank" rel="noopener noreferrer">Nameian</Footer.Link>
+              <Footer.Link href="https://handshakeacademy.org/en/" target="_blank" rel="noopener noreferrer">Academy</Footer.Link>
+              <Footer.Link href="https://handshake.community/" target="_blank" rel="noopener noreferrer">Community</Footer.Link>
             </Footer.LinkContainer>
             <Footer.LinkContainer>
               <Footer.Header>Related</Footer.Header>
-              <Footer.Link href="https://github.com/HandshakeAlliance">Github</Footer.Link>
-              <Footer.Link href="https://handshakehash.com/">Pool</Footer.Link>
-              <Footer.Link href="https://handshakeacademy.org/en/">Learning</Footer.Link>
-              <Footer.Link href="https://handshake-org.github.io/api-docs/">Docs</Footer.Link>
+              <Footer.Link href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">Github</Footer.Link>
+              <Footer.Link href="https://handshakehash.com/" target="_blank" rel="noopener noreferrer">Pool</Footer.Link>
+              <Footer.Link href="https://handshake-org.github.io/api-docs/" target="_blank" rel="noopener noreferrer">Docs</Footer.Link>
             </Footer.LinkContainer>
           </Footer.BlockRow>
 
@@ -37,19 +36,19 @@ export default class FooterComponent extends Component {
         <Footer.InfoContainer>
           <Footer.TextContainer>
             <Footer.Bold>CONTACT</Footer.Bold>
-            <span>engineering@urkel.io</span>
+            <span>support@urkel.io</span>
           </Footer.TextContainer>
         </Footer.InfoContainer>
 
         <Footer.IconContainer>
           <Footer.Fa href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github-alt fa-2x"></i>
+            <i className="fab fa-github-alt"></i>
           </Footer.Fa>
           <Footer.Fa href="https://twitter.com/HNSalliance" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter fa-2x"></i>
+            <i className="fab fa-twitter"></i>
           </Footer.Fa>
           <Footer.Fa href="https://medium.com/@handshakealliance" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-medium-m fa-2x"></i>
+            <i className="fab fa-medium-m"></i>
           </Footer.Fa>
         </Footer.IconContainer>
 

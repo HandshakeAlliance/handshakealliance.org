@@ -15,24 +15,29 @@ export const Wrapper = styled.div`
 `;
 
 export const Description = styled.div`
-  align-items: center;
+  align-items: flex-start;
+  max-width: 40%;
   display: flex;
   flex-grow: 2;
-  font-size: 24px;
-  justify-content: center;
+  font-size: 45px;
+  flex-direction: column;
+  padding: 90px 0 0 50px;
+  text-align: left;
 `;
 
 export const Map = styled.div`
   flex-grow: 1;
+  padding-right: 30px;
 `;
 
-export const SubscribeButton = styled.button`
+export const LearnButton = styled.button`
   background: #693afa;
   border: 1px solid #693afa;
-  border-radius: 1px;
+  border-radius: 5px;
   color: #f2f2f2;
-  font-size: 14px;
-  padding: 8px;
+  font-size: 20px;
+  padding: 10px 15px;
+  margin-top: 25px;
 
   &:hover {
     background: #693afa;

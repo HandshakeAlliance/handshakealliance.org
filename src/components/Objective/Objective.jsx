@@ -6,8 +6,7 @@ export default class ObjectiveComponent extends Component {
     return (
       <Objective.Wrapper>
         <Objective.Paragraph>
-        Here is where we will put the objective statement saying something
-        significant
+        [ Here is the Objective Carousel Slider ]
         </Objective.Paragraph>
       </Objective.Wrapper>
     )

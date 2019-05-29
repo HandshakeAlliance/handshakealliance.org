@@ -38,13 +38,14 @@ export const BlockRow = styled.div`
 
 export const SubscribeLabel = styled.div`
   font-size: 14px;
-  margin: 12px 0 4px;
+  margin: 12px 0 6px 0;
   text-align: left;
 `;
 
 export const SubscribeInput = styled.input`
   background: #363636;
   border: 1.5px solid #696969;
+  border-radius: 2px;
   color: #fafafa;
   font-size: 16px;
   margin-bottom: 12px;
@@ -58,7 +59,7 @@ export const SubscribeInput = styled.input`
 export const SubscribeButton = styled.button`
   background: #693afa;
   border: 1px solid #693afa;
-  border-radius: 1px;
+  border-radius: 2px;
   color: #f2f2f2;
   font-size: 14px;
   padding: 8px;
@@ -86,7 +87,7 @@ export const Header = styled.div`
 export const Link = styled.a`
   color: #f2f2f2;
   font-size: 14px;
-  font-weight: 300px;
+  font-weight: 300;
   padding: 5px 0;
   text-decoration: none;
 
@@ -110,7 +111,7 @@ export const TextContainer = styled.div`
 export const Bold = styled.div`
   font-weight: bold;
   font-size: 10pt;
-  margin: 20px 0 0 0;
+  margin: 20px 0 6px 0;
   &.boldLink {
     font-size: 11pt;
     padding-bottom: 5px;
@@ -132,8 +133,8 @@ export const IconContainer = styled.div`
 
 export const Fa = styled.a`
   color: #fff;
-  padding: 24px;
-  width: 48px;
+  margin: 24px;
+  font-size: 14pt;
 
   &:hover {
     color: #693afa;

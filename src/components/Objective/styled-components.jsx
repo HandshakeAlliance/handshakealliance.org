@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   height: 275px;
   padding-bottom: 15px;
   background: #202020;
-  /* background: #282828; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +15,6 @@ export const Paragraph = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 28pt;
+  font-size: 20pt;
   color: #fff;
 `;
