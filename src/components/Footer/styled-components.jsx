@@ -29,6 +29,7 @@ export const BlockRow = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: 40px;
 
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     justify-content: flex-start;
