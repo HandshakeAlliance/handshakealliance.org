@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: auto;
+  /* TODO This height isn't right. Let's play with it */
+  height: 40vh;
   padding: 72px 25px;
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
     padding: 72px 45px;
