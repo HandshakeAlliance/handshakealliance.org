@@ -1,45 +1,32 @@
 import React, { Component } from 'react';
-// import Amentum from '../Logos/Amentum';
+import Amentum from '../Logos/Amentum';
+import Namebase from '../Logos/Namebase';
+import Provide from '../Logos/Provide';
+import Urkel from '../Logos/Urkel';
 import * as Partners from './styled-components';
 
 export default class PartnersComponent extends Component {
   render() {
     return (
       <Partners.Wrapper>
-        <Partners.LogoWrapper>
-          {/* <Amentum /> */}
-        </Partners.LogoWrapper>
-        <Partners.LogoWrapper>
 
-        </Partners.LogoWrapper>
-        <Partners.LogoWrapper>
+        <Partners.Header>Partnerships</Partners.Header>
 
-        </Partners.LogoWrapper>
-        <Partners.LogoWrapper>
+        <Partners.Logos>
+          <Partners.LogoWrapper href="https://namebase.io/" target="_blank" rel="noopener noreferrer">
+            <Namebase height="40px" />
+          </Partners.LogoWrapper>
+          <Partners.LogoWrapper href="https://urkel.io/" target="_blank" rel="noopener noreferrer">
+            <Urkel height="80px" />
+          </Partners.LogoWrapper>
+          <Partners.LogoWrapper href="https://amentum.org/" target="_target" rel="noopener noreferrer">
+            <Amentum height="100px" />
+          </Partners.LogoWrapper>
+          <Partners.LogoWrapper href="https://provide.services/" target="_blank" rel="noopener noreferrer">
+            <Provide height="80px" />
+          </Partners.LogoWrapper>
+        </Partners.Logos>
 
-        </Partners.LogoWrapper>
-         {/* p.focusBody
-   .row.partnersSection
-     .col-xs-6.col-sm-4
-       .colWrapper
-         a.companyLink(href="https://amentum.org/" target="_target" rel="noopener noreferrer")
-           img#amentumLogo.grayscale(src="img/partnerAmentum.svg")
-     .col-xs-6.col-sm-4
-       .colWrapper
-         a.companyLink(href="https://provide.services/" target="_blank" rel="noopener noreferrer")
-           img#provideLogo.grayscale(src="img/partnerProvideDarkBlueBg.svg")
-     .col-xs-6.col-sm-4.last-xs
-       .colWrapper
-         a.companyLink(href="https://urkel.io/" target="_blank" rel="noopener noreferrer")
-           img#urkelLogo.grayscale(src="img/UrkelGlassesLogo.svg")
-     .col-xs-6.col-sm-4
-       .colWrapper
-         //- a.companyLink(href="#" rel="noopener noreferrer")
-         img#HNSimpleLogo.grayscale(src="img/partnerHNSimple.svg")
-     .col-xs-6.col-sm-4
-       .colWrapper
-         a.companyLink(href="https://namebase.io/" target="_blank" rel="noopener noreferrer")
-           img#namebaseLogo.grayscale(src="img/namebase.svg") */}
       </Partners.Wrapper>
     )
   }

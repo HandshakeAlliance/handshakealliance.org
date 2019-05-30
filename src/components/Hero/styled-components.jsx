@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   background: #202020;
   display: flex;
   flex-direction: column-reverse;
-  height: calc(100vh - ${props => props.theme.breakpoint.navbarHeightMobile});
+  height: auto;
   overflow: hidden;
 
   @media(min-width: ${props => props.theme.breakpoint.desktopMin}) {
