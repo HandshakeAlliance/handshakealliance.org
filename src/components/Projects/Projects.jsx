@@ -40,7 +40,7 @@ export default class ProjectsComponent extends Component {
             Join the Handshake Community on our forums. Discuss development, mining, or anything else Handshake related. Start contributing!
           </Projects.Card>
 
-          <Projects.Card href="https://handshake.org/">
+          <Projects.Card href="https://handshake.org/" target="_blank">
             <Projects.Brand><Handshake />&nbsp;Documentation</Projects.Brand>
             General Handshake documentation for newbies. You can find the notes on the daemon and node here.
           </Projects.Card>

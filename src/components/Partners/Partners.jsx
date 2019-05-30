@@ -14,16 +14,16 @@ export default class PartnersComponent extends Component {
 
         <Partners.Logos>
           <Partners.LogoWrapper href="https://namebase.io/" target="_blank" rel="noopener noreferrer">
-            <Namebase height="40px" />
+            <Namebase height="35px" />
           </Partners.LogoWrapper>
           <Partners.LogoWrapper href="https://urkel.io/" target="_blank" rel="noopener noreferrer">
-            <Urkel height="80px" />
+            <Urkel height="60px" />
           </Partners.LogoWrapper>
           <Partners.LogoWrapper href="https://amentum.org/" target="_target" rel="noopener noreferrer">
-            <Amentum height="100px" />
+            <Amentum height="70px" />
           </Partners.LogoWrapper>
           <Partners.LogoWrapper href="https://provide.services/" target="_blank" rel="noopener noreferrer">
-            <Provide height="80px" />
+            <Provide height="70px" />
           </Partners.LogoWrapper>
         </Partners.Logos>
 

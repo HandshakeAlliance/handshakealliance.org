@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  background: #fff;
+  background: #f2f2f2;
   display: flex;
   flex-direction: column;
   height: auto;
@@ -25,7 +25,8 @@ export const CardContainer = styled.div`
 `;
 
 export const Card = styled.a`
-  background: #fff;
+  /* background: #fff; */
+  background: #f2f2f2;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
   color: #3f3f44;
@@ -40,7 +41,11 @@ export const Card = styled.a`
   text-decoration: none;
   transition: all .2s ease-in-out;
   width: 30%;
-  &:hover { border: 1px solid #693afa; }
+  &:hover {
+    /* border: 1px solid #693afa; */
+    transition: .4s ease-in-out;
+    box-shadow: 0 0 5px 0 rgba(105, 57, 250, 0.5);
+  }
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
     height: 180px;
     margin: 10px;

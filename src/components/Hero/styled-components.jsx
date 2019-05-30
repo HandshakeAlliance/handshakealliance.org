@@ -38,10 +38,12 @@ export const LearnButton = styled.button`
   font-size: 20px;
   padding: 10px 15px;
   margin-top: 25px;
-
+  outline: none;
   &:hover {
-    background: #693afa;
+    background: #4223a4;
+    border-color: #4223a4;
     color: #f2f2f2;
     cursor: pointer;
+    transition: .25s ease-in-out;
   }
 `;
