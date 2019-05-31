@@ -16,6 +16,7 @@ export const Header = styled.h2`
   font-size: 26px;
   margin-bottom: 36px;
   text-decoration: underline #693afa;
+  text-underline-position: under;
 `;
 
 export const CardContainer = styled.div`

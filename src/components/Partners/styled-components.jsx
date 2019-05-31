@@ -17,6 +17,7 @@ export const Header = styled.h2`
   font-size: 26px;
   margin-bottom: 45px;
   text-decoration: underline #693afa;
+  text-underline-position: under;
 `;
 
 export const Logos = styled.div`
