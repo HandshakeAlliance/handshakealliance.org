@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  margin: 24px;
+  padding: 35px 24px;
+  background: #202020;
 `;
 
 export const ActionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     flex-direction: row;
+    padding: 0 125px;
   }
 `;
 
@@ -65,9 +67,11 @@ export const SubscribeButton = styled.button`
   padding: 8px;
 
   &:hover {
-    background: #693afa;
+    background: #4223a4;
+    border-color: #4223a4;
     color: #f2f2f2;
     cursor: pointer;
+    transition: .2s ease-in-out;
   }
 `;
 

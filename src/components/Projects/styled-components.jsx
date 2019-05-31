@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   height: auto;
   padding: 72px 25px;
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
-    padding: 72px 45px;
+    padding: 72px 45px 90px 45px;
   }
 `;
 

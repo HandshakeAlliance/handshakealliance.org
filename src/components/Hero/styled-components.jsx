@@ -32,7 +32,7 @@ export const Map = styled.div`
 
 export const LearnButton = styled.button`
   background: #693afa;
-  border: 1px solid #693afa;
+  border-color: #693afa;
   border-radius: 5px;
   color: #f2f2f2;
   font-size: 20px;
@@ -44,6 +44,6 @@ export const LearnButton = styled.button`
     border-color: #4223a4;
     color: #f2f2f2;
     cursor: pointer;
-    transition: .25s ease-in-out;
+    transition: .2s ease-in-out;
   }
 `;

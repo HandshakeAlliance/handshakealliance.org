@@ -10,7 +10,7 @@ export default class PartnersComponent extends Component {
     return (
       <Partners.Wrapper>
 
-        <Partners.Header>Partnerships</Partners.Header>
+        <Partners.Header>Collaborators</Partners.Header>
 
         <Partners.Logos>
           <Partners.LogoWrapper href="https://namebase.io/" target="_blank" rel="noopener noreferrer">
