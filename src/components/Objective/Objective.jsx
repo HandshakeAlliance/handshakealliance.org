@@ -17,7 +17,6 @@ export default class ObjectiveComponent extends Component {
     }
 
     e.target.classList.add("active");
-
   }
 
   render() {
@@ -41,12 +40,16 @@ export default class ObjectiveComponent extends Component {
         </Objective.Tabs>
 
         <Objective.Car>
-        [ Here is the Objective Carousel Slider ]
+          <Objective.CarContainer>
+
+            <Objective.CarImage>Test</Objective.CarImage>
+            <Objective.CarImage className="test">Test</Objective.CarImage>
+          </Objective.CarContainer>
           <Objective.RightArrow>
-            <i class="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i>
           </Objective.RightArrow>
           <Objective.LeftArrow>
-            <i class="fas fa-chevron-left"></i>
+            <i className="fas fa-chevron-left"></i>
           </Objective.LeftArrow>
         </Objective.Car>
 

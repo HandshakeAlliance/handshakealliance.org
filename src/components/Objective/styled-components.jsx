@@ -1,4 +1,53 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+// ***--- Carousel Animations ---*** //
+const TransformOutLeft = keyframes`
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+`;
+
+const TransformOutRight = keyframes`
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+`;
+
+const TransformInLeft = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+`;
+
+const TransformInRight = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+`;
 
 export const Wrapper = styled.div`
   /* debug*/
@@ -64,8 +113,30 @@ export const Car = styled.div`
   width: 750px;
 `;
 
+// There are 2 wrapper containers to allow arrows to sit above both wrappers
+export const CarContainer = styled.div`
+  /* Must match above h/w */
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  width: 750px;
+`;
+
+export const CarImage = styled.div`
+  background: #262626;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  &.test {
+    animation: ${TransformOutLeft} 2s forwards;
+    background: purple;
+  }
+`;
+
 export const Arrow = styled.div`
   align-items: center;
+  background: #202020;
   border-radius: 50px;
   /* border: 1px solid #fff; */
   border: 1px solid #696969;
@@ -75,6 +146,7 @@ export const Arrow = styled.div`
   position: absolute;
   top: calc(50% - 25px);
   width: 50px;
+  z-index: 2;
 
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     display: flex;
@@ -91,7 +163,7 @@ export const Arrow = styled.div`
 `;
 
 export const RightArrow = styled(Arrow)`
-  left: calc(100% + 25px);
+  left: calc(100% - 25px);
 `;
 
 export const LeftArrow = styled(Arrow)`
