@@ -27,9 +27,16 @@ export const Logos = styled.div`
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     flex-direction: row;
   }
+
+
 `;
 
 export const LogoWrapper = styled.a`
   cursor: pointer;
+  filter: grayscale(100%);
   margin: 24px;
+
+  &:hover {
+    filter: none;
+  }
 `;
