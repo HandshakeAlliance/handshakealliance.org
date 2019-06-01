@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   height: auto;
   padding: 72px 25px;
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
-    padding: 72px 45px;
+    padding: 72px 45px 90px 45px;
   }
 `;
 
@@ -16,6 +16,7 @@ export const Header = styled.h2`
   font-size: 26px;
   margin-bottom: 36px;
   text-decoration: underline #693afa;
+  text-underline-position: under;
 `;
 
 export const CardContainer = styled.div`
