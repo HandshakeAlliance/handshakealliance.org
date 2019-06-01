@@ -128,9 +128,20 @@ export const CarImage = styled.div`
   height: 100%;
   width: 100%;
 
-  &.test {
+  &.outLeft {
     animation: ${TransformOutLeft} 2s forwards;
-    background: purple;
+  }
+
+  &.outRight {
+    animation : ${TransformOutRight} 2s forwards;
+  }
+
+  &.inLeft {
+    animation: ${TransformInLeft} 2s forwards;
+  }
+
+  &.inRight {
+    animation : ${TransformInRight} 2s forwards;
   }
 `;
 
