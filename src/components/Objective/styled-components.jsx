@@ -53,12 +53,47 @@ export const Tab = styled.div`
 // stands for Carousel
 export const Car = styled.div`
   /* Change below */
-  border: 1px solid #434343;
-  height: 350px;
-  width: 750px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 20pt;
+  border: 1px solid #434343;
   color: #fff;
+  display: flex;
+  height: 350px;
+  font-size: 20pt;
+  justify-content: center;
+  position: relative;
+  width: 750px;
+`;
+
+export const Arrow = styled.div`
+  align-items: center;
+  border-radius: 50px;
+  /* border: 1px solid #fff; */
+  border: 1px solid #696969;
+  display: none;
+  justify-content: center;
+  height: 50px;
+  position: absolute;
+  top: calc(50% - 25px);
+  width: 50px;
+
+  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+    display: flex;
+  }
+
+  &:hover {
+    border: 1.5px solid #969696;
+    cursor: pointer;
+  }
+
+  &:active {
+    border: 1.5px solid #693afa;
+  }
+`;
+
+export const RightArrow = styled(Arrow)`
+  left: calc(100% + 25px);
+`;
+
+export const LeftArrow = styled(Arrow)`
+  left: calc(0% - 25px);
 `;

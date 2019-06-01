@@ -5,17 +5,6 @@ export default class ObjectiveComponent extends Component {
   constructor(props) {
     super(props);
 
-    // setting up various tabs as refs (probably not doing this right)
-    // this.fastRef = React.createRef();
-    // this.decRef = React.createRef();
-    // this.scaleRef = React.createRef();
-    // this.collRef = React.createRef();
-    // this.bridRef = React.createRef();
-    // this.openRef = React.createRef();
-
-    // this.state = {
-    //   activeRef: this.fastRef
-    // }
   }
 
   updateActiveTab = e => {
@@ -49,17 +38,18 @@ export default class ObjectiveComponent extends Component {
           <Objective.Tab onClick={this.updateActiveTab}>Scalable</Objective.Tab>
           <Objective.Tab onClick={this.updateActiveTab}>Root Zone</Objective.Tab>
           <Objective.Tab onClick={this.updateActiveTab}>Open Source</Objective.Tab>
-          {/* <Objective.Tab ref={this.fastRef}>Fast</Objective.Tab>
-          <Objective.Tab ref={this.decRef}>Decenteralized</Objective.Tab>
-          <Objective.Tab ref={this.scaleRef}>Scalable</Objective.Tab>
-          <Objective.Tab ref={this.collRef}>Collaborative</Objective.Tab>
-          <Objective.Tab ref={this.bridRef}>Bridging</Objective.Tab>
-          <Objective.Tab ref={this.openRef}>Open Source</Objective.Tab> */}
         </Objective.Tabs>
 
         <Objective.Car>
         [ Here is the Objective Carousel Slider ]
+          <Objective.RightArrow>
+            <i class="fas fa-chevron-right"></i>
+          </Objective.RightArrow>
+          <Objective.LeftArrow>
+            <i class="fas fa-chevron-left"></i>
+          </Objective.LeftArrow>
         </Objective.Car>
+
       </Objective.Wrapper>
     )
   }
