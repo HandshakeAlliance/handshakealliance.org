@@ -116,7 +116,7 @@ export const Tab = styled.div`
 export const Car = styled.div`
   /* Change below */
   align-items: center;
-  border: 1px solid #434343;
+  /* border: 1px solid #434343; */
   color: #fff;
   display: flex;
   height: 350px;
@@ -136,7 +136,7 @@ export const CarContainer = styled.div`
   height: 350px;
   overflow: hidden;
   position: relative;
-  width: auto;
+  width: 100%;
 
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     width: 750px;

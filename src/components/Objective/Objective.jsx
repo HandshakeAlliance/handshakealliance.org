@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import * as Objective from './styled-components';
+import { Swipeable, defineSwipe } from 'react-touch';
+
 
 export default class ObjectiveComponent extends Component {
   constructor(props) {
@@ -160,6 +162,8 @@ export default class ObjectiveComponent extends Component {
   }
 
   render() {
+    const swipe = defineSwipe({swipeDistance: 50});
+
     return (
       <Objective.Wrapper>
         <Objective.AboutHeader>
@@ -177,18 +181,21 @@ export default class ObjectiveComponent extends Component {
 
         <Objective.Car>
 
-          <Objective.CarContainer>
-            {this.displaySlides()}
-            {/* <Objective.CarImage className='inRight'>Rest</Objective.CarImage>
-            <Objective.CarImage className='outLeft'>Test</Objective.CarImage> */}
-          </Objective.CarContainer>
+          <Swipeable config={swipe} onSwipeLeft={this.next} onSwipeRight={this.previous}>
+            <Objective.CarContainer>
+              {this.displaySlides()}
+              {/* <Objective.CarImage className='inRight'>Rest</Objective.CarImage>
+              <Objective.CarImage className='outLeft'>Test</Objective.CarImage> */}
+            </Objective.CarContainer>
+          </Swipeable>
 
-          <Objective.RightArrow onClick={this.next}>
-            <i className='fas fa-chevron-right'></i>
-          </Objective.RightArrow>
-          <Objective.LeftArrow onClick={this.previous}>
-            <i className='fas fa-chevron-left'></i>
-          </Objective.LeftArrow>
+
+            <Objective.RightArrow onClick={this.next}>
+              <i className='fas fa-chevron-right'></i>
+            </Objective.RightArrow>
+            <Objective.LeftArrow onClick={this.previous}>
+              <i className='fas fa-chevron-left'></i>
+            </Objective.LeftArrow>
         </Objective.Car>
 
       </Objective.Wrapper>
