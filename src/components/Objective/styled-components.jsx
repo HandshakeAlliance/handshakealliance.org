@@ -50,11 +50,8 @@ const TransformInRight = keyframes`
 `;
 
 export const Wrapper = styled.div`
-  /* debug*/
   align-items: center;
-  /* background: #202020; */
   background: #252525;
-  /* border: 1px solid #262626; */
   display: flex;
   flex-direction: column;
   height: auto;
@@ -69,10 +66,15 @@ export const AboutHeader = styled.div`
 `;
 
 export const AboutParagraph = styled.div`
-  height: 100px;
-  width: 750px;
+  height: auto;
   line-height: 20px;
   margin-bottom: 35px;
+  width: 100%;
+
+  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+    height: 100px;
+    width: 750px;
+  }
 `;
 
 export const Tabs = styled.div`
@@ -80,13 +82,24 @@ export const Tabs = styled.div`
   justify-content: center;
   margin-bottom: 36px;
   width: auto;
+
+  /* Although this isn't ideal to break off a arbitrary width, it significantly improves the view's look at mobile */
+  @media(max-width: 445px) {
+    display: none;
+  }
 `;
 
 export const Tab = styled.div`
   border-bottom: 1.5px solid #434343;
-  padding: 12px 14px;
+  font-size: 12px;
+  padding: 8px 10px;
   text-transform: uppercase;
   white-space: nowrap;
+
+  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+    font-size: inherit;
+    padding: 12px 14px;
+  }
 
   &.active {
     border-bottom: 1.5px solid #693afa;
@@ -110,7 +123,11 @@ export const Car = styled.div`
   font-size: 20pt;
   justify-content: center;
   position: relative;
-  width: 750px;
+  width: 100%;
+
+  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+    width: 750px;
+  }
 `;
 
 // There are 2 wrapper containers to allow arrows to sit above both wrappers
@@ -119,7 +136,11 @@ export const CarContainer = styled.div`
   height: 350px;
   overflow: hidden;
   position: relative;
-  width: 750px;
+  width: auto;
+
+  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+    width: 750px;
+  }
 `;
 
 export const CarImage = styled.div`

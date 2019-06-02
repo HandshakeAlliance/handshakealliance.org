@@ -129,16 +129,6 @@ export default class ObjectiveComponent extends Component {
     node.classList.remove('inRight')
   }
 
-  // clearInClasses = node => {
-  //   node.classList.remove('inLeft')
-  //   node.classList.remove('inRight')
-  // }
-
-  // clearOutClasses = node => {
-  //   node.classList.remove('outLeft')
-  //   node.classList.remove('outRight')
-  // }
-
   render() {
     return (
       <Objective.Wrapper>
