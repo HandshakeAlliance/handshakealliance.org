@@ -16,7 +16,7 @@ export const ActionContainer = styled.div`
   }
 `;
 
-export const BlockColumn = styled.div`
+export const BlockColumn = styled.form`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -66,11 +66,12 @@ export const SubscribeButton = styled.button`
   font-size: 14px;
   padding: 8px;
 
-  &:hover {
+  &:hover, &:focus {
     background: #4223a4;
     border-color: #4223a4;
     color: #f2f2f2;
     cursor: pointer;
+    outline: none;
     transition: .2s ease-in-out;
   }
 `;
@@ -143,4 +144,9 @@ export const Fa = styled.a`
   &:hover {
     color: #693afa;
   }
+`;
+
+export const Copyright = styled.div`
+  font-size: 14px;
+  opacity: .4;
 `;

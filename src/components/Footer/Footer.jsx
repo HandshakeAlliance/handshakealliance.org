@@ -3,16 +3,22 @@ import AllianceDesktopLogo from '../Logos/AllianceDesktopLogo';
 import * as Footer from './styled-components';
 
 export default class FooterComponent extends Component {
+
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log('submitting!');
+  }
+
   render() {
     return (
       <Footer.Wrapper>
         <Footer.ActionContainer>
 
-          <Footer.BlockColumn>
+          <Footer.BlockColumn onSubmit={this.handleSubmit}>
             <AllianceDesktopLogo height="36px" />
             <Footer.SubscribeLabel>Want to save the internet? Subscribe for notifications.</Footer.SubscribeLabel>
-            <Footer.SubscribeInput />
-            <Footer.SubscribeButton>Join Us</Footer.SubscribeButton>
+            <Footer.SubscribeInput placeholder="Enter Your Email" type="email" name="EMAIL" />
+            <Footer.SubscribeButton type="submit">Join Us</Footer.SubscribeButton>
           </Footer.BlockColumn>
 
           <Footer.BlockRow>
@@ -51,6 +57,10 @@ export default class FooterComponent extends Component {
             <i className="fab fa-medium-m"></i>
           </Footer.Fa>
         </Footer.IconContainer>
+        <Footer.Copyright>
+          Copyright © 2019 Urkel Labs.
+          All rights reserved.
+        </Footer.Copyright>
 
       </Footer.Wrapper>
     )
