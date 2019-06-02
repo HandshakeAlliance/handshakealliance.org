@@ -25,6 +25,7 @@ export default class ObjectiveComponent extends Component {
 
   componentDidMount() {
     this.updateActiveTab();
+    this.updateActiveSlide();
   }
 
   updateActiveTab = (e, key) => {
@@ -52,7 +53,6 @@ export default class ObjectiveComponent extends Component {
     for(let slide of this.state.slides) {
       output.push(
       <Objective.CarImage
-        className='inRight'
         key={'slide' + slide.key}
         ref={slide.ref}>
         {slide.key}
@@ -86,9 +86,14 @@ export default class ObjectiveComponent extends Component {
 
   // TODO: Move all Carousel logic and styling into a separate component
   // This function does a little bit of everything (sorry)
-  // @params to: string - key of desired slide
+  // @params to?: string - key of desired slide
   updateActiveSlide = to => {
-    console.log('updating')
+    if (!to) {
+      // set default
+      this.state.slides[0].ref.current.classList.add('inRight');
+      return;
+    }
+
     // escape if we're already at the target
     if (to === this.state.activeSlide) return;
     let atIndex, toIndex = -1;
@@ -102,7 +107,6 @@ export default class ObjectiveComponent extends Component {
     let toElement = this.state.slides[toIndex].ref.current;
     let atElement = this.state.slides[atIndex].ref.current;
 
-    this.clearAllAnimations(toElement)
     this.clearAllAnimations(atElement)
 
     if (atIndex > toIndex) {
@@ -112,9 +116,6 @@ export default class ObjectiveComponent extends Component {
       atElement.classList.add('outLeft');
       toElement.classList.add('inRight')
     }
-
-    // clean up old classes
-    // setTimeout(() => {this.clearAllAnimations(atElement)}, 2000);
 
     // update active
     this.setState({activeSlide: this.state.slides[toIndex].key})
@@ -127,6 +128,16 @@ export default class ObjectiveComponent extends Component {
     node.classList.remove('inLeft')
     node.classList.remove('inRight')
   }
+
+  // clearInClasses = node => {
+  //   node.classList.remove('inLeft')
+  //   node.classList.remove('inRight')
+  // }
+
+  // clearOutClasses = node => {
+  //   node.classList.remove('outLeft')
+  //   node.classList.remove('outRight')
+  // }
 
   render() {
     return (
