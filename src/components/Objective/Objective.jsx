@@ -15,11 +15,11 @@ export default class ObjectiveComponent extends Component {
 
     this.state = {
       slides: [
-        { name: 'Distributed', key: 'distributed', url: '', body: '', ref: this.distributedRef},
-        { name: 'Uncensorable', key: 'uncensorable', url: '', body: '', ref: this.uncensorableRef},
-        { name: 'Scalable', key: 'scaleable', url: '', body: '', ref: this.scaleableRef},
-        { name: 'Root Zone', key: 'root-zone', url: '', body: '', ref: this.rootZoneRef},
-        { name: 'Open Source', key: 'open-source', url: '', body: '', ref: this.openSourceRef},
+        { name: 'Distributed', key: 'distributed', url: '', body: 'Compressed and distributed to thousands of child nodes around the world, handshake can be found on any user\'s computer.', ref: this.distributedRef},
+        { name: 'Uncensorable', key: 'uncensorable', url: '', body: 'Driven by a consensus-based blockchain, names cannot be taken down by anyone with political or malicious intent. Once on the chain, the action is all but immutable.', ref: this.uncensorableRef},
+        { name: 'Scalable', key: 'scaleable', url: '', body: 'Handshake uses a Merkle Tree, an innovative data structure that uses nearly no memory space to maintain.', ref: this.scaleableRef},
+        { name: 'Root Zone', key: 'root-zone', url: '', body: 'halp. I dont know what this even means...', ref: this.rootZoneRef},
+        { name: 'Open Source', key: 'open-source', url: '', body: 'All code for Handshake is entirely open source, meaning the community has every chance to ensure it\'s safety and quality.', ref: this.openSourceRef},
       ],
       activeSlide: 'distributed'
     };
@@ -69,7 +69,7 @@ export default class ObjectiveComponent extends Component {
       <Objective.CarImage
         key={'slide' + slide.key}
         ref={slide.ref}>
-        {slide.key}
+        {slide.body}
       </Objective.CarImage>
       )
     }
@@ -167,13 +167,11 @@ export default class ObjectiveComponent extends Component {
     return (
       <Objective.Wrapper>
         <Objective.AboutHeader>
-          About Handshake
+          The Alliance
         </Objective.AboutHeader>
         <Objective.AboutParagraph>
-          Rockstar facebook paradigm shift virality incubator entrepreneur stealth business-to-consumer
-          bootstrapping deployment learning curve android MVP. Angel investor holy grail infrastructure
-          graphical user interface buzz termsheet traction marketing investor iPhone direct mailing value
-          proposition deployment.
+          Handshake is a proposed replacement to the trusted actors that control the web through centralization. These ... have and will fail again, sacrificing the integrity of the web.
+          The alliance around Handshake aims to never let this happen again. We are a group of passionate developers trying to make the world a safer, more secure place.
         </Objective.AboutParagraph>
         <Objective.Tabs id='tabs'>
           {this.displayTabs()}
@@ -184,8 +182,6 @@ export default class ObjectiveComponent extends Component {
           <Swipeable config={swipe} onSwipeLeft={this.next} onSwipeRight={this.previous}>
             <Objective.CarContainer>
               {this.displaySlides()}
-              {/* <Objective.CarImage className='inRight'>Rest</Objective.CarImage>
-              <Objective.CarImage className='outLeft'>Test</Objective.CarImage> */}
             </Objective.CarContainer>
           </Swipeable>
 

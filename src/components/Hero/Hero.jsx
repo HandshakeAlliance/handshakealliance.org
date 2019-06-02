@@ -8,7 +8,7 @@ export default class HeroComponent extends Component {
     return (
       <Hero.Wrapper>
         <Hero.Description>
-          Here is where we will put the objective statement
+          Working together to save the future of the internet
           <Hero.LearnButton>Learn More</Hero.LearnButton>
         </Hero.Description>
         <Hero.Map>
