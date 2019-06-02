@@ -124,24 +124,25 @@ export const CarContainer = styled.div`
 
 export const CarImage = styled.div`
   background: #262626;
-  position: absolute;
+  opacity: 0;
   height: 100%;
+  position: absolute;
   width: 100%;
 
   &.outLeft {
-    animation: ${TransformOutLeft} 2s forwards;
+    animation: ${TransformOutLeft} 1s forwards;
   }
 
   &.outRight {
-    animation : ${TransformOutRight} 2s forwards;
+    animation : ${TransformOutRight} 1s forwards;
   }
 
   &.inLeft {
-    animation: ${TransformInLeft} 2s forwards;
+    animation: ${TransformInLeft} 1s forwards;
   }
 
   &.inRight {
-    animation : ${TransformInRight} 2s forwards;
+    animation : ${TransformInRight} 1s forwards;
   }
 `;
 

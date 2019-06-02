@@ -4,34 +4,74 @@ import * as Objective from './styled-components';
 export default class ObjectiveComponent extends Component {
   constructor(props) {
     super(props);
+
+    this.distributedRef = React.createRef();
+    this.uncensorableRef = React.createRef();
+    this.scaleableRef = React.createRef();
+    this.rootZoneRef = React.createRef();
+    this.openSourceRef = React.createRef();
+
     this.state = {
       slides: [
-        { key: 'distributed', url: '', body: ''},
-        { key: 'uncensorable', url: '', body: ''},
-        { key: 'scaleable', url: '', body: ''},
-        { key: 'root-zone', url: '', body: ''},
-        { key: 'open-source', url: '', body: ''},
+        { name: 'Distributed', key: 'distributed', url: '', body: '', ref: this.distributedRef},
+        { name: 'Uncensorable', key: 'uncensorable', url: '', body: '', ref: this.uncensorableRef},
+        { name: 'Scalable', key: 'scaleable', url: '', body: '', ref: this.scaleableRef},
+        { name: 'Root Zone', key: 'root-zone', url: '', body: '', ref: this.rootZoneRef},
+        { name: 'Open Source', key: 'open-source', url: '', body: '', ref: this.openSourceRef},
       ],
       activeSlide: 'distributed'
     };
   }
 
-  updateActiveTab = e => {
-    let tabs = document.getElementById("tabs").children;
+  componentDidMount() {
+    this.updateActiveTab();
+  }
+
+  updateActiveTab = (e, key) => {
+    let tabs = document.getElementById('tabs').children;
+
+    if (!e) {
+      // set default active if no event exists
+      tabs[0].classList.add('active');
+      return;
+    }
+
     // Loop through to seek and destroy 'active' class onclick
     for (let i = 0; i < tabs.length; i++) {
-      if (tabs[i].classList.contains("active")) {
-        tabs[i].classList.remove("active");
+      if (tabs[i].classList.contains('active')) {
+        tabs[i].classList.remove('active');
       }
     }
 
-    e.target.classList.add("active");
+    e.target.classList.add('active');
+    this.updateActiveSlide(key)
   }
 
   displaySlides = () => {
     let output = [];
     for(let slide of this.state.slides) {
-      output.push(<Objective.CarImage key={slide.key}>{slide.key}</Objective.CarImage>)
+      output.push(
+      <Objective.CarImage
+        className='inRight'
+        key={'slide' + slide.key}
+        ref={slide.ref}>
+        {slide.key}
+      </Objective.CarImage>
+      )
+    }
+    return output;
+  }
+
+  displayTabs = () => {
+    let output = [];
+    for(let tab of this.state.slides) {
+      output.push(
+        <Objective.Tab
+          key={'tab-' + tab.key}
+          onClick={e => this.updateActiveTab(e, tab.key)}>
+          {tab.name}
+        </Objective.Tab>
+      )
     }
     return output;
   }
@@ -46,7 +86,9 @@ export default class ObjectiveComponent extends Component {
 
   // TODO: Move all Carousel logic and styling into a separate component
   // This function does a little bit of everything (sorry)
-  updateActive = to => {
+  // @params to: string - key of desired slide
+  updateActiveSlide = to => {
+    console.log('updating')
     // escape if we're already at the target
     if (to === this.state.activeSlide) return;
     let atIndex, toIndex = -1;
@@ -57,23 +99,34 @@ export default class ObjectiveComponent extends Component {
       if (this.state.slides[index].key === this.state.activeSlide) atIndex = index;
     }
 
-    // set animation direction
+    let toElement = this.state.slides[toIndex].ref.current;
+    let atElement = this.state.slides[atIndex].ref.current;
+
+    this.clearAllAnimations(toElement)
+    this.clearAllAnimations(atElement)
+
     if (atIndex > toIndex) {
-      // Right
+      atElement.classList.add('outRight');
+      toElement.classList.add('inLeft')
     } else {
-      // Left
+      atElement.classList.add('outLeft');
+      toElement.classList.add('inRight')
     }
 
-    // Animate out Slide
-
-    // Animate in Slide
-
+    // clean up old classes
+    // setTimeout(() => {this.clearAllAnimations(atElement)}, 2000);
 
     // update active
     this.setState({activeSlide: this.state.slides[toIndex].key})
   }
 
-  clearAnimation
+  // Clears all leftover animation styles on all child nodes
+  clearAllAnimations = node => {
+    node.classList.remove('outLeft')
+    node.classList.remove('outRight')
+    node.classList.remove('inLeft')
+    node.classList.remove('inRight')
+  }
 
   render() {
     return (
@@ -87,27 +140,23 @@ export default class ObjectiveComponent extends Component {
           graphical user interface buzz termsheet traction marketing investor iPhone direct mailing value
           proposition deployment.
         </Objective.AboutParagraph>
-        <Objective.Tabs id="tabs">
-          <Objective.Tab onClick={this.updateActiveTab} className="active">Distributed</Objective.Tab>
-          <Objective.Tab onClick={this.updateActiveTab}>Uncensorable</Objective.Tab>
-          <Objective.Tab onClick={this.updateActiveTab}>Scalable</Objective.Tab>
-          <Objective.Tab onClick={this.updateActiveTab}>Root Zone</Objective.Tab>
-          <Objective.Tab onClick={this.updateActiveTab}>Open Source</Objective.Tab>
+        <Objective.Tabs id='tabs'>
+          {this.displayTabs()}
         </Objective.Tabs>
 
         <Objective.Car>
 
           <Objective.CarContainer>
             {this.displaySlides()}
-            {/* <Objective.CarImage className="inRight">Rest</Objective.CarImage>
-            <Objective.CarImage className="outLeft">Test</Objective.CarImage> */}
+            {/* <Objective.CarImage className='inRight'>Rest</Objective.CarImage>
+            <Objective.CarImage className='outLeft'>Test</Objective.CarImage> */}
           </Objective.CarContainer>
 
           <Objective.RightArrow onClick={this.next}>
-            <i className="fas fa-chevron-right"></i>
+            <i className='fas fa-chevron-right'></i>
           </Objective.RightArrow>
           <Objective.LeftArrow onClick={this.previous}>
-            <i className="fas fa-chevron-left"></i>
+            <i className='fas fa-chevron-left'></i>
           </Objective.LeftArrow>
         </Objective.Car>
 
