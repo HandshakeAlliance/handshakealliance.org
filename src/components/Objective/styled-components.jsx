@@ -83,7 +83,7 @@ export const Tabs = styled.div`
   margin-bottom: 36px;
   width: auto;
 
-  /* Although this isn't ideal to break off a arbitrary width, it significantly improves the view's look at mobile */
+  /* Although this isn't ideal to break off an arbitrary width, it significantly improves the view's look at mobile */
   @media(max-width: 445px) {
     display: none;
   }

@@ -31,7 +31,7 @@ export default class ObjectiveComponent extends Component {
   updateActiveTab = (e, key) => {
     let tabs = document.getElementById('tabs').children;
 
-    if (!e) {
+    if (!e && !key) {
       // set default active if no event exists
       tabs[0].classList.add('active');
       return;
@@ -44,8 +44,20 @@ export default class ObjectiveComponent extends Component {
       }
     }
 
-    e.target.classList.add('active');
     this.updateActiveSlide(key)
+
+    // Was not called via a click
+    if (!e) {
+      // Loop through slides, find passed key, set corresponding tag
+      for (let i in this.state.slides) {
+        if (this.state.slides[i].key === key) {
+          tabs[i].classList.add('active')
+        }
+      }
+      return;
+    }
+
+    e.target.classList.add('active');
   }
 
   displaySlides = () => {
@@ -77,11 +89,29 @@ export default class ObjectiveComponent extends Component {
   }
 
   previous = () => {
-
+    // Find current slide, then update to the following slide
+    let i;
+    for (i = this.state.slides.length - 1; i >= 0; i--) {
+      if (this.state.slides[i].key === this.state.activeSlide) break;
+    }
+    if (i === 0) {
+      this.updateActiveTab(null, 'open-source')
+    } else {
+      this.updateActiveTab(null, this.state.slides[i - 1].key)
+    }
   }
 
   next = () => {
-
+    // Find current slide, then update to the following slide
+    let i;
+    for(i = 0; i < this.state.slides.length; i++) {
+      if (this.state.slides[i].key === this.state.activeSlide) break;
+    }
+    if (i === this.state.slides.length - 1) {
+      this.updateActiveTab(null, 'distributed')
+    } else {
+      this.updateActiveTab(null, this.state.slides[i + 1].key)
+    }
   }
 
   // TODO: Move all Carousel logic and styling into a separate component
