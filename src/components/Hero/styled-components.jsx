@@ -37,7 +37,7 @@ export const LearnButton = styled.button`
   color: #f2f2f2;
   font-size: 20px;
   padding: 10px 15px;
-  margin-top: 25px;
+  margin: 25px 0;
   outline: none;
   &:hover {
     background: #4223a4;
