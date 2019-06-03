@@ -6,8 +6,10 @@ export const Wrapper = styled.div`
   flex-direction: column-reverse;
   height: auto;
   overflow: hidden;
+  align-items: center;
 
   @media(min-width: ${props => props.theme.breakpoint.desktopMin}) {
+    align-items: stretch;
     flex-direction: row;
     height: calc(100vh - ${props => props.theme.breakpoint.navbarHeightDesktop});
     top: ${props => props.theme.breakpoint.navbarHeightDesktop};
@@ -15,19 +17,33 @@ export const Wrapper = styled.div`
 `;
 
 export const Description = styled.div`
-  align-items: flex-start;
-  max-width: 40%;
+  align-items: center;
+  max-width: 80%;
   display: flex;
   flex-grow: 2;
-  font-size: 45px;
+  font-size: 28px;
   flex-direction: column;
-  padding: 90px 0 0 50px;
-  text-align: left;
+  padding: 40px 0 70px 0;
+
+  @media(min-width: ${props => props.theme.breakpoint.desktopMin}) {
+    align-items: flex-start;
+    max-width: 40%;
+    display: flex;
+    flex-grow: 2;
+    font-size: 45px;
+    flex-direction: column;
+    padding: 90px 0 0 50px;
+    text-align: left;
+  }
 `;
 
 export const Map = styled.div`
   flex-grow: 1;
-  padding-right: 30px;
+  padding: 20px;
+
+  @media(min-width: ${props => props.theme.breakpoint.desktopMin}) {
+    padding: 0 30px 0 0;
+  }
 `;
 
 export const LearnButton = styled.button`
