@@ -12,7 +12,7 @@ export const ActionContainer = styled.div`
 
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     flex-direction: row;
-    padding: 0 125px;
+    padding: 0 50px;
   }
 `;
 
@@ -40,8 +40,12 @@ export const BlockRow = styled.div`
 
 export const SubscribeLabel = styled.div`
   font-size: 14px;
-  margin: 12px 0 6px 0;
+  margin: 20px 0 6px 0;
   text-align: left;
+
+  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+    margin: 12px 0 6px 0;
+  }
 `;
 
 export const SubscribeInput = styled.input`

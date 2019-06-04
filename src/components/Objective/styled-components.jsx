@@ -74,6 +74,7 @@ export const AboutParagraph = styled.div`
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     height: 100px;
     width: 750px;
+    margin: 25px 0 10px 0;
   }
 `;
 

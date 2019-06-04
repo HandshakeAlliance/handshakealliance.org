@@ -11,7 +11,9 @@ export const Wrapper = styled.div`
   @media(min-width: ${props => props.theme.breakpoint.desktopMin}) {
     align-items: stretch;
     flex-direction: row;
-    height: calc(100vh - ${props => props.theme.breakpoint.navbarHeightDesktop});
+    height: auto;
+    padding: 15px 0 135px 0;
+    /* height: calc(100vh - ${props => props.theme.breakpoint.navbarHeightDesktop}); */
     top: ${props => props.theme.breakpoint.navbarHeightDesktop};
   }
 `;
@@ -30,7 +32,7 @@ export const Description = styled.div`
     max-width: 40%;
     display: flex;
     flex-grow: 2;
-    font-size: 45px;
+    font-size: 42px;
     flex-direction: column;
     padding: 90px 0 0 50px;
     text-align: left;
