@@ -62,14 +62,14 @@ export const Wrapper = styled.div`
 export const AboutHeader = styled.div`
   font-size: 24pt;
   color: #fff;
-  margin-bottom: 20px;
 `;
 
 export const AboutParagraph = styled.div`
   height: auto;
   line-height: 20px;
-  margin-bottom: 35px;
-  width: 100%;
+  margin: 25px 0 40px 0;
+  width: 90%;
+  font-size: 14pt;
 
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     height: 100px;
@@ -91,7 +91,7 @@ export const Tabs = styled.div`
 
 export const Tab = styled.div`
   border-bottom: 1.5px solid #434343;
-  font-size: 12px;
+  font-size: 14px;
   padding: 8px 10px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -107,7 +107,7 @@ export const Tab = styled.div`
 
   &:hover {
     cursor: pointer;
-    color: #693afa;
+    color: #a1a1a1;
     transition: .2s ease-in-out;
   }
 `;
@@ -120,10 +120,10 @@ export const Car = styled.div`
   color: #fff;
   display: flex;
   height: 350px;
-  font-size: 20pt;
+  font-size: 12pt;
   justify-content: center;
   position: relative;
-  width: 100%;
+  width: 80%;
 
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     width: 750px;

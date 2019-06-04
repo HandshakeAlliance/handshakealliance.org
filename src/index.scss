@@ -10,3 +10,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.handshake {
+  font-style: italic;
+  border-bottom: 1px solid #693afa;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    color: #a1a1a1;
+  }
+}
