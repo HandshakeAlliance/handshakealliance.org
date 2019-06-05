@@ -5,9 +5,9 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: auto;
-  padding: 72px 25px;
+  padding: 75px 25px;
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
-    padding: 72px 45px 90px 45px;
+    padding: 75px 45px 90px 45px;
   }
 `;
 

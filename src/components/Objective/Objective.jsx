@@ -103,7 +103,7 @@ export default class ObjectiveComponent extends Component {
       if (this.state.slides[i].key === this.state.activeSlide) break;
     }
     if (i === 0) {
-      this.updateActiveTab(null, 'open-source')
+      // this.updateActiveTab(null, 'open-source')
     } else {
       this.updateActiveTab(null, this.state.slides[i - 1].key)
     }
@@ -116,7 +116,7 @@ export default class ObjectiveComponent extends Component {
       if (this.state.slides[i].key === this.state.activeSlide) break;
     }
     if (i === this.state.slides.length - 1) {
-      this.updateActiveTab(null, 'distributed')
+      // this.updateActiveTab(null, 'distributed')
     } else {
       this.updateActiveTab(null, this.state.slides[i + 1].key)
     }
