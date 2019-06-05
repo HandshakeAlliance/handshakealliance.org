@@ -51,7 +51,7 @@ const TransformInRight = keyframes`
 
 export const Wrapper = styled.div`
   align-items: center;
-  background: #252525;
+  background: #262626;
   display: flex;
   flex-direction: column;
   height: auto;
@@ -83,11 +83,6 @@ export const Tabs = styled.div`
   justify-content: center;
   margin-bottom: 36px;
   width: auto;
-
-  /* Although this isn't ideal to break off an arbitrary width, it significantly improves the view's look at mobile */
-  @media(max-width: 445px) {
-    display: none;
-  }
 `;
 
 export const Tab = styled.div`
@@ -100,6 +95,10 @@ export const Tab = styled.div`
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     font-size: inherit;
     padding: 12px 14px;
+  }
+
+  @media(max-width: 445px) {
+    font-size: 12px;
   }
 
   &.active {
@@ -120,7 +119,7 @@ export const Car = styled.div`
   /* border: 1px solid #434343; */
   color: #fff;
   display: flex;
-  height: 350px;
+  height: 400px;
   font-size: 12pt;
   justify-content: center;
   position: relative;
@@ -134,7 +133,7 @@ export const Car = styled.div`
 // There are 2 wrapper containers to allow arrows to sit above both wrappers
 export const CarContainer = styled.div`
   /* Must match above h/w */
-  height: 350px;
+  height: 400px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -144,7 +143,7 @@ export const CarContainer = styled.div`
   }
 `;
 
-export const CarImage = styled.div`
+export const CarSlide = styled.div`
   background: #262626;
   opacity: 0;
   height: 100%;
@@ -165,6 +164,15 @@ export const CarImage = styled.div`
 
   &.inRight {
     animation : ${TransformInRight} 1s forwards;
+  }
+`;
+
+export const SlideBody = styled.div`
+  margin: 0 auto;
+  max-width: 600px;
+
+  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+    padding-top: 24px;
   }
 `;
 

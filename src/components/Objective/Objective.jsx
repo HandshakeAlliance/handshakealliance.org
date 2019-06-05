@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import * as Objective from './styled-components';
 import { Swipeable, defineSwipe } from 'react-touch';
 
+import { ReactComponent as Distributed } from '../../distributed.svg';
+import { ReactComponent as Uncensorable } from '../../uncensorable.svg';
+import { ReactComponent as Scalable } from '../../scalable.svg';
+import { ReactComponent as OpenSource } from '../../open-source.svg';
 
 export default class ObjectiveComponent extends Component {
   constructor(props) {
@@ -15,11 +19,10 @@ export default class ObjectiveComponent extends Component {
 
     this.state = {
       slides: [
-        { name: 'Distributed', key: 'distributed', url: '', body: 'Compressed and distributed to thousands of child nodes around the world, handshake can be found on any user\'s computer.', ref: this.distributedRef},
-        { name: 'Uncensorable', key: 'uncensorable', url: '', body: 'Driven by a consensus-based blockchain, names cannot be taken down by anyone with political or malicious intent. Once on the chain, the action is all but immutable.', ref: this.uncensorableRef},
-        { name: 'Scalable', key: 'scaleable', url: '', body: 'Handshake uses a Merkle Tree, an innovative data structure that uses nearly no memory space to maintain.', ref: this.scaleableRef},
-        // { name: 'Root Zone', key: 'root-zone', url: '', body: 'halp. I dont know what this even means...', ref: this.rootZoneRef},
-        { name: 'Open Source', key: 'open-source', url: '', body: 'All code for Handshake is entirely open source, meaning the community has every chance to ensure it\'s safety and quality.', ref: this.openSourceRef},
+        { name: 'Distributed', key: 'distributed', component: <Distributed />, body: 'Compressed and distributed to thousands of child nodes around the world, handshake can be found on any user\'s computer.', ref: this.distributedRef},
+        { name: 'Uncensorable', key: 'uncensorable', component: <Uncensorable />, body: 'Driven by a consensus-based blockchain, names cannot be taken down by anyone with political or malicious intent. Once on the chain, the action is all but immutable.', ref: this.uncensorableRef},
+        { name: 'Scalable', key: 'scaleable', component: <Scalable />, body: 'Handshake uses a Merkle Tree, an innovative data structure that uses nearly no memory space to maintain.', ref: this.scaleableRef},
+        { name: 'Open Source', key: 'open-source', component: <OpenSource />, body: 'All code for Handshake is entirely open source, meaning the community has every chance to ensure it\'s safety and quality.', ref: this.openSourceRef},
       ],
       activeSlide: 'distributed'
     };
@@ -66,11 +69,14 @@ export default class ObjectiveComponent extends Component {
     let output = [];
     for(let slide of this.state.slides) {
       output.push(
-      <Objective.CarImage
+      <Objective.CarSlide
         key={'slide' + slide.key}
         ref={slide.ref}>
-        {slide.body}
-      </Objective.CarImage>
+        {slide.component}
+          <Objective.SlideBody>
+            {slide.body}
+          </Objective.SlideBody>
+      </Objective.CarSlide>
       )
     }
     return output;
@@ -97,7 +103,7 @@ export default class ObjectiveComponent extends Component {
       if (this.state.slides[i].key === this.state.activeSlide) break;
     }
     if (i === 0) {
-      this.updateActiveTab(null, 'open-source')
+      // this.updateActiveTab(null, 'open-source')
     } else {
       this.updateActiveTab(null, this.state.slides[i - 1].key)
     }
@@ -110,7 +116,7 @@ export default class ObjectiveComponent extends Component {
       if (this.state.slides[i].key === this.state.activeSlide) break;
     }
     if (i === this.state.slides.length - 1) {
-      this.updateActiveTab(null, 'distributed')
+      // this.updateActiveTab(null, 'distributed')
     } else {
       this.updateActiveTab(null, this.state.slides[i + 1].key)
     }
@@ -172,7 +178,7 @@ export default class ObjectiveComponent extends Component {
         <Objective.AboutParagraph>
           We are the Handshake Alliance, a group of passionate developers
           working towards a more secure internet, open to everyone. We build
-          the tools to support the <a href="https://handshake.org" class="handshake" target="_blank" rel="noopener noreferrer">Handshake</a> blockchain and help drive adoption.
+          the tools to support the <a href="https://handshake.org" className="handshake" target="_blank" rel="noopener noreferrer">Handshake</a> blockchain and help drive adoption.
         </Objective.AboutParagraph>
         <Objective.Tabs id='tabs'>
           {this.displayTabs()}

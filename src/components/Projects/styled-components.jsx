@@ -5,9 +5,9 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: auto;
-  padding: 72px 25px;
+  padding: 75px 25px;
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
-    padding: 72px 45px 90px 45px;
+    padding: 75px 45px 90px 45px;
   }
 `;
 
@@ -44,7 +44,7 @@ export const Card = styled.a`
   width: 30%;
   &:hover {
     /* border: 1px solid #693afa; */
-    transition: .4s ease-in-out;
+    transition: .25s ease-in-out;
     box-shadow: 0 0 5px 0 rgba(105, 57, 250, 0.5);
   }
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {

@@ -42,7 +42,7 @@ export default class FooterComponent extends Component {
         <Footer.InfoContainer>
           <Footer.TextContainer>
             <Footer.Bold>CONTACT</Footer.Bold>
-            <span>support@urkel.io</span>
+            <span>support@handshakealliance.org</span>
           </Footer.TextContainer>
         </Footer.InfoContainer>
 

@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   background: #252525;
   /* TODO This height isn't right. Let's play with it */
   height: auto;
-  padding: 72px 25px;
+  padding: 75px 25px;
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
     padding: 75px 45px 65px 45px;
   }
