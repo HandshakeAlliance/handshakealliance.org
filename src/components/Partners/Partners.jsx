@@ -12,6 +12,7 @@ export default class PartnersComponent extends Component {
       <Partners.Wrapper>
 
         <Partners.Header>Collaborators</Partners.Header>
+        <Partners.Hr />
 
         <Partners.Logos>
           <Partners.LogoWrapper href="https://connext.network/" target="_blank" rel="noopener noreferrer">

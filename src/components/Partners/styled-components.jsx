@@ -15,9 +15,12 @@ export const Wrapper = styled.div`
 export const Header = styled.h2`
   color: #f2f2f2;
   font-size: 26px;
-  margin-bottom: 45px;
-  text-decoration: underline #693afa;
-  text-underline-position: under;
+  margin: 0 0 35px;
+`;
+
+export const Hr = styled.hr`
+  border: 1px solid #693afa;
+  width: 50px;
 `;
 
 export const Logos = styled.div`

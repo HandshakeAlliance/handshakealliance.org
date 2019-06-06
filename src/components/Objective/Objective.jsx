@@ -171,9 +171,10 @@ export default class ObjectiveComponent extends Component {
 
     return (
       <Objective.Wrapper>
-        <Objective.AboutHeader>
+        <Objective.Header>
           The Alliance
-        </Objective.AboutHeader>
+        </Objective.Header>
+        <Objective.Hr />
         <Objective.AboutParagraph>
           We are the Handshake Alliance, a group of passionate developers
           working towards a more secure internet, open to everyone. We build

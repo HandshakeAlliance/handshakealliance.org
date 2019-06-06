@@ -59,10 +59,17 @@ export const Wrapper = styled.div`
   padding: 75px 0 100px 0;
 `;
 
-export const AboutHeader = styled.h2`
+export const Header = styled.h2`
+  color: #fff;
   font-size: 24pt;
   font-weight: 500;
-  color: #fff;
+  margin-bottom: 16px;
+`;
+
+export const Hr = styled.hr`
+  border: 1px solid #693afa;
+  margin: 0 0 25px;
+  width: 50px;
 `;
 
 export const AboutParagraph = styled.div`

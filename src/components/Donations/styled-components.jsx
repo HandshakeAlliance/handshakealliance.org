@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 export const Header = styled.h2`
   color: #f2f2f2;
   font-size: 32px;
-  margin-bottom: 0 0 45px;
+  margin: 0 0 35px;
 `;
 
 export const Hr = styled.hr`

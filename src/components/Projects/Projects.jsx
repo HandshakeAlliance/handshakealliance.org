@@ -14,6 +14,7 @@ export default class ProjectsComponent extends Component {
     return (
       <Projects.Wrapper>
         <Projects.Header>Projects</Projects.Header>
+        <Projects.Hr />
         <Projects.CardContainer>
           <Projects.Card href="https://hnscan.com" target="_blank">
             <Projects.Brand><HNScan /></Projects.Brand>
