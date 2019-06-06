@@ -48,7 +48,6 @@ const Dot = styled.circle`
 const DelayedDot = styled.circle`
   animation: ${FadeIn} linear 2s ${props => props.delay + 's'} forwards,
     ${Pulse} linear 2s ${props => props.delay + 2 + 's'} infinite;
-  opacity: 0;
 `;
 
 export default class PulsingCircle extends Component {
@@ -61,7 +60,7 @@ export default class PulsingCircle extends Component {
 
   render() {
     if (this.props.delay) {
-      return <Fragment><DelayedRing delay={this.props.delay} stroke={this.state.color} fill="none" cx={0} cy={0} r={10} /><DelayedDot fill={this.state.color} cx={0} cy={0} r={5} /></Fragment>
+      return <Fragment><Ring delay={this.props.delay} stroke={this.state.color} fill="none" cx={0} cy={0} r={10} /><Dot fill={this.state.color} cx={0} cy={0} r={5} /></Fragment>
     }
     else {
       return <Fragment><Ring stroke={this.state.color} fill="none" cx={0} cy={0} r={10} /></Fragment>

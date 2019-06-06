@@ -68,7 +68,7 @@ export default class NodeMapComponent extends Component {
   }
 
   allNodes = () => {
-    return [].concat(this.hnsNodes()).concat(this.rootNodes());
+    return [].concat(this.hnsNodes());
   }
 
   render() {
