@@ -10,7 +10,10 @@ import {
 } from "react-simple-maps";
 import * as NodeMap from './styled-components';
 import data from '../../map-of-world.json';
+
+// https://www.iana.org/domains/root/servers
 import rootNodes from './root-nodes.json';
+import hnsNodes from './hns-nodes.json';
 import PulsingCircle from './PulsingCircle';
 
 export default class NodeMapComponent extends Component {
@@ -35,18 +38,37 @@ export default class NodeMapComponent extends Component {
     this.setState({ geographyPaths })
   }
 
-  allMarkers = () => {
+  rootNodes = () => {
     let result = [];
     let index = 0;
     for(let el of rootNodes) {
       result.push(
-        <Marker marker={{ coordinates: el.coord }} tabable={false} style={{ outline: "none" }} key={index}>
-          <PulsingCircle color={"#693AFA"}/>
+        <Marker marker={{ coordinates: el.coord }} tabable={false} style={{ outline: "none" }} key={"r-" + index}>
+          <PulsingCircle color={"#EC8C44"}/>
         </Marker>
       );
       index++;
     }
     return result;
+  }
+
+  hnsNodes = () => {
+    let result = [];
+    let index = 0;
+    for (let el of hnsNodes) {
+      let rand = Math.random() * (20 - 2) + 2;
+      result.push(
+        <Marker marker={{ coordinates: el.coord }} tabable={false} style={{ outline: "none" }} key={"h" + index}>
+          <PulsingCircle delay={rand}/>
+        </Marker>
+      );
+      index++;
+    }
+    return result;
+  }
+
+  allNodes = () => {
+    return [].concat(this.hnsNodes()).concat(this.rootNodes());
   }
 
   render() {
@@ -100,7 +122,9 @@ export default class NodeMapComponent extends Component {
                 )}
             </Geographies>
             <Markers>
-              {this.allMarkers()}
+              {/* {this.rootNodes()}
+              {this.hnsNodes()} */}
+              {this.allNodes()}
             </Markers>
           </ZoomableGroup>
         </ComposableMap>

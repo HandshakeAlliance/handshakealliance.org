@@ -1,0 +1,115 @@
+[
+  {
+    "name": "Dublin, Ireland",
+    "coord": [ -6.2603, 53.3498 ]
+  },
+  {
+    "name": "New Zealand",
+    "coord": [ 172.4662705, -43.3744881 ]
+  },
+  {
+    "name": "?",
+    "coord": [ -83.5379, 41.6528 ]
+  },
+  {
+    "name": "St. Petersburg, Russia",
+    "coord": [ 30.3351,59.9343 ]
+  },
+  {
+    "name": "LA, USA",
+    "coord": [ -118.2437, 34.0522 ]
+  },
+  {
+    "name": "San Fran, USA",
+    "coord": [ -122.4194, 37.7749 ]
+  },
+  {
+    "name": "Eagan, USA",
+    "coord": [ -93.1669, 44.8041 ]
+  },
+  {
+    "name": "Minneapolis, USA",
+    "coord": [ -93.2650, 44.9778 ]
+  },
+  {
+    "name": "Luxembourg",
+    "coord": [ 6.1319, 49.6116 ]
+  },
+  {
+    "name": "Pretoria",
+    "coord": [ 28.2293, -25.7479 ]
+  },
+  {
+    "name": "Dubai",
+    "coord": [ 55.2708, 25.2048 ]
+  },
+  {
+    "name": "Thailand",
+    "coord": [ 100.9925, 15.8700 ]
+  },
+  {
+    "name": "Brazil",
+    "coord": [ -47.9218, -15.8267 ]
+  },
+  {
+    "name": "Alaska",
+    "coord": [ -149.4937, 64.2008 ]
+  },
+  {
+    "name": "Japan",
+    "coord": [ 138.2529, 36.2048 ]
+  },
+  {
+    "name": "N. Korea",
+    "coord": [ 127.5101, 40.3399 ]
+  },
+  {
+    "name": "N. Korea 2",
+    "coord": [ 129.5101, 41.3399 ]
+  },
+  {
+    "name": "Rome",
+    "coord": [ 12.4964, 41.9028 ]
+  },
+  {
+    "name": "Madison",
+    "coord": [ -89.4012, 43.0731 ]
+  },
+  {
+    "name": "Shanghai",
+    "coord": [ 31.2304, 121.4737 ]
+  },
+  {
+    "name": "Hong Kong",
+    "coord": [ 114.1694, 22.3193 ]
+  },
+  {
+    "name": "Hong Kong 2",
+    "coord": [ 113.1694, 23.3193 ]
+  },
+  {
+    "name": "Beijing",
+    "coord": [ 116.4, 39.90 ]
+  },
+  {
+    "name": "London",
+    "coord": [ 0.1278, 51.5074 ]
+  },
+  {
+    "name": "Australia",
+    "coord": [ 119.7751, -25.2744 ]
+  },
+  {
+    "name": "Toronto",
+    "coord": [ -79.3832, 43.6532 ]
+  },
+  {
+    "name": "?",
+    "coord": [ 79.3832, 43.6532 ]
+  },
+  {
+    "name": "S. India",
+    "coord": [ 77.1461, 12.2602 ]
+  }
+
+]
