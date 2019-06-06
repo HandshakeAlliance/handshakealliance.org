@@ -14,6 +14,10 @@ export const Header = styled.h2`
   margin-bottom: 0 0 45px;
 `;
 
+export const Hr = styled.hr`
+  width: 50px;
+`;
+
 export const Body = styled.p`
   color: #f2f2f2;
   max-width: 700px;

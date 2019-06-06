@@ -13,6 +13,8 @@ import FooterComponent from './components/Footer/Footer.jsx';
 
 import themes from './theme-variables.js';
 import { breakpoints } from './breakpoint-variables.js';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const theme = {
   breakpoint: breakpoints,
@@ -30,6 +32,10 @@ function App() {
         <PartnersComponent />
         <DonationsComponent />
         <FooterComponent />
+        <ToastContainer
+          autoClose={3000}
+          hideProgressBar={true}
+          />
       </div>
     </ThemeProvider>
   );

@@ -9,6 +9,7 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "react-simple-maps": "^0.12.1",
+    "react-toastify": "^5.2.1",
     "react-touch": "^0.4.4",
     "styled-components": "^4.2.0",
     "topojson-client": "^3.0.0"
