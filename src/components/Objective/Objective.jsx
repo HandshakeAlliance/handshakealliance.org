@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import * as Objective from './styled-components';
 import { Swipeable, defineSwipe } from 'react-touch';
 
-import { ReactComponent as Community } from '../../img/open-source.svg';
+import { ReactComponent as Community } from '../../img/community.svg';
 import { ReactComponent as Educate } from '../../img/educate.svg';
-import { ReactComponent as Adoption } from '../../img/distributed.svg';
+import { ReactComponent as Adoption } from '../../img/adoption.svg';
 import { ReactComponent as Support } from '../../img/support.svg';
 
 export default class ObjectiveComponent extends Component {
