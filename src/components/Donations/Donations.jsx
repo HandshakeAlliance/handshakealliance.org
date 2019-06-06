@@ -7,7 +7,9 @@ export default class DonationsComponent extends Component {
     const el = e.target;
     el.select();
     document.execCommand('copy');
-    toast('Copied to clipboard');
+    toast('Copied to clipboard', {
+      className: 'toast-success'
+    });
   }
 
   render() {

@@ -15,6 +15,7 @@ export const Header = styled.h2`
 `;
 
 export const Hr = styled.hr`
+  border: 1px solid #693afa;
   width: 50px;
 `;
 
