@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import * as Objective from './styled-components';
 import { Swipeable, defineSwipe } from 'react-touch';
 
-import { ReactComponent as Distributed } from '../../distributed.svg';
-import { ReactComponent as Uncensorable } from '../../uncensorable.svg';
-import { ReactComponent as Scalable } from '../../scalable.svg';
-import { ReactComponent as OpenSource } from '../../open-source.svg';
+import { ReactComponent as Distributed } from '../../img/distributed.svg';
+import { ReactComponent as Uncensorable } from '../../img/uncensorable.svg';
+import { ReactComponent as Scalable } from '../../img/scalable.svg';
+import { ReactComponent as OpenSource } from '../../img/open-source.svg';
 
 export default class ObjectiveComponent extends Component {
   constructor(props) {
@@ -19,10 +19,10 @@ export default class ObjectiveComponent extends Component {
 
     this.state = {
       slides: [
-        { name: 'Distributed', key: 'distributed', component: <Distributed />, body: 'Compressed and distributed to thousands of child nodes around the world, handshake can be found on any user\'s computer.', ref: this.distributedRef},
-        { name: 'Uncensorable', key: 'uncensorable', component: <Uncensorable />, body: 'Driven by a consensus-based blockchain, names cannot be taken down by anyone with political or malicious intent. Once on the chain, the action is all but immutable.', ref: this.uncensorableRef},
-        { name: 'Scalable', key: 'scaleable', component: <Scalable />, body: 'Handshake uses a Merkle Tree, an innovative data structure that uses nearly no memory space to maintain.', ref: this.scaleableRef},
-        { name: 'Open Source', key: 'open-source', component: <OpenSource />, body: 'All code for Handshake is entirely open source, meaning the community has every chance to ensure it\'s safety and quality.', ref: this.openSourceRef},
+        { name: 'Community', key: 'distributed', component: <Scalable /> , body: 'We are a coalition of companies and organizations who have come together with a shared common goal- to ensure the success of Handshake.  All are welcome!', ref: this.distributedRef},
+        { name: 'Educate', key: 'uncensorable', component: <Uncensorable />, body: 'We believe that a market is only as strong as its educational foundation. The alliance is focused on providing educational resources for all audiences, whether you are a developer or completely new to blockchain.', ref: this.uncensorableRef},
+        { name: 'Adoption', key: 'scaleable', component: <Distributed />, body: 'Handshakes success is determined solely by if it is being used. Therefore, the alliance will provide the infrastructure and necessary open sourced tools for future developers looking to integrate or build on top of Handshake.', ref: this.scaleableRef},
+        { name: 'Support', key: 'open-source', component: <OpenSource />, body: 'We are here to help! The alliance is responsible for supporting any and all inquiries regarding Handshake. Seriously, anything! Give us a shout.', ref: this.openSourceRef},
       ],
       activeSlide: 'distributed'
     };

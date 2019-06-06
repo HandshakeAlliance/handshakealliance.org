@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import * as Partners from './styled-components';
+
 import Amentum from '../Logos/Amentum';
+import { ReactComponent as Connext } from '../../img/connext.svg';
 import Namebase from '../Logos/Namebase';
 import Provide from '../Logos/Provide';
 import Urkel from '../Logos/Urkel';
-import * as Partners from './styled-components';
-
 export default class PartnersComponent extends Component {
   render() {
     return (
@@ -24,6 +25,9 @@ export default class PartnersComponent extends Component {
           </Partners.LogoWrapper>
           <Partners.LogoWrapper href="https://provide.services/" target="_blank" rel="noopener noreferrer">
             <Provide height="70px" />
+          </Partners.LogoWrapper>
+          <Partners.LogoWrapper href="https://connext.network/" target="_blank" rel="noopener noreferrer">
+            <Connext height="70px" />
           </Partners.LogoWrapper>
         </Partners.Logos>
 

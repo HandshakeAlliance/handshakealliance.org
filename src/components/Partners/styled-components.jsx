@@ -24,13 +24,12 @@ export const Logos = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
 
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
     flex-direction: row;
   }
-
-
 `;
 
 export const LogoWrapper = styled.a`

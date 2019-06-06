@@ -119,13 +119,14 @@ export const Car = styled.div`
   /* border: 1px solid #434343; */
   color: #fff;
   display: flex;
-  height: 400px;
+  height: 460px;
   font-size: 12pt;
   justify-content: center;
   position: relative;
   width: 80%;
 
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+    height: 400px;
     width: 750px;
   }
 `;
@@ -133,12 +134,13 @@ export const Car = styled.div`
 // There are 2 wrapper containers to allow arrows to sit above both wrappers
 export const CarContainer = styled.div`
   /* Must match above h/w */
-  height: 400px;
+  height: 460px;
   overflow: hidden;
   position: relative;
   width: 100%;
 
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+    height: 400px;
     width: 750px;
   }
 `;
