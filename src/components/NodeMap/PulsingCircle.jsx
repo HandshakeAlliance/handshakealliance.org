@@ -64,7 +64,7 @@ export default class PulsingCircle extends Component {
       return <Fragment><DelayedRing delay={this.props.delay} stroke={this.state.color} fill="none" cx={0} cy={0} r={10} /><DelayedDot fill={this.state.color} cx={0} cy={0} r={5} /></Fragment>
     }
     else {
-      return <Fragment><Ring stroke={this.state.color} fill="none" cx={0} cy={0} r={10} /><Dot fill={this.state.color} cx={0} cy={0} r={5} /></Fragment>
+      return <Fragment><Ring stroke={this.state.color} fill="none" cx={0} cy={0} r={10} /></Fragment>
     }
   }
 }
