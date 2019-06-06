@@ -10,7 +10,7 @@ import ProjectsComponent from './components/Projects/Projects.jsx';
 import PartnersComponent from './components/Partners/Partners.jsx';
 import FooterComponent from './components/Footer/Footer.jsx';
 
-import themes from './theme-variable.js';
+import themes from './theme-variables.js';
 import { breakpoints } from './breakpoint-variables.js';
 
 const theme = {

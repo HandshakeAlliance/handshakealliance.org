@@ -18,12 +18,13 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Description = styled.div`
+export const Description = styled.h1`
   align-items: center;
   max-width: 80%;
   display: flex;
   flex-grow: 2;
   font-size: 28px;
+  font-weight: 400;
   flex-direction: column;
   padding: 40px 0 70px 0;
 

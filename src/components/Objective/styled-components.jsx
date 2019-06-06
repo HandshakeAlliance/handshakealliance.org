@@ -59,8 +59,9 @@ export const Wrapper = styled.div`
   padding: 75px 0 100px 0;
 `;
 
-export const AboutHeader = styled.div`
+export const AboutHeader = styled.h2`
   font-size: 24pt;
+  font-weight: 500;
   color: #fff;
 `;
 

@@ -26,7 +26,6 @@ export const CardContainer = styled.div`
 `;
 
 export const Card = styled.a`
-  /* background: #fff; */
   background: #f2f2f2;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
