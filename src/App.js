@@ -8,6 +8,7 @@ import HeroComponent from './components/Hero/Hero.jsx';
 import ObjectiveComponent from './components/Objective/Objective.jsx';
 import ProjectsComponent from './components/Projects/Projects.jsx';
 import PartnersComponent from './components/Partners/Partners.jsx';
+import DonationsComponent from './components/Donations/Donations.jsx';
 import FooterComponent from './components/Footer/Footer.jsx';
 
 import themes from './theme-variables.js';
@@ -27,6 +28,7 @@ function App() {
         <ObjectiveComponent />
         <ProjectsComponent />
         <PartnersComponent />
+        <DonationsComponent />
         <FooterComponent />
       </div>
     </ThemeProvider>
