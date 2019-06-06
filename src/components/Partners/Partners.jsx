@@ -14,8 +14,8 @@ export default class PartnersComponent extends Component {
         <Partners.Header>Collaborators</Partners.Header>
 
         <Partners.Logos>
-          <Partners.LogoWrapper href="https://namebase.io/" target="_blank" rel="noopener noreferrer">
-            <Namebase height="35px" />
+          <Partners.LogoWrapper href="https://connext.network/" target="_blank" rel="noopener noreferrer">
+            <Connext height="70px" />
           </Partners.LogoWrapper>
           <Partners.LogoWrapper href="https://urkel.io/" target="_blank" rel="noopener noreferrer">
             <Urkel height="60px" />
@@ -26,8 +26,8 @@ export default class PartnersComponent extends Component {
           <Partners.LogoWrapper href="https://provide.services/" target="_blank" rel="noopener noreferrer">
             <Provide height="70px" />
           </Partners.LogoWrapper>
-          <Partners.LogoWrapper href="https://connext.network/" target="_blank" rel="noopener noreferrer">
-            <Connext height="70px" />
+          <Partners.LogoWrapper href="https://namebase.io/" target="_blank" rel="noopener noreferrer">
+            <Namebase height="35px" />
           </Partners.LogoWrapper>
         </Partners.Logos>
 
