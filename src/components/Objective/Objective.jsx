@@ -2,29 +2,28 @@ import React, { Component } from 'react';
 import * as Objective from './styled-components';
 import { Swipeable, defineSwipe } from 'react-touch';
 
-import { ReactComponent as Distributed } from '../../img/distributed.svg';
-import { ReactComponent as Uncensorable } from '../../img/uncensorable.svg';
-import { ReactComponent as Scalable } from '../../img/scalable.svg';
-import { ReactComponent as OpenSource } from '../../img/open-source.svg';
+import { ReactComponent as Community } from '../../img/open-source.svg';
+import { ReactComponent as Educate } from '../../img/educate.svg';
+import { ReactComponent as Adoption } from '../../img/distributed.svg';
+import { ReactComponent as Support } from '../../img/support.svg';
 
 export default class ObjectiveComponent extends Component {
   constructor(props) {
     super(props);
 
-    this.distributedRef = React.createRef();
-    this.uncensorableRef = React.createRef();
-    this.scaleableRef = React.createRef();
-    this.rootZoneRef = React.createRef();
-    this.openSourceRef = React.createRef();
+    this.communityRef = React.createRef();
+    this.educateRef = React.createRef();
+    this.adoptionRef = React.createRef();
+    this.supportRef = React.createRef();
 
     this.state = {
       slides: [
-        { name: 'Community', key: 'distributed', component: <Scalable /> , body: 'We are a coalition of companies and organizations who have come together with a shared common goal- to ensure the success of Handshake.  All are welcome!', ref: this.distributedRef},
-        { name: 'Educate', key: 'uncensorable', component: <Uncensorable />, body: 'We believe that a market is only as strong as its educational foundation. The alliance is focused on providing educational resources for all audiences, whether you are a developer or completely new to blockchain.', ref: this.uncensorableRef},
-        { name: 'Adoption', key: 'scaleable', component: <Distributed />, body: 'Handshakes success is determined solely by if it is being used. Therefore, the alliance will provide the infrastructure and necessary open sourced tools for future developers looking to integrate or build on top of Handshake.', ref: this.scaleableRef},
-        { name: 'Support', key: 'open-source', component: <OpenSource />, body: 'We are here to help! The alliance is responsible for supporting any and all inquiries regarding Handshake. Seriously, anything! Give us a shout.', ref: this.openSourceRef},
+        { name: 'Community', key: 'community', component: <Community /> , body: 'We are a coalition of companies and organizations who have come together with a shared common goal- to ensure the success of Handshake.  All are welcome!', ref: this.communityRef},
+        { name: 'Educate', key: 'educate', component: <Educate />, body: 'We believe that a market is only as strong as its educational foundation. The alliance is focused on providing educational resources for all audiences, whether you are a developer or completely new to blockchain.', ref: this.educateRef},
+        { name: 'Adoption', key: 'adoption', component: <Adoption />, body: 'Handshake\'s success is determined solely by its users. Therefore, the alliance will provide the infrastructure and open source tools for future developers looking to integrate or build on top of the Handshake network.', ref: this.adoptionRef},
+        { name: 'Support', key: 'support', component: <Support />, body: 'We are here to help! The alliance is responsible for supporting any and all inquiries regarding Handshake. Seriously, anything! Give us a shout.', ref: this.supportRef},
       ],
-      activeSlide: 'distributed'
+      activeSlide: 'community'
     };
   }
 
@@ -103,7 +102,7 @@ export default class ObjectiveComponent extends Component {
       if (this.state.slides[i].key === this.state.activeSlide) break;
     }
     if (i === 0) {
-      // this.updateActiveTab(null, 'open-source')
+      // don't allow the user to click or swipe back
     } else {
       this.updateActiveTab(null, this.state.slides[i - 1].key)
     }
@@ -116,7 +115,7 @@ export default class ObjectiveComponent extends Component {
       if (this.state.slides[i].key === this.state.activeSlide) break;
     }
     if (i === this.state.slides.length - 1) {
-      // this.updateActiveTab(null, 'distributed')
+      // don't allow the user to click or swipe forwards
     } else {
       this.updateActiveTab(null, this.state.slides[i + 1].key)
     }
