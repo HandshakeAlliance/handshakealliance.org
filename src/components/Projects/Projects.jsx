@@ -4,8 +4,8 @@ import HNScan from '../Logos/HNScan';
 import HNSAcademy from '../Logos/HNSAcademy';
 import HNSPool from '../Logos/HNSPool';
 import Nameian from '../Logos/Nameian';
-import HA from '../Logos/HA';
-import Handshake from '../Logos/Handshake';
+import HandshakeCommunity from '../Logos/HandshakeCommunity';
+import HandshakeDocs from '../Logos/HandshakeDocs';
 
 // TODO consider adding roadmap or progress notes to each card
 
@@ -36,12 +36,12 @@ export default class ProjectsComponent extends Component {
           </Projects.Card>
 
           <Projects.Card href="https://handshake.community/categories" target="_blank">
-            <Projects.Brand><HA />Handshake Community</Projects.Brand>
+            <Projects.Brand><HandshakeCommunity /></Projects.Brand>
             Join the Handshake Community on our forums. Discuss development, mining, or anything else Handshake related. Start contributing!
           </Projects.Card>
 
           <Projects.Card href="https://handshake.org/" target="_blank">
-            <Projects.Brand><Handshake />&nbsp;Documentation</Projects.Brand>
+            <Projects.Brand><HandshakeDocs /></Projects.Brand>
             General Handshake documentation for newbies. You can find the notes on the daemon and node here.
           </Projects.Card>
         </Projects.CardContainer>
