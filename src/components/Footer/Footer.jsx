@@ -1,12 +1,59 @@
 import React, { Component } from 'react';
 import AllianceDesktopLogo from '../Logos/AllianceDesktopLogo';
 import * as Footer from './styled-components';
+import $ from "jquery";
+
 
 export default class FooterComponent extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log('submitting!');
+
+    let email = $(`input[name="EMAIL"]`);
+    let form = $(".emailContainer");
+
+    if (email.val() === "") {
+      //Handle some error here
+      // toastr.error("Please enter an email");
+      // form.addClass("shake");
+      // removeAnimation();
+      return;
+    }
+
+    let formData = email.serialize();
+
+    $.ajax({
+      type: "post",
+      url:
+        "https://urkel.us19.list-manage.com/subscribe/post-json?u=4f327a17a091f4dc9fddf20f5&amp;id=d7753e97c9&c=?",
+      data: formData,
+      cache: false,
+      dataType: "json",
+      contentType: "application/json; charset=utf-8",
+      encode: true,
+      error: function (err) {
+        // toastr.error("Something went wrong, please try again later.");
+        // form.addClass("shake");
+        // removeAnimation();
+        console.log("Uh, oh. There was an error:", err);
+      }
+    }) // All done! Let's show the user a success message:
+      .done(function (data) {
+        if (data.result === "error") {
+          // toastr.error("This email is already registered");
+          // form.addClass("shake");
+          // removeAnimation();
+          console.log('error')
+          return;
+        } else {
+          console.log('success')
+          //Send google analytics hit
+          window.ga("send", "event", "email", "submit");
+          // $("#heroEmailForm").hide();
+          // $(".successMessage").show(); // Show the checkmark
+          // $("svg").addClass("active"); // Start animation of checkmark
+        }
+      });
   }
 
   render() {
