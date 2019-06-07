@@ -15,10 +15,10 @@ export default class DonationsComponent extends Component {
   render() {
     return (
       <Donations.Wrapper>
-        <Donations.Header>Feeling Generous?</Donations.Header>
+        <Donations.Header>Support Development</Donations.Header>
         <Donations.Hr />
         <Donations.Body>All proceeds will go directly towards the teams developing the infrastructure for the Handshake protocol</Donations.Body>
-        <Donations.Address onClick={this.onClick} readOnly value="bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq" />
+        <Donations.Address onClick={this.onClick} readOnly value="37jov2n9YKofVjCQX43MVSSc36GeL2RSss" />
       </Donations.Wrapper>
     )
   }
