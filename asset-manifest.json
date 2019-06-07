@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.d62fca54.chunk.css",
-    "main.js": "/static/js/main.43132f26.chunk.js",
-    "main.js.map": "/static/js/main.43132f26.chunk.js.map",
+    "main.css": "/static/css/main.904a1d7c.chunk.css",
+    "main.js": "/static/js/main.f5a6001d.chunk.js",
+    "main.js.map": "/static/js/main.f5a6001d.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.d24788f3.chunk.css": "/static/css/2.d24788f3.chunk.css",
+    "static/css/2.d2e981aa.chunk.css": "/static/css/2.d2e981aa.chunk.css",
     "static/js/2.172a6bd7.chunk.js": "/static/js/2.172a6bd7.chunk.js",
     "static/js/2.172a6bd7.chunk.js.map": "/static/js/2.172a6bd7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.a4bfe0b39793539c81638bd60e80c639.js": "/precache-manifest.a4bfe0b39793539c81638bd60e80c639.js",
+    "precache-manifest.5747a1ea232c60ad715754c3d778c4a7.js": "/precache-manifest.5747a1ea232c60ad715754c3d778c4a7.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.d24788f3.chunk.css.map": "/static/css/2.d24788f3.chunk.css.map",
-    "static/css/main.d62fca54.chunk.css.map": "/static/css/main.d62fca54.chunk.css.map",
-    "static/media/adoption.83a07270.svg": "/static/media/adoption.83a07270.svg",
-    "static/media/community.27008c9b.svg": "/static/media/community.27008c9b.svg",
+    "static/css/2.d2e981aa.chunk.css.map": "/static/css/2.d2e981aa.chunk.css.map",
+    "static/css/main.904a1d7c.chunk.css.map": "/static/css/main.904a1d7c.chunk.css.map",
+    "static/media/UrkelLabs.7900cc85.svg": "/static/media/UrkelLabs.7900cc85.svg",
+    "static/media/adoption.71a6149e.svg": "/static/media/adoption.71a6149e.svg",
+    "static/media/community.665c4043.svg": "/static/media/community.665c4043.svg",
     "static/media/connext.76d6272b.svg": "/static/media/connext.76d6272b.svg",
-    "static/media/educate.d4f54c2d.svg": "/static/media/educate.d4f54c2d.svg",
-    "static/media/support.0aa7f140.svg": "/static/media/support.0aa7f140.svg"
+    "static/media/educate.46cb8f56.svg": "/static/media/educate.46cb8f56.svg",
+    "static/media/support.12506962.svg": "/static/media/support.12506962.svg"
   }
 }
