@@ -4,23 +4,23 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   background: #252525;
-  /* TODO This height isn't right. Let's play with it */
   height: auto;
-  padding: 75px 25px;
+  padding: 75px 25px 50px 25px;
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
-    padding: 75px 45px 65px 45px;
+    padding: 75px 45px 50px 45px;
   }
 `;
 
 export const Header = styled.h2`
   color: #f2f2f2;
   font-size: 26px;
-  margin: 0 0 35px;
+  margin: 0 0 16px;
 `;
 
 export const Hr = styled.hr`
   border: 1px solid #693afa;
-  width: 50px;
+  width: 60px;
+  margin-bottom: 35px;
 `;
 
 export const Logos = styled.div`

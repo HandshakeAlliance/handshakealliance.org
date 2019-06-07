@@ -56,7 +56,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   height: auto;
   justify-content: center;
-  padding: 75px 0 100px 0;
+  padding: 75px 0 75px 0;
 `;
 
 export const Header = styled.h2`
@@ -68,8 +68,8 @@ export const Header = styled.h2`
 
 export const Hr = styled.hr`
   border: 1px solid #693afa;
-  margin: 0 0 25px;
-  width: 50px;
+  margin: 0 0 20px;
+  width: 60px;
 `;
 
 export const AboutParagraph = styled.div`
@@ -180,9 +180,10 @@ export const CarSlide = styled.div`
 export const SlideBody = styled.div`
   margin: 0 auto;
   max-width: 600px;
+  padding-top: 20px;
 
   @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
-    padding-top: 24px;
+    padding-top: 25px;
   }
 `;
 
