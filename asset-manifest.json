@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d62fca54.chunk.css",
+    "main.js": "/static/js/main.43132f26.chunk.js",
+    "main.js.map": "/static/js/main.43132f26.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.d24788f3.chunk.css": "/static/css/2.d24788f3.chunk.css",
+    "static/js/2.172a6bd7.chunk.js": "/static/js/2.172a6bd7.chunk.js",
+    "static/js/2.172a6bd7.chunk.js.map": "/static/js/2.172a6bd7.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a4bfe0b39793539c81638bd60e80c639.js": "/precache-manifest.a4bfe0b39793539c81638bd60e80c639.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.d24788f3.chunk.css.map": "/static/css/2.d24788f3.chunk.css.map",
+    "static/css/main.d62fca54.chunk.css.map": "/static/css/main.d62fca54.chunk.css.map",
+    "static/media/adoption.83a07270.svg": "/static/media/adoption.83a07270.svg",
+    "static/media/community.27008c9b.svg": "/static/media/community.27008c9b.svg",
+    "static/media/connext.76d6272b.svg": "/static/media/connext.76d6272b.svg",
+    "static/media/educate.d4f54c2d.svg": "/static/media/educate.d4f54c2d.svg",
+    "static/media/support.0aa7f140.svg": "/static/media/support.0aa7f140.svg"
+  }
+}
