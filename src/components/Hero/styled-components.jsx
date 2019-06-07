@@ -49,7 +49,7 @@ export const Map = styled.div`
   }
 `;
 
-export const LearnButton = styled.button`
+export const LearnButton = styled.a`
   background: #693afa;
   border-color: #693afa;
   border-radius: 5px;
@@ -58,6 +58,7 @@ export const LearnButton = styled.button`
   padding: 10px 15px;
   margin: 25px 0;
   outline: none;
+  text-decoration: none;
   &:hover {
     background: #4223a4;
     border-color: #4223a4;

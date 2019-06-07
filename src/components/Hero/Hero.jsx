@@ -9,7 +9,7 @@ export default class HeroComponent extends Component {
       <Hero.Wrapper>
         <Hero.Description>
           Working together to save the future of the internet
-          <Hero.LearnButton>Learn More</Hero.LearnButton>
+          <Hero.LearnButton href="https://handshake.org/" target="_blank" rel="noopener noreferrer">Learn More</Hero.LearnButton>
         </Hero.Description>
         <Hero.Map>
           <NodeMapComponent />
