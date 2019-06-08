@@ -4,10 +4,6 @@
     "coord": [ -6.2603, 53.3498 ]
   },
   {
-    "name": "New Zealand",
-    "coord": [ 172.4662705, -43.3744881 ]
-  },
-  {
     "name": "St. Petersburg, Russia",
     "coord": [ 30.3351,59.9343 ]
   },
@@ -22,10 +18,6 @@
   {
     "name": "Minneapolis, USA",
     "coord": [ -93.2650, 44.9778 ]
-  },
-  {
-    "name": "Pretoria",
-    "coord": [ 28.2293, -25.7479 ]
   },
   {
     "name": "Dubai",
@@ -60,16 +52,7 @@
     "coord": [ 31.2304, 121.4737 ]
   },
   {
-    "name": "Australia",
-    "coord": [ 119.7751, -25.2744 ]
-  },
-  {
     "name": "Toronto",
     "coord": [ -79.3832, 43.6532 ]
-  },
-  {
-    "name": "?",
-    "coord": [ 79.3832, 43.6532 ]
   }
-
 ]

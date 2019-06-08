@@ -15,13 +15,13 @@ export const Wrapper = styled.div`
 export const Header = styled.h2`
   color: #3f3f44;
   font-size: 26px;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
 `;
 
 export const Hr = styled.hr`
   border: 1px solid #693afa;
-  margin: 0 0 35px;
-  width: 50px;
+  margin: 0 0 45px;
+  width: 60px;
 `;
 
 export const CardContainer = styled.div`
