@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.8d3418d3.chunk.css",
-    "main.js": "/static/js/main.e03d3448.chunk.js",
-    "main.js.map": "/static/js/main.e03d3448.chunk.js.map",
+    "main.js": "/static/js/main.8b3a1703.chunk.js",
+    "main.js.map": "/static/js/main.8b3a1703.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
     "static/css/2.d24788f3.chunk.css": "/static/css/2.d24788f3.chunk.css",
-    "static/js/2.172a6bd7.chunk.js": "/static/js/2.172a6bd7.chunk.js",
-    "static/js/2.172a6bd7.chunk.js.map": "/static/js/2.172a6bd7.chunk.js.map",
+    "static/js/2.ba840a12.chunk.js": "/static/js/2.ba840a12.chunk.js",
+    "static/js/2.ba840a12.chunk.js.map": "/static/js/2.ba840a12.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.739a8fef93c8b99771b99f3feaa78109.js": "/precache-manifest.739a8fef93c8b99771b99f3feaa78109.js",
+    "precache-manifest.392dc3d25845ff26b12f6abc078802d2.js": "/precache-manifest.392dc3d25845ff26b12f6abc078802d2.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d24788f3.chunk.css.map": "/static/css/2.d24788f3.chunk.css.map",
     "static/css/main.8d3418d3.chunk.css.map": "/static/css/main.8d3418d3.chunk.css.map",
     "static/media/HNSimple.cb6506f8.svg": "/static/media/HNSimple.cb6506f8.svg",
-    "static/media/UrkelLabs.7900cc85.svg": "/static/media/UrkelLabs.7900cc85.svg",
+    "static/media/UrkelLabs.9d446261.svg": "/static/media/UrkelLabs.9d446261.svg",
     "static/media/adoption.71a6149e.svg": "/static/media/adoption.71a6149e.svg",
     "static/media/community.665c4043.svg": "/static/media/community.665c4043.svg",
     "static/media/connext.76d6272b.svg": "/static/media/connext.76d6272b.svg",
     "static/media/educate.46cb8f56.svg": "/static/media/educate.46cb8f56.svg",
+    "static/media/kyokan.10a4a070.svg": "/static/media/kyokan.10a4a070.svg",
     "static/media/support.12506962.svg": "/static/media/support.12506962.svg"
   }
 }
