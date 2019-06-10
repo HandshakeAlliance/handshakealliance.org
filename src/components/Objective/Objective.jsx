@@ -102,7 +102,8 @@ export default class ObjectiveComponent extends Component {
       if (this.state.slides[i].key === this.state.activeSlide) break;
     }
     if (i === 0) {
-      // don't allow the user to click or swipe back
+      // go to last slide
+      this.updateActiveTab(null, this.state.slides[this.state.slides.length - 1].key)
     } else {
       this.updateActiveTab(null, this.state.slides[i - 1].key)
     }
@@ -115,7 +116,8 @@ export default class ObjectiveComponent extends Component {
       if (this.state.slides[i].key === this.state.activeSlide) break;
     }
     if (i === this.state.slides.length - 1) {
-      // don't allow the user to click or swipe forwards
+      // to to first slide
+      this.updateActiveTab(null, this.state.slides[0].key)
     } else {
       this.updateActiveTab(null, this.state.slides[i + 1].key)
     }
@@ -146,7 +148,16 @@ export default class ObjectiveComponent extends Component {
 
     this.clearAllAnimations(atElement)
 
-    if (atIndex > toIndex) {
+    const lastSlideToFirst = parseInt(atIndex) === this.state.slides.length - 1 && parseInt(toIndex) === 0;
+    const firstSlideToLast = parseInt(atIndex) ===  0 && parseInt(toIndex) === this.state.slides.length - 1;
+
+    if(lastSlideToFirst) {
+      atElement.classList.add('outLeft');
+      toElement.classList.add('inRight')
+    } else if(firstSlideToLast) {
+      atElement.classList.add('outRight');
+      toElement.classList.add('inLeft')
+    } else if (atIndex > toIndex) {
       atElement.classList.add('outRight');
       toElement.classList.add('inLeft')
     } else {
