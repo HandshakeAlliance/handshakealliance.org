@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class PoolLogo extends Component {
   render() {
     return (
-      <svg width="100%" height="100%" viewBox="0 0 3217 542" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+      <svg width="180px" viewBox="0 0 3217 542" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
           <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g id="Group-2" transform="translate(13.000000, 13.000000)">
                   <g id="Group">
