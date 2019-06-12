@@ -21,7 +21,7 @@ export default class ProjectsComponent extends Component {
             The unofficial Handshake block explorer. Claim your airdrops or delve into the chain here.
           </Projects.Card>
 
-          <Projects.Card href="https://handshakehash.com/" target="_blank">
+          <Projects.Card href="https://hnspool.org" target="_blank">
             <Projects.Brand><HNSPool /></Projects.Brand>
             Never mine alone again. Join a community of miners dedicated to solving blocks efficiently.
           </Projects.Card>
