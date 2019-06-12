@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import './App.scss';
 
 import {ThemeProvider} from 'styled-components';
@@ -20,6 +21,11 @@ const theme = {
   breakpoint: breakpoints,
   ...themes
 };
+
+function initializeReactGA() {
+  ReactGA.initialize('UA-133243722-1');
+  ReactGA.pageview('/');
+}
 
 function App() {
   return (

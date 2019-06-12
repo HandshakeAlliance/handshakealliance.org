@@ -9,6 +9,7 @@
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-ga": "^2.5.7",
     "react-scripts": "3.0.1",
     "react-simple-maps": "^0.12.1",
     "react-toastify": "^5.2.1",
