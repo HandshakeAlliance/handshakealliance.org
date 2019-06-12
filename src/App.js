@@ -28,6 +28,7 @@ function initializeReactGA() {
 }
 
 function App() {
+  initializeReactGA();
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
