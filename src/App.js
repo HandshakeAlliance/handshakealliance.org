@@ -2,13 +2,12 @@ import React from 'react';
 import ReactGA from 'react-ga';
 import './App.scss';
 
-import {ThemeProvider} from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import NavbarComponent from './components/Navbar/Navbar.jsx';
 import HeroComponent from './components/Hero/Hero.jsx';
 import ObjectiveComponent from './components/Objective/Objective.jsx';
 import ProjectsComponent from './components/Projects/Projects.jsx';
-import PartnersComponent from './components/Partners/Partners.jsx';
 import DonationsComponent from './components/Donations/Donations.jsx';
 import FooterComponent from './components/Footer/Footer.jsx';
 
@@ -36,13 +35,12 @@ function App() {
         <HeroComponent />
         <ObjectiveComponent />
         <ProjectsComponent />
-        <PartnersComponent />
         <DonationsComponent />
         <FooterComponent />
         <ToastContainer
           autoClose={3000}
           hideProgressBar={true}
-          />
+        />
       </div>
     </ThemeProvider>
   );

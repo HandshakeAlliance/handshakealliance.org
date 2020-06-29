@@ -3,7 +3,6 @@ import * as Hero from './styled-components';
 import NodeMapComponent from '../NodeMap/NodeMap';
 
 export default class HeroComponent extends Component {
-
   render() {
     return (
       <Hero.Wrapper>

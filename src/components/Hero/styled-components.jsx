@@ -48,22 +48,3 @@ export const Map = styled.div`
     padding: 0 30px 0 0;
   }
 `;
-
-export const LearnButton = styled.a`
-  background: #693afa;
-  border-color: #693afa;
-  border-radius: 5px;
-  color: #f2f2f2;
-  font-size: 20px;
-  padding: 10px 15px;
-  margin: 25px 0;
-  outline: none;
-  text-decoration: none;
-  &:hover {
-    background: #4223a4;
-    border-color: #4223a4;
-    color: #f2f2f2;
-    cursor: pointer;
-    transition: .2s ease-in-out;
-  }
-`;
