@@ -49,29 +49,6 @@ const TransformInRight = keyframes`
   }
 `;
 
-export const Wrapper = styled.div`
-  align-items: center;
-  background: #262626;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  justify-content: center;
-  padding: 75px 0 75px 0;
-`;
-
-export const Header = styled.h2`
-  color: #fff;
-  font-size: 24pt;
-  font-weight: 500;
-  margin-bottom: 16px;
-`;
-
-export const Hr = styled.hr`
-  border: 1px solid #693afa;
-  margin: 0 0 20px;
-  width: 60px;
-`;
-
 export const AboutParagraph = styled.div`
   height: auto;
   line-height: 20px;

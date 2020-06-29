@@ -1,29 +1,5 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  align-items: center;
-  background: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  padding: 75px 25px;
-  @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
-    padding: 75px 45px 90px 45px;
-  }
-`;
-
-export const Header = styled.h2`
-  color: #3f3f44;
-  font-size: 26px;
-  margin: 0 0 16px;
-`;
-
-export const Hr = styled.hr`
-  border: 1px solid #693afa;
-  margin: 0 0 45px;
-  width: 60px;
-`;
-
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: row;

@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import * as Donations from './styled-components';
+import React from 'react';
 import { toast } from 'react-toastify';
 
-export default class DonationsComponent extends Component {
-  onClick = e => {
-    const el = e.target;
-    el.select();
+// Components
+import * as Donations from './styled-components';
+import SectionWrapper from 'components/shared/SectionWrapper';
+import SectionHeader from 'components/shared/SectionHeader';
+
+export default function DonationsComponent() {
+  const handleClick = event => {
+    event.target.select();
     document.execCommand('copy');
     toast('Copied to clipboard', {
       className: 'toast-success'
     });
   }
 
-  render() {
-    return (
-      <Donations.Wrapper>
-        <Donations.Header>Support Development</Donations.Header>
-        <Donations.Hr />
-        <Donations.Body>All proceeds will go directly towards the teams developing the infrastructure for the Handshake protocol</Donations.Body>
-        <Donations.Address onClick={this.onClick} readOnly value="37jov2n9YKofVjCQX43MVSSc36GeL2RSss" />
-      </Donations.Wrapper>
-    )
-  }
+  return (
+    <SectionWrapper backgroundColor="#252525">
+      <SectionHeader color="#f2f2f2">Support Development</SectionHeader>
+      <Donations.Body>All proceeds will go directly towards the teams developing the infrastructure for the Handshake protocol</Donations.Body>
+      <Donations.Address onClick={handleClick} readOnly value="37jov2n9YKofVjCQX43MVSSc36GeL2RSss" />
+    </SectionWrapper>
+  )
 }
