@@ -5,6 +5,7 @@ import { Flex, Header } from "@urkellabs/ucl";
 
 const Wrapper = styled(Flex)`
   background: ${props => props.backgroundColor};
+  color: ${props => props.color};
   height: auto;
   padding: 75px 25px;
   @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
@@ -21,9 +22,11 @@ export default function SectionWrapper({ children, ...rest }) {
 }
 
 SectionWrapper.propTypes = {
-  backgroundColor: PropTypes.string
+  backgroundColor: PropTypes.string,
+  color: PropTypes.string
 };
 
 SectionWrapper.defaultProps = {
-  backgroundColor: "#f2f2f2"
+  backgroundColor: "#f2f2f2",
+  color: "#3f3f44"
 };

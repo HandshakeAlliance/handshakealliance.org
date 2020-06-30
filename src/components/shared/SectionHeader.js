@@ -1,10 +1,8 @@
 import React from 'react';
-import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Flex, Header } from "@urkellabs/ucl";
+import { Header } from "@urkellabs/ucl";
 
 const StyledHeader = styled(Header)`
-  color: ${props => props.color};
   font-size: 26px;
   margin: 0 0 16px;
   letter-spacing: 1px;
@@ -16,19 +14,11 @@ const Underline = styled.div`
   width: 60px;
 `;
 
-export default function SectionHeader({ children, ...rest }) {
+export default function SectionHeader({ children }) {
   return (
     <>
-      <StyledHeader small bold {...rest}>{children}</StyledHeader>
+      <StyledHeader small bold>{children}</StyledHeader>
       <Underline />
     </>
   );
 }
-
-SectionHeader.propTypes = {
-  color: PropTypes.string
-};
-
-SectionHeader.defaultProps = {
-  color: "#3f3f44"
-};
