@@ -99,10 +99,7 @@ export const Tab = styled.div`
 
 // stands for Carousel
 export const Car = styled.div`
-  /* Change below */
   align-items: center;
-  /* border: 1px solid #434343; */
-  color: #fff;
   display: flex;
   height: 460px;
   font-size: 12pt;
@@ -131,7 +128,6 @@ export const CarContainer = styled.div`
 `;
 
 export const CarSlide = styled.div`
-  background: #262626;
   opacity: 0;
   height: 100%;
   position: absolute;
@@ -166,9 +162,7 @@ export const SlideBody = styled.div`
 
 export const Arrow = styled.div`
   align-items: center;
-  background: #202020;
   border-radius: 50px;
-  /* border: 1px solid #fff; */
   border: 1px solid #696969;
   display: none;
   justify-content: center;

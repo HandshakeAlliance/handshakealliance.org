@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
 export const Body = styled.p`
-  color: #f2f2f2;
   max-width: 400px;
   margin-bottom: 35px;
-
   @media (min-width: ${props => props.theme.breakpoint.tabletMin}) {
     margin-bottom: 30px;
     max-width: 600px;

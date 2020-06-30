@@ -186,8 +186,8 @@ export default class ObjectiveComponent extends Component {
     const swipe = defineSwipe({ swipeDistance: 50 });
 
     return (
-      <SectionWrapper backgroundColor="#262626">
-        <SectionHeader color="#fff">
+      <SectionWrapper backgroundColor="#262626" color="#f2f2f2">
+        <SectionHeader>
           The Alliance
         </SectionHeader>
         <Objective.AboutParagraph>
