@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import { Flex } from "@urkellabs/ucl";
+import { Flex, Row, Col, Header, Spacer, Hidden, breakpoint } from "@urkellabs/ucl";
 
 // Components
 import SectionWrapper from "components/shared/SectionWrapper";
@@ -13,108 +13,109 @@ import hotbit from "img/hotbit.png";
 import mxc from "img/mxc.png";
 import namebase from "img/namebase.png";
 
-const Table = styled.table`
-  width: 90%;
-  border-collapse: collapse;
-  text-align: left;
-`;
-
-const Tr = styled.tr`
-  height: 75px;
-  border-bottom: 1px solid #d9d9d9;
-  &:last-child {
-    border: none;
-  }
-`;
-
 const Image = styled.img`
-  height: 15px;
+  height: 25px;
   width: auto;
-  margin-right: 10px;
+  margin-bottom: 10px;
+`;
 
-  &.mxc {
-    height: 13px;
-    width: 15px;
+const ImageWrapper = styled.a`
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px 0 rgba(105,57,250,0.2);
+  cursor: pointer;
+  color: #3F3F44;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 0 5px 0 rgba(105,57,250,0.35);
+    border-radius: 5%;
+  }
+
+  ${breakpoint.tablet} {
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    transition: 0.25s;
+  }
+  
+`;
+
+const SectionInfo = styled.p`
+  max-width: 600px;
+  line-height: 1.25rem;
+`;
+
+const CGLink = styled.a`
+  text-decoration: none;
+  border-bottom: 1px solid #3F3F44;
+  color: #3F3F44;
+  &:hover {
+    border-color: #693afa;
   }
 `;
 
 export default function ExchangesComponent() {
   return (
     <SectionWrapper>
-      <SectionHeader>Buy Handshake</SectionHeader>
-      <Table>
-        <thead>
-          <Tr>
-            <th>Exchange</th>
-            <th>Price</th>
-            <th>Volume (24h)</th>
-            <th>Markets</th>
-            <th>Updated</th>
-          </Tr>
-        </thead>
-        <tbody>
-          <Tr>
-            <td>
-              <Flex align="center">
-                <Image src={bittrex} alt="Bittrex" />
-                Bittrex
-              </Flex>
-            </td>
-            <td>--</td>
-            <td>--</td>
-            <td>USDT|BTC|ETH</td>
-            <td>--</td>
-          </Tr>
-          <Tr>
-            <td>
-              <Flex align="center">
-                <Image src={gate} alt="Gate" />
-                Gate.io
-              </Flex>
-            </td>
-            <td>--</td>
-            <td>--</td>
-            <td>USDT|BTC</td>
-            <td>--</td>
-          </Tr>
-          <Tr>
-            <td>
-              <Flex align="center">
-                <Image src={hotbit} alt="Hotbit" />
-                Hotbit
-              </Flex>
-            </td>
-            <td>--</td>
-            <td>--</td>
-            <td>USDT|BTC</td>
-            <td>--</td>
-          </Tr>
-          <Tr>
-            <td>
-              <Flex align="center">
-                <Image src={mxc} alt="MXC" className="mxc" />
-                MXC
-              </Flex>
-            </td>
-            <td>--</td>
-            <td>--</td>
-            <td>USDT</td>
-            <td>--</td>
-          </Tr>
-          <Tr>
-            <td>
-              <Flex align="center">
-                <Image src={namebase} alt="Namebase" />
-                Namebase
-              </Flex>
-            </td>
-            <td>--</td>
-            <td>--</td>
-            <td>BTC</td>
-            <td>--</td>
-          </Tr>
-        </tbody>
-      </Table>
+      <SectionHeader>Exchanges</SectionHeader>
+      <Flex justify="center">
+        <SectionInfo>
+          Purchasing HNS is currently possible on the following exchanges. Visit their sites for more information on
+          market pairs or you can see them here on <CGLink href="https://www.coingecko.com/en/coins/handshake#markets" target="_blank">CoinGecko</CGLink>
+        </SectionInfo>
+      </Flex>
+      <Spacer px={50} />
+      <Row>
+        <Col mobile={12} tablet>
+          <Flex justify="center">
+            <ImageWrapper href="https://bittrex.com" target="_blank">
+              <Image src={bittrex} alt="bittrex logo" />
+              <Header xsmall>Bittrex</Header>
+            </ImageWrapper>
+          </Flex>
+        </Col>
+        <Hidden tablet as={Spacer} />
+        <Col mobile={12} tablet>
+          <Flex columns align="center">
+            <ImageWrapper href="https://gate.io" target="_blank">
+              <Image src={gate} alt="gate.io logo" />
+              <Header xsmall>Gate</Header>
+            </ImageWrapper>
+          </Flex>
+        </Col>
+        <Hidden tablet as={Spacer} />
+        <Col mobile={12} tablet>
+          <Flex justify="center">
+            <ImageWrapper href="https://www.hotbit.io/" target="_blank">
+              <Image src={hotbit} alt="hotbit logo" />
+              <Header xsmall>Hotbit</Header>
+            </ImageWrapper>
+          </Flex>
+        </Col>
+        <Hidden tablet as={Spacer} />
+        <Col mobile={12} tablet>
+          <Flex justify="center">
+            <ImageWrapper href="https://www.mxc.com/" target="_blank">
+              <Image src={mxc} alt="mxc logo" />
+              <Header xsmall>MXC</Header>
+            </ImageWrapper>
+          </Flex>
+        </Col>
+        <Hidden tablet as={Spacer} />
+        <Col mobile={12} tablet>
+          <Flex justify="center">
+            <ImageWrapper href="https://www.namebase.io" target="_blank">
+              <Image src={namebase} alt="namebase logo" />
+              <Header xsmall>Namebase</Header>
+            </ImageWrapper>
+          </Flex>
+        </Col>
+      </Row>
     </SectionWrapper>
   );
 }
