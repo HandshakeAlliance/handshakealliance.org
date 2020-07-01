@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Flex, Header } from "@urkellabs/ucl";
+import { Flex } from "@urkellabs/ucl";
 
-const Wrapper = styled(Flex)`
+const Wrapper = styled.div`
   background: ${props => props.backgroundColor};
   color: ${props => props.color};
   height: auto;
@@ -15,7 +15,7 @@ const Wrapper = styled(Flex)`
 
 export default function SectionWrapper({ children, ...rest }) {
   return (
-    <Wrapper columns align="center" {...rest}>
+    <Wrapper {...rest}>
       {children}
     </Wrapper>
   );

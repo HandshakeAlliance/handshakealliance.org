@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import { Header } from "@urkellabs/ucl";
+import { Flex, Header } from "@urkellabs/ucl";
 
 const StyledHeader = styled(Header)`
   font-size: 26px;
@@ -16,9 +16,9 @@ const Underline = styled.div`
 
 export default function SectionHeader({ children }) {
   return (
-    <>
+    <Flex columns align="center">
       <StyledHeader small bold>{children}</StyledHeader>
       <Underline />
-    </>
+    </Flex>
   );
 }
