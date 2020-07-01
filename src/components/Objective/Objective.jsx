@@ -187,13 +187,10 @@ export default class ObjectiveComponent extends Component {
 
     return (
       <SectionWrapper backgroundColor="#262626" color="#f2f2f2">
-        <SectionHeader>
-          The Alliance
-        </SectionHeader>
         <Objective.AboutParagraph>
-          We are the Handshake Alliance, a group of passionate developers
+          The Handshake Alliance is a group of passionate developers
           working towards a more secure internet, open to everyone. We build
-          the tools to support the <a href="https://handshake.org" className="handshake" target="_blank" rel="noopener noreferrer">Handshake</a> blockchain and help drive adoption.
+          tools to support the <a href="https://handshake.org" className="handshake" target="_blank" rel="noopener noreferrer">Handshake</a> blockchain and help drive adoption.
         </Objective.AboutParagraph>
         <Objective.Tabs id='tabs'>
           {this.displayTabs()}
