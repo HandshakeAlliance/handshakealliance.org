@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Swipeable, defineSwipe } from 'react-touch';
+import { Flex } from "@urkellabs/ucl";
 
 // Components
 import * as Objective from './styled-components';
 import SectionWrapper from 'components/shared/SectionWrapper';
-import SectionHeader from 'components/shared/SectionHeader';
 
 // Images
 import { ReactComponent as Community } from 'img/community.svg';
@@ -187,27 +187,29 @@ export default class ObjectiveComponent extends Component {
 
     return (
       <SectionWrapper backgroundColor="#262626" color="#f2f2f2">
-        <Objective.AboutParagraph>
-          The Handshake Alliance is a group of passionate developers
-          working towards a more secure internet, open to everyone. We build
+        <Flex columns justify="center" align="center">
+          <Objective.AboutParagraph>
+            The Handshake Alliance is a group of passionate developers
+            working towards a more secure internet, open to everyone. We build
           tools to support the <a href="https://handshake.org" className="handshake" target="_blank" rel="noopener noreferrer">Handshake</a> blockchain and help drive adoption.
-        </Objective.AboutParagraph>
-        <Objective.Tabs id='tabs'>
-          {this.displayTabs()}
-        </Objective.Tabs>
-        <Objective.Car>
-          <Swipeable config={swipe} onSwipeLeft={this.next} onSwipeRight={this.previous}>
-            <Objective.CarContainer>
-              {this.displaySlides()}
-            </Objective.CarContainer>
-          </Swipeable>
-          <Objective.RightArrow onClick={this.next}>
-            <i className='fas fa-chevron-right'></i>
-          </Objective.RightArrow>
-          <Objective.LeftArrow onClick={this.previous}>
-            <i className='fas fa-chevron-left'></i>
-          </Objective.LeftArrow>
-        </Objective.Car>
+          </Objective.AboutParagraph>
+          <Objective.Tabs id='tabs'>
+            {this.displayTabs()}
+          </Objective.Tabs>
+          <Objective.Car>
+            <Swipeable config={swipe} onSwipeLeft={this.next} onSwipeRight={this.previous}>
+              <Objective.CarContainer>
+                {this.displaySlides()}
+              </Objective.CarContainer>
+            </Swipeable>
+            <Objective.RightArrow onClick={this.next}>
+              <i className='fas fa-chevron-right'></i>
+            </Objective.RightArrow>
+            <Objective.LeftArrow onClick={this.previous}>
+              <i className='fas fa-chevron-left'></i>
+            </Objective.LeftArrow>
+          </Objective.Car>
+        </Flex>
       </SectionWrapper>
     )
   }

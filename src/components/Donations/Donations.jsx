@@ -1,5 +1,6 @@
 import React from 'react';
 import { toast } from 'react-toastify';
+import { Flex } from '@urkellabs/ucl';
 
 // Components
 import * as Donations from './styled-components';
@@ -17,9 +18,11 @@ export default function DonationsComponent() {
 
   return (
     <SectionWrapper backgroundColor="#252525" color="#f2f2f2">
-      <SectionHeader>Support Development</SectionHeader>
-      <Donations.Body>All proceeds will go directly towards the teams developing the infrastructure for the Handshake protocol</Donations.Body>
-      <Donations.Address onClick={handleClick} readOnly value="37jov2n9YKofVjCQX43MVSSc36GeL2RSss" />
+      <Flex columns justify="center" align="center">
+        <SectionHeader>Support Development</SectionHeader>
+        <Donations.Body>All proceeds will go directly towards the teams developing the infrastructure for the Handshake protocol</Donations.Body>
+        <Donations.Address onClick={handleClick} readOnly value="37jov2n9YKofVjCQX43MVSSc36GeL2RSss" />
+      </Flex>
     </SectionWrapper>
   )
 }
