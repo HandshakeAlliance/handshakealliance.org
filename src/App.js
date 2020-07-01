@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import NavbarComponent from './components/Navbar/Navbar.jsx';
 import HeroComponent from './components/Hero/Hero.jsx';
 import ObjectiveComponent from './components/Objective/Objective.jsx';
-import ProjectsComponent from './components/Projects/Projects.jsx';
+import ToolsComponent from './components/Tools/Tools.jsx';
 import ExchangesComponent from "components/Exchanges/Exchanges";
 import DonationsComponent from './components/Donations/Donations.jsx';
 import FooterComponent from './components/Footer/Footer.jsx';
@@ -36,7 +36,7 @@ function App() {
         <HeroComponent />
         <ObjectiveComponent />
         <ExchangesComponent />
-        <ProjectsComponent />
+        <ToolsComponent />
         <DonationsComponent />
         <FooterComponent />
         <ToastContainer
