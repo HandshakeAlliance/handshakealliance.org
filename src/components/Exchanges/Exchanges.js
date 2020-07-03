@@ -42,7 +42,6 @@ const ImageWrapper = styled.a`
     border-radius: 50%;
     transition: 0.25s;
   }
-  
 `;
 
 const SectionInfo = styled.p`
@@ -50,7 +49,7 @@ const SectionInfo = styled.p`
   line-height: 1.25rem;
 `;
 
-const CGLink = styled.a`
+const MarketDataLink = styled.a`
   text-decoration: none;
   border-bottom: 1px solid #3F3F44;
   color: #3F3F44;
@@ -66,7 +65,8 @@ export default function ExchangesComponent() {
       <Flex justify="center">
         <SectionInfo>
           Purchasing HNS is currently possible on the following exchanges. Visit their sites for more information on
-          market pairs or you can see them here on <CGLink href="https://www.coingecko.com/en/coins/handshake#markets" target="_blank">CoinGecko</CGLink>
+          market pairs or you can see them here on <MarketDataLink href="https://www.coingecko.com/en/coins/handshake#markets" target="_blank">CoinGecko</MarketDataLink>
+          &nbsp;or <MarketDataLink href="https://coinmarketcap.com/currencies/handshake/markets" target="_blank">Coin Market Cap</MarketDataLink>
         </SectionInfo>
       </Flex>
       <Spacer px={50} />
