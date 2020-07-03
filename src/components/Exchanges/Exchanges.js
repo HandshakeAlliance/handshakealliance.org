@@ -104,14 +104,13 @@ export default function ExchangesComponent() {
   return (
     <SectionWrapper>
       <SectionHeader>Exchanges</SectionHeader>
-      <Flex justify="center">
+      <Flex justify="center" mb={50}>
         <SectionInfo>
           Purchasing HNS is currently possible on the following exchanges. Visit their sites for more information on
           market pairs or you can see them here on <MarketDataLink href="https://www.coingecko.com/en/coins/handshake#markets" target="_blank">CoinGecko</MarketDataLink>
           &nbsp;or <MarketDataLink href="https://coinmarketcap.com/currencies/handshake/markets" target="_blank">Coin Market Cap</MarketDataLink>
         </SectionInfo>
       </Flex>
-      <Spacer px={50} />
       <Row>
         <BuildExchanges />
       </Row>
