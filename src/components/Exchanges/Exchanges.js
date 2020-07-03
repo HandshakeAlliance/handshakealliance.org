@@ -53,10 +53,52 @@ const MarketDataLink = styled.a`
   text-decoration: none;
   border-bottom: 1px solid #3F3F44;
   color: #3F3F44;
-  &:hover {
-    border-color: #693afa;
-  }
+  &:hover { border-color: #693afa; }
 `;
+
+const BuildExchanges = () => {
+  const exchanges = [
+    {
+      name: "Bittrex",
+      link: "https://bittrex.com",
+      image: bittrex
+    },
+    {
+      name: "Gate",
+      link: "https://gate.io",
+      image: gate
+    },
+    {
+      name: "Hotbit",
+      link: "https://www.hotbit.io/",
+      image: hotbit
+    },
+    {
+      name: "MXC",
+      link: "https://www.mxc.com/",
+      image: mxc
+    },
+    {
+      name: "Namebase",
+      link: "https://www.namebase.io",
+      image: namebase
+    },
+  ];
+
+  return exchanges.map((exchange, i) => (
+    <React.Fragment key={i}>
+      <Col mobile={12} tablet>
+        <Flex justify="center">
+          <ImageWrapper href={exchange.link} target="_blank">
+            <Image src={exchange.image} alt={`${exchange.name} Logo`} />
+            <Header xsmall>{exchange.name}</Header>
+          </ImageWrapper>
+        </Flex>
+      </Col>
+      {i !== exchanges.length - 1 && (<Hidden tablet as={Spacer} />)}
+    </React.Fragment>
+  ));
+}
 
 export default function ExchangesComponent() {
   return (
@@ -71,50 +113,7 @@ export default function ExchangesComponent() {
       </Flex>
       <Spacer px={50} />
       <Row>
-        <Col mobile={12} tablet>
-          <Flex justify="center">
-            <ImageWrapper href="https://bittrex.com" target="_blank">
-              <Image src={bittrex} alt="bittrex logo" />
-              <Header xsmall>Bittrex</Header>
-            </ImageWrapper>
-          </Flex>
-        </Col>
-        <Hidden tablet as={Spacer} />
-        <Col mobile={12} tablet>
-          <Flex columns align="center">
-            <ImageWrapper href="https://gate.io" target="_blank">
-              <Image src={gate} alt="gate.io logo" />
-              <Header xsmall>Gate</Header>
-            </ImageWrapper>
-          </Flex>
-        </Col>
-        <Hidden tablet as={Spacer} />
-        <Col mobile={12} tablet>
-          <Flex justify="center">
-            <ImageWrapper href="https://www.hotbit.io/" target="_blank">
-              <Image src={hotbit} alt="hotbit logo" />
-              <Header xsmall>Hotbit</Header>
-            </ImageWrapper>
-          </Flex>
-        </Col>
-        <Hidden tablet as={Spacer} />
-        <Col mobile={12} tablet>
-          <Flex justify="center">
-            <ImageWrapper href="https://www.mxc.com/" target="_blank">
-              <Image src={mxc} alt="mxc logo" />
-              <Header xsmall>MXC</Header>
-            </ImageWrapper>
-          </Flex>
-        </Col>
-        <Hidden tablet as={Spacer} />
-        <Col mobile={12} tablet>
-          <Flex justify="center">
-            <ImageWrapper href="https://www.namebase.io" target="_blank">
-              <Image src={namebase} alt="namebase logo" />
-              <Header xsmall>Namebase</Header>
-            </ImageWrapper>
-          </Flex>
-        </Col>
+        <BuildExchanges />
       </Row>
     </SectionWrapper>
   );
