@@ -7,6 +7,7 @@
     "@urkellabs/ucl": "^0.1.112",
     "gh-pages": "^2.0.1",
     "jquery": "^3.5.1",
+    "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
