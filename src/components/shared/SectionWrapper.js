@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Flex } from "@urkellabs/ucl";
 
 const Wrapper = styled.div`
   background: ${props => props.backgroundColor};
