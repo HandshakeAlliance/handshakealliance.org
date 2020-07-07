@@ -10,14 +10,9 @@ export default class FooterComponent extends Component {
     e.preventDefault();
 
     let email = $(`input[name="EMAIL"]`);
-    let form = $(".emailContainer");
 
     if (email.val() === "") {
-      //Handle some error here
       toast('Please enter an email', { className: 'toast-warning' });
-      // toastr.error("Please enter an email");
-      // form.addClass("shake");
-      // removeAnimation();
       return;
     }
 
@@ -34,28 +29,19 @@ export default class FooterComponent extends Component {
       encode: true,
       error: function (err) {
         toast('Something went wrong, please try again or contact us.', { className: 'toast-danger' });
-        // toastr.error("Something went wrong, please try again later.");
-        // form.addClass("shake");
-        // removeAnimation();
         console.log("Uh, oh. There was an error:", err);
       }
     }) // All done! Let's show the user a success message:
       .done(function (data) {
         if (data.result === "error") {
           toast('This email is already registered', { className: 'toast-danger' });
-          // toastr.error("This email is already registered");
-          // form.addClass("shake");
-          // removeAnimation();
           console.log('error')
           return;
         } else {
           console.log('success')
           //Send google analytics hit
           window.ga("send", "event", "email", "submit");
-          // $("#heroEmailForm").hide();
           toast('Welcome to the alliance!', { className: 'toast-success' });
-          // $(".successMessage").show(); // Show the checkmark
-          // $("svg").addClass("active"); // Start animation of checkmark
         }
       });
   }
