@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-
-
 export const Pulse = keyframes`
   0% {
     transform: scale(.8)
@@ -25,35 +23,18 @@ const Expand = keyframes`
   }
 `;
 
-const FadeIn = keyframes`
-  0% {opacity: 0}
-  100%   { opacity: 1; }
-`;
-
-// These styled components will likely need a vocal explanation...
 const Ring = styled.circle`
   animation: ${Expand} linear 2s ${() => (Math.random() / 2) + 's'} infinite;
-`;
-
-const DelayedRing = styled.circle`
-  animation: ${FadeIn} linear 2s ${props => props.delay + 's'} forwards,
-    ${Expand} linear 2s ${props => props.delay + 2 + 's'} infinite;
-  opacity: 0;
 `;
 
 const Dot = styled.circle`
   animation: ${Pulse} linear 2s ${() => (Math.random() / 2) + 's'} infinite;
 `;
 
-const DelayedDot = styled.circle`
-  animation: ${FadeIn} linear 2s ${props => props.delay + 's'} forwards,
-    ${Pulse} linear 2s ${props => props.delay + 2 + 's'} infinite;
-`;
-
 export default class PulsingCircle extends Component {
   constructor(props) {
     super(props);
-    this.state= {
+    this.state = {
       color: props.color || '#693afa'
     };
   }
