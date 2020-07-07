@@ -3,42 +3,44 @@ import moment from "moment";
 
 export default function EventsComponent() {
   const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  // TODO: create an empty state
 
+  // TODO: move this to a hook
   useEffect(() => {
-    getEvents();
-  }, []);
+    setLoading(true);
 
-  const getEvents = () => {
-    function start() {
+    function init() {
       window.gapi.client
-        .init({
-          apiKey: process.env.REACT_APP_GOOGLE_API_KEY
-        })
+        .init({ apiKey: process.env.REACT_APP_GOOGLE_API_KEY })
         .then(() => {
           return window.gapi.client.request({
             path: `https://www.googleapis.com/calendar/v3/calendars/${process.env.REACT_APP_CALENDAR_ID}/events`
           });
         })
         .then(res => {
-          res.result.items.length > 0 ? (
+          if (res.result.items) {
+            setLoading(false);
             setEvents(res.result.items.sort((a, b) => (
               moment(a.start.dateTime).format("YYYYMMDD") -
               moment(b.start.dateTime).format("YYYYMMDD")
-            )))
-          ) : (
-              console.log("Err: there are no events this week")
-            );
+            )));
+          } else {
+            // TODO: set empty state to true
+            console.log("Error: no events have been scheduled yet");
+          }
         });
     }
-    window.gapi.load("client", start);
-  };
 
+    window.gapi.load("client", init);
+  }, []);
+
+  // TODO: remove when section is complete
   console.log(events);
 
   return (
     <>
-      <div>Events Section</div>
+      {loading ? <div>Loading...</div> : <div>{events[0]?.start.dateTime}</div>}
     </>
   );
 }
