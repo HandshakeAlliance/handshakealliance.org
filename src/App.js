@@ -11,6 +11,7 @@ import ToolsComponent from './components/Tools/Tools.jsx';
 import ExchangesComponent from "components/Exchanges/Exchanges";
 import DonationsComponent from './components/Donations/Donations.jsx';
 import FooterComponent from './components/Footer/Footer.jsx';
+import EventsComponent from 'components/Events/Events';
 
 import themes from './theme-variables.js';
 import { breakpoints } from './breakpoint-variables.js';
@@ -35,6 +36,7 @@ function App() {
         <NavbarComponent />
         <HeroComponent />
         <ObjectiveComponent />
+        <EventsComponent />
         <ExchangesComponent />
         <ToolsComponent />
         <DonationsComponent />
