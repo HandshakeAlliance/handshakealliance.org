@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Flex, Spacer, Header } from "@urkellabs/ucl";
 import styled from "styled-components";
-import moment from "moment";
+import moment from 'moment-timezone';
 
 // Components
 import SectionWrapper from "components/shared/SectionWrapper";
 import SectionHeader from "components/shared/SectionHeader";
+import AddToCalendarButton from "components/Events/AddToCalendarButton";
 
 // Images
 import Calendar from "components/Logos/Calendar";
@@ -22,6 +23,9 @@ const InfoWrapper = styled.div`
 export default function EventsComponent() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(false);
+  const browserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const event = events[0];
+  const eventTime = moment.tz(event?.start.dateTime, browserTimezone).format("dddd, MMM Do YYYY h:mm A z");
   // TODO: create an empty state
 
   // TODO: move this to a hook
@@ -65,8 +69,10 @@ export default function EventsComponent() {
         </CalendarWrapper>
         <Spacer px={50} />
         <InfoWrapper>
-          {loading ? <div>Loading...</div> : <Header xsmall bold>{moment(events[0]?.start.dateTime).utc().format("dddd, MMMM Do YYYY, h:mm:ss A")}</Header>}
+          {loading ? <div>Loading...</div> : <Header xsmall bold>{eventTime}</Header>}
         </InfoWrapper>
+        <Spacer />
+        <AddToCalendarButton data={event} value="Add to Calendar" />
       </Flex>
     </SectionWrapper>
   );
