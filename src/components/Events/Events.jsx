@@ -1,5 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { Flex, Spacer, Header } from "@urkellabs/ucl";
+import styled from "styled-components";
 import moment from "moment";
+
+// Components
+import SectionWrapper from "components/shared/SectionWrapper";
+import SectionHeader from "components/shared/SectionHeader";
+
+// Images
+import Calendar from "components/Logos/Calendar";
+
+const CalendarWrapper = styled.div`
+  height: 250px;
+  width: 750px;
+`;
+
+const InfoWrapper = styled.div`
+  width: 750px;
+`;
 
 export default function EventsComponent() {
   const [events, setEvents] = useState([]);
@@ -39,8 +57,17 @@ export default function EventsComponent() {
   console.log(events);
 
   return (
-    <>
-      {loading ? <div>Loading...</div> : <div>{events[0]?.start.dateTime}</div>}
-    </>
+    <SectionWrapper>
+      <Flex columns align="center">
+        <SectionHeader>Monthly Meeting</SectionHeader>
+        <CalendarWrapper>
+          <Calendar />
+        </CalendarWrapper>
+        <Spacer px={50} />
+        <InfoWrapper>
+          {loading ? <div>Loading...</div> : <Header xsmall bold>{moment(events[0]?.start.dateTime).utc().format("dddd, MMMM Do YYYY, h:mm:ss A")}</Header>}
+        </InfoWrapper>
+      </Flex>
+    </SectionWrapper>
   );
 }
