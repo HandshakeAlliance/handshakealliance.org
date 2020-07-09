@@ -9,9 +9,12 @@ const ButtonWrapper = styled.div`
 `;
 
 const Button = styled.button`
-  background: none;
+  background: #f2f2f2;
+  color: black;
   padding: 10px;
   border-radius: 5px;
+  border-style: none;
+  border: 2px solid black;
   cursor: pointer;
   min-width: 160px;
 `;
@@ -79,7 +82,6 @@ const makeOutlookCalendarUrl = (data) => makeUrl("https://outlook.live.com/owa",
   path: "/calendar/view/Month"
 });
 
-// Need to test
 const makeYahooCalendarUrl = (data) => makeUrl("https://calendar.yahoo.com", {
   v: 60,
   view: "d",
@@ -90,6 +92,7 @@ const makeYahooCalendarUrl = (data) => makeUrl("https://calendar.yahoo.com", {
   desc: data?.summary
 });
 
+// TODO: this needs refining
 const makeICSCalendarUrl = (data) => {
   const components = [
     "BEGIN:VCALENDAR",
@@ -120,7 +123,7 @@ function Dropdown({ active, urls }) {
   console.log(urls);
   return (
     <ButtonDropdown active={active}>
-      <Calendar href={urls.ical} download>iCal</Calendar>
+      <Calendar href={urls.ics} download>iCal</Calendar>
       <Calendar href={urls.google}>Google</Calendar>
       <Calendar href={urls.outlook}>Outlook</Calendar>
       <Calendar href={urls.yahoo}>Yahoo</Calendar>
