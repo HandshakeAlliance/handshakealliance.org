@@ -22,7 +22,7 @@ const InfoWrapper = styled.div`
 
 export default function EventsComponent() {
   const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const browserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const event = events[0];
   const eventTime = moment.tz(event?.start.dateTime, browserTimezone).format("dddd, MMM Do YYYY h:mm A z");
@@ -30,9 +30,7 @@ export default function EventsComponent() {
 
   // TODO: move this to a hook
   useEffect(() => {
-    setLoading(true);
-
-    function init() {
+    const init = () => {
       window.gapi.client
         .init({ apiKey: process.env.REACT_APP_GOOGLE_API_KEY })
         .then(() => {
@@ -48,7 +46,7 @@ export default function EventsComponent() {
               moment(b.start.dateTime).format("YYYYMMDD")
             )));
           } else {
-            // TODO: set empty state to true
+            setLoading(false);
             console.log("Error: no events have been scheduled yet");
           }
         });
@@ -56,9 +54,6 @@ export default function EventsComponent() {
 
     window.gapi.load("client", init);
   }, []);
-
-  // TODO: remove when section is complete
-  console.log(events);
 
   return (
     <SectionWrapper>
@@ -72,7 +67,7 @@ export default function EventsComponent() {
           {loading ? <div>Loading...</div> : <Header xsmall bold>{eventTime}</Header>}
         </InfoWrapper>
         <Spacer />
-        <AddToCalendarButton data={event} value="Add to Calendar" />
+        <AddToCalendarButton data={event} loading={loading} value="Add to Calendar" />
       </Flex>
     </SectionWrapper>
   );
