@@ -113,9 +113,9 @@ const Copyright = styled.div`
   opacity: .4;
 `;
 
-export default class FooterComponent extends Component {
+export default function FooterComponent() {
 
-  handleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault();
 
     let email = $(`input[name="EMAIL"]`);
@@ -155,57 +155,55 @@ export default class FooterComponent extends Component {
       });
   }
 
-  render() {
-    return (
-      <Wrapper>
+  return (
+    <Wrapper>
 
-        <ActionContainer>
-          <BlockColumn onSubmit={this.handleSubmit}>
-            <AllianceDesktopLogo height="36px" />
-            <SubscribeLabel>Want to save the internet? Subscribe for notifications.</SubscribeLabel>
-            <SubscribeInput placeholder="Enter Your Email" type="email" name="EMAIL" />
-            <SubscribeButton type="submit">Join Us</SubscribeButton>
-          </BlockColumn>
-          <Flex justify="space-around" mt={50} mb={50}>
-            <Flex columns align="flex-start" m={24}>
-              <Header xsmall bold>RESOURCES</Header>
-              <Link href="https://hnscan.com/" target="_blank" rel="noopener noreferrer">HNScan</Link>
-              <Link href="https://handshakeacademy.org/en/" target="_blank" rel="noopener noreferrer">Academy</Link>
-              <Link href="https://handshake.community/" target="_blank" rel="noopener noreferrer">Community</Link>
-            </Flex>
-            <Flex columns align="flex-start" m={24}>
-              <Header xsmall bold>RELATED</Header>
-              <Link href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">Github</Link>
-              <Link href="https://hnspool.com/" target="_blank" rel="noopener noreferrer">Pool</Link>
-              <Link href="https://hsd-dev.org/" target="_blank" rel="noopener noreferrer">Docs</Link>
-            </Flex>
+      <ActionContainer>
+        <BlockColumn onSubmit={handleSubmit}>
+          <AllianceDesktopLogo height="36px" />
+          <SubscribeLabel>Want to save the internet? Subscribe for notifications.</SubscribeLabel>
+          <SubscribeInput placeholder="Enter Your Email" type="email" name="EMAIL" />
+          <SubscribeButton type="submit">Join Us</SubscribeButton>
+        </BlockColumn>
+        <Flex justify="space-around" mt={50} mb={50}>
+          <Flex columns align="flex-start" m={24}>
+            <Header xsmall bold>RESOURCES</Header>
+            <Link href="https://hnscan.com/" target="_blank" rel="noopener noreferrer">HNScan</Link>
+            <Link href="https://handshakeacademy.org/en/" target="_blank" rel="noopener noreferrer">Academy</Link>
+            <Link href="https://handshake.community/" target="_blank" rel="noopener noreferrer">Community</Link>
           </Flex>
-        </ActionContainer>
-
-        <Flex columns justify="center" align="center" mt={20}>
-          <TextContainer>
-            <Header xsmall bold>CONTACT</Header>
-            <span>support@handshakealliance.org</span>
-          </TextContainer>
+          <Flex columns align="flex-start" m={24}>
+            <Header xsmall bold>RELATED</Header>
+            <Link href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">Github</Link>
+            <Link href="https://hnspool.com/" target="_blank" rel="noopener noreferrer">Pool</Link>
+            <Link href="https://hsd-dev.org/" target="_blank" rel="noopener noreferrer">Docs</Link>
+          </Flex>
         </Flex>
+      </ActionContainer>
 
-        <Flex justify="center">
-          <Fa href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github-alt"></i>
-          </Fa>
-          <Fa href="https://twitter.com/HNSalliance" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter"></i>
-          </Fa>
-          <Fa href="https://medium.com/@handshakealliance" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-medium-m"></i>
-          </Fa>
-        </Flex>
+      <Flex columns justify="center" align="center" mt={20}>
+        <TextContainer>
+          <Header xsmall bold>CONTACT</Header>
+          <span>support@handshakealliance.org</span>
+        </TextContainer>
+      </Flex>
 
-        <Copyright>
-          Copyright © 2019 Urkel Labs.
-          All rights reserved.
-        </Copyright>
-      </Wrapper>
-    )
-  }
+      <Flex justify="center">
+        <Fa href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-github-alt"></i>
+        </Fa>
+        <Fa href="https://twitter.com/HNSalliance" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-twitter"></i>
+        </Fa>
+        <Fa href="https://medium.com/@handshakealliance" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-medium-m"></i>
+        </Fa>
+      </Flex>
+
+      <Copyright>
+        Copyright © 2019 Urkel Labs.
+        All rights reserved.
+      </Copyright>
+    </Wrapper>
+  )
 }

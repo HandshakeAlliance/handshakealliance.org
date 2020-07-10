@@ -7,7 +7,7 @@ import styled from "@emotion/styled";
 import SectionWrapper from 'components/shared/SectionWrapper';
 import SectionHeader from 'components/shared/SectionHeader';
 
-export const Body = styled.p`
+const Body = styled.p`
   max-width: 400px;
   margin-bottom: 35px;
   ${breakpoint.tablet} {
@@ -16,7 +16,7 @@ export const Body = styled.p`
   }
 `;
 
-export const Address = styled.input`
+const Address = styled.input`
   background: #363636;
   border: 1.5px solid #696969;
   border-radius: 2px;
