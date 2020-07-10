@@ -73,8 +73,7 @@ export const Tabs = styled.div`
 
 export const Tab = styled.div`
   border-bottom: 1.5px solid #434343;
-  font-size: 14px;
-  /* TODO: this might need to be 12px */
+  font-size: 12px;
   padding: 8px 10px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -93,7 +92,7 @@ export const Tab = styled.div`
   }
 `;
 
-// stands for Carousel
+// Car stands for Carousel
 export const Car = styled.div`
   align-items: center;
   display: flex;

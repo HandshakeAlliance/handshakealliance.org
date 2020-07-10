@@ -1,8 +1,117 @@
 import React, { Component } from 'react';
+import { Flex, Header, breakpoint } from "@urkellabs/ucl";
+import styled from "@emotion/styled";
 import AllianceDesktopLogo from '../Logos/AllianceDesktopLogo';
-import * as Footer from './styled-components';
 import $ from "jquery";
 import { toast } from 'react-toastify';
+
+const Link = styled.a`
+  color: #f2f2f2;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 5px 0;
+  text-decoration: none;
+
+  &:visited {
+    color: #f2f2f2;
+  }
+  &:hover {
+    color: #693afa;
+  }
+`;
+
+const TextContainer = styled.div`
+  width: 75%;
+  max-width: 325px;
+  min-width: 260px;
+  margin-top: 10px;
+  font-size: 11pt;
+  text-align: center;
+`;
+
+const Wrapper = styled.div`
+  padding: 75px 24px 35px;
+  background: #202020;
+`;
+
+const ActionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  ${breakpoint.tablet} {
+    flex-direction: row;
+    padding: 0 50px;
+  }
+`;
+
+const BlockColumn = styled.form`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  ${breakpoint.tablet} {
+    align-items: flex-start;
+  }
+`;
+
+const SubscribeLabel = styled.div`
+  font-size: 14px;
+  margin: 20px 0 6px 0;
+  text-align: left;
+
+  ${breakpoint.tablet} {
+    margin: 12px 0 6px 0;
+  }
+`;
+
+const SubscribeInput = styled.input`
+  background: #363636;
+  border: 1.5px solid #696969;
+  border-radius: 2px;
+  color: #fafafa;
+  font-size: 16px;
+  margin-bottom: 12px;
+  min-width: 220px;
+  max-width: 350px;
+  outline: none;
+  padding: 8px;
+  width: 100%;
+`;
+
+const SubscribeButton = styled.button`
+  background: #693afa;
+  border: 1px solid #693afa;
+  border-radius: 2px;
+  color: #f2f2f2;
+  font-size: 14px;
+  padding: 8px;
+
+  &:hover, &:focus {
+    background: #4223a4;
+    border-color: #4223a4;
+    color: #f2f2f2;
+    cursor: pointer;
+    outline: none;
+    transition: .2s ease-in-out;
+  }
+`;
+
+const Fa = styled.a`
+  color: #fff;
+  margin: 24px;
+  font-size: 14pt;
+
+  &:hover {
+    color: #693afa;
+  }
+`;
+
+const Copyright = styled.div`
+  font-size: 14px;
+  opacity: .4;
+`;
 
 export default class FooterComponent extends Component {
 
@@ -48,57 +157,55 @@ export default class FooterComponent extends Component {
 
   render() {
     return (
-      <Footer.Wrapper>
-        <Footer.ActionContainer>
+      <Wrapper>
 
-          <Footer.BlockColumn onSubmit={this.handleSubmit}>
+        <ActionContainer>
+          <BlockColumn onSubmit={this.handleSubmit}>
             <AllianceDesktopLogo height="36px" />
-            <Footer.SubscribeLabel>Want to save the internet? Subscribe for notifications.</Footer.SubscribeLabel>
-            <Footer.SubscribeInput placeholder="Enter Your Email" type="email" name="EMAIL" />
-            <Footer.SubscribeButton type="submit">Join Us</Footer.SubscribeButton>
-          </Footer.BlockColumn>
+            <SubscribeLabel>Want to save the internet? Subscribe for notifications.</SubscribeLabel>
+            <SubscribeInput placeholder="Enter Your Email" type="email" name="EMAIL" />
+            <SubscribeButton type="submit">Join Us</SubscribeButton>
+          </BlockColumn>
+          <Flex justify="space-around" mt={50} mb={50}>
+            <Flex columns align="flex-start" m={24}>
+              <Header xsmall bold>RESOURCES</Header>
+              <Link href="https://hnscan.com/" target="_blank" rel="noopener noreferrer">HNScan</Link>
+              <Link href="https://handshakeacademy.org/en/" target="_blank" rel="noopener noreferrer">Academy</Link>
+              <Link href="https://handshake.community/" target="_blank" rel="noopener noreferrer">Community</Link>
+            </Flex>
+            <Flex columns align="flex-start" m={24}>
+              <Header xsmall bold>RELATED</Header>
+              <Link href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">Github</Link>
+              <Link href="https://hnspool.com/" target="_blank" rel="noopener noreferrer">Pool</Link>
+              <Link href="https://hsd-dev.org/" target="_blank" rel="noopener noreferrer">Docs</Link>
+            </Flex>
+          </Flex>
+        </ActionContainer>
 
-          <Footer.BlockRow>
-            <Footer.LinkContainer>
-              <Footer.Header>Resources</Footer.Header>
-              <Footer.Link href="https://hnscan.com/" target="_blank" rel="noopener noreferrer">HNScan</Footer.Link>
-              <Footer.Link href="https://handshakeacademy.org/en/" target="_blank" rel="noopener noreferrer">Academy</Footer.Link>
-              <Footer.Link href="https://handshake.community/" target="_blank" rel="noopener noreferrer">Community</Footer.Link>
-            </Footer.LinkContainer>
-            <Footer.LinkContainer>
-              <Footer.Header>Related</Footer.Header>
-              <Footer.Link href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">Github</Footer.Link>
-              <Footer.Link href="https://hnspool.com/" target="_blank" rel="noopener noreferrer">Pool</Footer.Link>
-              <Footer.Link href="https://hsd-dev.org/" target="_blank" rel="noopener noreferrer">Docs</Footer.Link>
-            </Footer.LinkContainer>
-          </Footer.BlockRow>
-
-        </Footer.ActionContainer>
-
-        <Footer.InfoContainer>
-          <Footer.TextContainer>
-            <Footer.Bold>CONTACT</Footer.Bold>
+        <Flex columns justify="center" align="center" mt={20}>
+          <TextContainer>
+            <Header xsmall bold>CONTACT</Header>
             <span>support@handshakealliance.org</span>
-          </Footer.TextContainer>
-        </Footer.InfoContainer>
+          </TextContainer>
+        </Flex>
 
-        <Footer.IconContainer>
-          <Footer.Fa href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">
+        <Flex justify="center">
+          <Fa href="https://github.com/HandshakeAlliance" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github-alt"></i>
-          </Footer.Fa>
-          <Footer.Fa href="https://twitter.com/HNSalliance" target="_blank" rel="noopener noreferrer">
+          </Fa>
+          <Fa href="https://twitter.com/HNSalliance" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-twitter"></i>
-          </Footer.Fa>
-          <Footer.Fa href="https://medium.com/@handshakealliance" target="_blank" rel="noopener noreferrer">
+          </Fa>
+          <Fa href="https://medium.com/@handshakealliance" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-medium-m"></i>
-          </Footer.Fa>
-        </Footer.IconContainer>
-        <Footer.Copyright>
+          </Fa>
+        </Flex>
+
+        <Copyright>
           Copyright © 2019 Urkel Labs.
           All rights reserved.
-        </Footer.Copyright>
-
-      </Footer.Wrapper>
+        </Copyright>
+      </Wrapper>
     )
   }
 }
