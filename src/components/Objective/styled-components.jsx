@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { breakpoint } from "@urkellabs/ucl";
 
 // ***--- Carousel Animations ---*** //
 const TransformOutLeft = keyframes`
@@ -56,7 +57,7 @@ export const AboutParagraph = styled.div`
   width: 90%;
   font-size: 14pt;
 
-  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+  ${breakpoint.tablet} {
     height: 100px;
     width: 750px;
     margin: 25px 0 10px 0;
@@ -73,22 +74,17 @@ export const Tabs = styled.div`
 export const Tab = styled.div`
   border-bottom: 1.5px solid #434343;
   font-size: 14px;
+  /* TODO: this might need to be 12px */
   padding: 8px 10px;
   text-transform: uppercase;
   white-space: nowrap;
 
-  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+  ${breakpoint.tablet} {
     font-size: inherit;
     padding: 12px 14px;
   }
 
-  @media(max-width: 445px) {
-    font-size: 12px;
-  }
-
-  &.active {
-    border-bottom: 1.5px solid #693afa;
-  }
+  &.active { border-bottom: 1.5px solid #693afa; }
 
   &:hover {
     cursor: pointer;
@@ -107,7 +103,7 @@ export const Car = styled.div`
   position: relative;
   width: 80%;
 
-  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+  ${breakpoint.tablet} {
     height: 400px;
     width: 750px;
   }
@@ -121,7 +117,7 @@ export const CarContainer = styled.div`
   position: relative;
   width: 100%;
 
-  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+  ${breakpoint.tablet} {
     height: 400px;
     width: 750px;
   }
@@ -133,21 +129,10 @@ export const CarSlide = styled.div`
   position: absolute;
   width: 100%;
 
-  &.outLeft {
-    animation: ${TransformOutLeft} 1s forwards;
-  }
-
-  &.outRight {
-    animation : ${TransformOutRight} 1s forwards;
-  }
-
-  &.inLeft {
-    animation: ${TransformInLeft} 1s forwards;
-  }
-
-  &.inRight {
-    animation : ${TransformInRight} 1s forwards;
-  }
+  &.outLeft { animation: ${TransformOutLeft} 1s forwards; }
+  &.outRight { animation : ${TransformOutRight} 1s forwards; }
+  &.inLeft { animation: ${TransformInLeft} 1s forwards; }
+  &.inRight { animation : ${TransformInRight} 1s forwards; }
 `;
 
 export const SlideBody = styled.div`
@@ -155,9 +140,7 @@ export const SlideBody = styled.div`
   max-width: 600px;
   padding-top: 20px;
 
-  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
-    padding-top: 25px;
-  }
+  ${breakpoint.tablet} { padding-top: 25px; }
 `;
 
 export const Arrow = styled.div`
@@ -172,18 +155,14 @@ export const Arrow = styled.div`
   width: 50px;
   z-index: 2;
 
-  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
-    display: flex;
-  }
+  ${breakpoint.tablet} { display: flex; }
 
   &:hover {
     border: 1.5px solid #969696;
     cursor: pointer;
   }
 
-  &:active {
-    border: 1.5px solid #693afa;
-  }
+  &:active { border: 1.5px solid #693afa; }
 `;
 
 export const RightArrow = styled(Arrow)`

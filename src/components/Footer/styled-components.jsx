@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoint } from "@urkellabs/ucl";
 
 export const Wrapper = styled.div`
   padding: 75px 24px 35px;
@@ -10,7 +11,7 @@ export const ActionContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+  ${breakpoint.tablet} {
     flex-direction: row;
     padding: 0 50px;
   }
@@ -22,7 +23,7 @@ export const BlockColumn = styled.form`
   flex-direction: column;
   justify-content: center;
 
-  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+  ${breakpoint.tablet} {
     align-items: flex-start;
   }
 `;
@@ -33,7 +34,7 @@ export const BlockRow = styled.div`
   justify-content: space-around;
   margin-top: 40px;
 
-  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+  ${breakpoint.tablet} {
     justify-content: flex-start;
   }
 `;
@@ -43,7 +44,7 @@ export const SubscribeLabel = styled.div`
   margin: 20px 0 6px 0;
   text-align: left;
 
-  @media(min-width: ${props => props.theme.breakpoint.tabletMin}) {
+  ${breakpoint.tablet} {
     margin: 12px 0 6px 0;
   }
 `;
@@ -127,13 +128,13 @@ export const Bold = styled.div`
   }
 `;
 
-export const InfoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: auto;
-  align-items: center;
-`;
+// export const InfoContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   height: auto;
+//   align-items: center;
+// `;
 
 export const IconContainer = styled.div`
   display: flex;

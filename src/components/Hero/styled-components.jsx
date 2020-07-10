@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoint } from "@urkellabs/ucl";
 
 export const Wrapper = styled.div`
   background: #202020;
@@ -8,13 +9,12 @@ export const Wrapper = styled.div`
   overflow: hidden;
   align-items: center;
 
-  @media(min-width: ${props => props.theme.breakpoint.desktopMin}) {
+  ${breakpoint.desktop} {
     align-items: stretch;
     flex-direction: row;
     height: auto;
     padding: 15px 0 135px 0;
-    /* height: calc(100vh - ${props => props.theme.breakpoint.navbarHeightDesktop}); */
-    top: ${props => props.theme.breakpoint.navbarHeightDesktop};
+    top: 80px;
   }
 `;
 
@@ -28,7 +28,7 @@ export const Description = styled.h1`
   flex-direction: column;
   padding: 40px 0 70px 0;
 
-  @media(min-width: ${props => props.theme.breakpoint.desktopMin}) {
+  ${breakpoint.desktop} {
     align-items: flex-start;
     max-width: 40%;
     display: flex;
@@ -44,7 +44,7 @@ export const Map = styled.div`
   flex-grow: 1;
   padding: 20px;
 
-  @media(min-width: ${props => props.theme.breakpoint.desktopMin}) {
+  ${breakpoint.desktop} {
     padding: 0 30px 0 0;
   }
 `;

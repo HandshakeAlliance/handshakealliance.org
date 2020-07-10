@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoint } from "@urkellabs/ucl";
 
 export const CardContainer = styled.div`
   display: flex;
@@ -27,7 +28,8 @@ export const Card = styled.a`
     transition: .25s ease-in-out;
     box-shadow: 0 0 5px 0 rgba(105, 57, 250, 0.5);
   }
-  @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
+
+  ${breakpoint.desktop} {
     height: 180px;
     margin: 10px;
   }

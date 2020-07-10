@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { breakpoint } from "@urkellabs/ucl";
 
 const Wrapper = styled.div`
   background: ${props => props.backgroundColor};
   color: ${props => props.color};
   height: auto;
   padding: 75px 25px;
-  @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
-    padding: 75px 45px 50px 45px;
-  }
+
+  ${breakpoint.desktop} { padding: 75px 45px 50px 45px; }
 `;
 
 export default function SectionWrapper({ children, ...rest }) {

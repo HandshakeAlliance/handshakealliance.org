@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoint } from "@urkellabs/ucl";
 
 export const Wrapper = styled.div`
   align-items: center;
@@ -8,7 +9,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   padding: 0 12px;
 
-  @media (min-width: ${props => props.theme.breakpoint.desktopMin}) {
+  ${breakpoint.desktop} {
     height: 80px;
     padding: 0 50px;
   }
