@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactGA from 'react-ga';
-import { ThemeProvider } from 'styled-components';
 import styled from "@emotion/styled";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,16 +14,7 @@ import DonationsComponent from 'components/Donations/Donations.jsx';
 import FooterComponent from 'components/Footer/Footer.jsx';
 import EventsComponent from 'components/Events/Events';
 
-import themes from './theme-variables.js';
-// TODO: replace with ucl breakpoints
-import { breakpoints } from './breakpoint-variables.js';
-
-// TODO: remove and fix breakpoints
-const theme = {
-  breakpoint: breakpoints,
-  ...themes
-};
-
+// TODO: is there a better way to do this - read react-ga docs
 function initializeReactGA() {
   ReactGA.initialize('UA-133243722-1');
   ReactGA.pageview('/');
@@ -40,21 +30,19 @@ const Content = styled.div`
 export default function App() {
   initializeReactGA();
   return (
-    <ThemeProvider theme={theme}>
-      <Content>
-        <NavbarComponent />
-        <HeroComponent />
-        <ObjectiveComponent />
-        <EventsComponent />
-        <ExchangesComponent />
-        <ToolsComponent />
-        <DonationsComponent />
-        <FooterComponent />
-        <ToastContainer
-          autoClose={3000}
-          hideProgressBar={true}
-        />
-      </Content>
-    </ThemeProvider>
+    <Content>
+      <NavbarComponent />
+      <HeroComponent />
+      <ObjectiveComponent />
+      <EventsComponent />
+      <ExchangesComponent />
+      <ToolsComponent />
+      <DonationsComponent />
+      <FooterComponent />
+      <ToastContainer
+        autoClose={3000}
+        hideProgressBar={true}
+      />
+    </Content>
   );
 }
