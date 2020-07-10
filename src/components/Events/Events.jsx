@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Flex, Spacer, Header } from "@urkellabs/ucl";
+import { Flex, Spacer } from "@urkellabs/ucl";
 import styled from "styled-components";
 import moment from 'moment-timezone';
 
@@ -20,15 +20,20 @@ const InfoWrapper = styled.div`
   width: 750px;
 `;
 
-export default function EventsComponent() {
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const browserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const event = events[0];
-  const eventTime = moment.tz(event?.start.dateTime, browserTimezone).format("dddd, MMM Do YYYY h:mm A z");
-  // TODO: create an empty state
+// TODO: move to a hooks folder
+const useIsMounted = () => {
+  const [mounted, setMounted] = useState(false);
 
-  // TODO: move this to a hook
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  return mounted;
+};
+
+// TODO: move to a hooks folder
+const useEventAsync = (componentIsMounted) => {
+  const [event, setEvent] = useState(null);
   useEffect(() => {
     const init = () => {
       window.gapi.client
@@ -40,34 +45,41 @@ export default function EventsComponent() {
         })
         .then(res => {
           if (res.result.items) {
-            setLoading(false);
-            setEvents(res.result.items.sort((a, b) => (
+            let events = res.result.items.sort((a, b) => (
               moment(a.start.dateTime).format("YYYYMMDD") -
               moment(b.start.dateTime).format("YYYYMMDD")
-            )));
+            ));
+            setEvent(events[0]);
           } else {
-            setLoading(false);
-            console.log("Error: no events have been scheduled yet");
+            console.log("Error: no events have been scheduled yet")
           }
         });
     }
 
     window.gapi.load("client", init);
-  }, []);
+  }, [componentIsMounted]);
 
+  if (componentIsMounted) {
+    return event;
+  }
+};
+
+export default function EventsComponent() {
+  const componentIsMounted = useIsMounted();
+  const event = useEventAsync(componentIsMounted);
+
+  // TODO: need a legit loading spinner
   return (
     <SectionWrapper>
       <Flex columns align="center">
-        <SectionHeader>Monthly Meeting</SectionHeader>
+        <SectionHeader>Alliance Meeting</SectionHeader>
         <CalendarWrapper>
           <Calendar />
         </CalendarWrapper>
         <Spacer px={50} />
         <InfoWrapper>
-          {loading ? <div>Loading...</div> : <Header xsmall bold>{eventTime}</Header>}
+          {!event ? <div>...Loading</div> : <AddToCalendarButton event={event} />}
         </InfoWrapper>
-        <Spacer />
-        <AddToCalendarButton data={event} loading={loading} value="Add to Calendar" />
       </Flex>
     </SectionWrapper>
   );
