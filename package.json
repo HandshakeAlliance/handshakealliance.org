@@ -1,43 +1,74 @@
 {
-  "name": "handshakealliance.org",
-  "private": true,
-  "description": "",
+  "name": "handshake-alliance-website",
   "version": "0.1.0",
+  "description": "Website of HandshakeAlliance.org",
+  "main": "index.js",
   "author": "Jake Geiser <jake@urkellabs.com>",
+  "license": "MIT",
+  "private": true,
   "dependencies": {
-    "gatsby": "^2.23.12",
-    "gatsby-image": "^2.4.9",
-    "gatsby-plugin-manifest": "^2.4.14",
-    "gatsby-plugin-react-helmet": "^3.3.6",
-    "gatsby-plugin-sharp": "^2.6.14",
-    "gatsby-source-filesystem": "^2.3.14",
-    "gatsby-transformer-sharp": "^2.5.7",
+    "gatsby": "^2.24.2",
+    "gatsby-image": "^2.4.13",
+    "gatsby-plugin-manifest": "^2.4.18",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-sharp": "^2.6.19",
+    "gatsby-source-filesystem": "^2.3.19",
+    "gatsby-transformer-sharp": "^2.5.11",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "react-scripts": "3.4.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "build": "gatsby clean && gatsby build",
+    "develop": "gatsby clean && gatsby develop",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "serve": "gatsby clean && gatsby serve",
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/HandshakeAlliance/handshakealliance.org"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/HandshakeAlliance/handshakealliance.org/issues"
+  },
+  "keywords": [
+    "handshake",
+    "alliance",
+    "dns",
+    "blockchain",
+    "crypto"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
