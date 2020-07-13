@@ -52,10 +52,15 @@
   ],
   "eslintConfig": {
     "extends": [
-      "react-app",
       "plugin:prettier/recommended"
     ]
   },
+  "eslintIgnore": [
+    "gatsby-browser.js",
+    "gatsby-config.js",
+    "gatsby-node.js",
+    "gatsby-ssr.js"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -63,12 +68,10 @@
   },
   "lint-staged": {
     "*.+(js|jsx)": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "*.+(json|css|md)": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   }
 }
