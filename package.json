@@ -22,13 +22,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "eslint": "^7.4.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5",
-    "react-scripts": "3.4.1"
+    "prettier": "^2.0.5"
   },
   "scripts": {
     "build": "gatsby clean && gatsby build",
@@ -50,29 +44,5 @@
     "dns",
     "blockchain",
     "crypto"
-  ],
-  "eslintConfig": {
-    "extends": [
-      "plugin:prettier/recommended"
-    ]
-  },
-  "eslintIgnore": [
-    "gatsby-browser.js",
-    "gatsby-config.js",
-    "gatsby-node.js",
-    "gatsby-ssr.js"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.+(js|jsx)": [
-      "eslint --fix"
-    ],
-    "*.+(json|css|md)": [
-      "prettier --write"
-    ]
-  }
+  ]
 }
