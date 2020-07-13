@@ -12,6 +12,10 @@
 /build
 /dest
 
+# build files
+.cache
+public/
+
 # misc
 .DS_Store
 .env
