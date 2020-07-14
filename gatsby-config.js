@@ -47,6 +47,12 @@ let plugins = [
       fonts: [`Inter:500,400,300`],
       display: "swap"
     }
+  },
+  {
+    resolve: 'gatsby-plugin-html-attributes',
+    options: {
+      'data-theme': 'light'
+    }
   }
 ]
 
