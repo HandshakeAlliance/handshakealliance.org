@@ -41,6 +41,13 @@ let plugins = [
       component: require.resolve(`./src/components/layout.js`)
     }
   },
+  {
+    resolve: `gatsby-plugin-google-fonts`,
+    options: {
+      fonts: [`Inter:500,400,300`],
+      display: "swap"
+    }
+  }
 ]
 
 module.exports = {
