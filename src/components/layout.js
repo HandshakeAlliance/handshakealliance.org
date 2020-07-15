@@ -1,9 +1,9 @@
-import React from "react"
-import { css } from "styled-components"
-import { GlobalStyles } from "@urkellabs/ucl"
+import React from "react";
+import styled, { css } from "styled-components";
+import { GlobalStyles } from "@urkellabs/ucl";
 
 // Components
-import Navbar from "components/Navbar"
+import Navbar from "components/Navbar";
 
 // @TODO: move to its own file and decide on final theme color palette
 const lightColors = css`
@@ -20,15 +20,19 @@ const lightColors = css`
   --color-gray-9: hsl(0, 0%, 0%);
 `;
 
+const Content = styled.main`
+  width: 95%;
+  margin: 0 auto;
+`;
+
 const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles fontFamily="'Inter', sans-serf" lightColors={lightColors} />
       <Navbar />
-      {/* @TODO: add content wrapper here for children */}
-      <main>{children}</main>
+      <Content>{children}</Content>
     </>
   )
-}
+};
 
-export default Layout
+export default Layout;
