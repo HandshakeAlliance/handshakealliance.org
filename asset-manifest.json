@@ -1,25 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.8d3418d3.chunk.css",
-    "main.js": "/static/js/main.ecc73428.chunk.js",
-    "main.js.map": "/static/js/main.ecc73428.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.d24788f3.chunk.css": "/static/css/2.d24788f3.chunk.css",
-    "static/js/2.91c01310.chunk.js": "/static/js/2.91c01310.chunk.js",
-    "static/js/2.91c01310.chunk.js.map": "/static/js/2.91c01310.chunk.js.map",
+    "main.css": "/static/css/main.8c500b36.chunk.css",
+    "main.js": "/static/js/main.fad07f9a.chunk.js",
+    "main.js.map": "/static/js/main.fad07f9a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7b93c697.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7b93c697.js.map",
+    "static/css/2.f42e59c9.chunk.css": "/static/css/2.f42e59c9.chunk.css",
+    "static/js/2.f71079fb.chunk.js": "/static/js/2.f71079fb.chunk.js",
+    "static/js/2.f71079fb.chunk.js.map": "/static/js/2.f71079fb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.7dccc0d1ce3d590eeb35fa2f48918212.js": "/precache-manifest.7dccc0d1ce3d590eeb35fa2f48918212.js",
+    "precache-manifest.5e33e5407dbdba9a8c0794677a6eeb77.js": "/precache-manifest.5e33e5407dbdba9a8c0794677a6eeb77.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.d24788f3.chunk.css.map": "/static/css/2.d24788f3.chunk.css.map",
-    "static/css/main.8d3418d3.chunk.css.map": "/static/css/main.8d3418d3.chunk.css.map",
-    "static/media/HNSimple.cb6506f8.svg": "/static/media/HNSimple.cb6506f8.svg",
-    "static/media/UrkelLabs.9d446261.svg": "/static/media/UrkelLabs.9d446261.svg",
+    "static/css/2.f42e59c9.chunk.css.map": "/static/css/2.f42e59c9.chunk.css.map",
+    "static/css/main.8c500b36.chunk.css.map": "/static/css/main.8c500b36.chunk.css.map",
+    "static/js/2.f71079fb.chunk.js.LICENSE.txt": "/static/js/2.f71079fb.chunk.js.LICENSE.txt",
     "static/media/adoption.71a6149e.svg": "/static/media/adoption.71a6149e.svg",
+    "static/media/bobwallet.svg": "/static/media/bobwallet.10578ac9.svg",
     "static/media/community.665c4043.svg": "/static/media/community.665c4043.svg",
-    "static/media/connext.76d6272b.svg": "/static/media/connext.76d6272b.svg",
     "static/media/educate.46cb8f56.svg": "/static/media/educate.46cb8f56.svg",
-    "static/media/kyokan.10a4a070.svg": "/static/media/kyokan.10a4a070.svg",
+    "static/media/github.svg": "/static/media/github.d622a140.svg",
     "static/media/support.12506962.svg": "/static/media/support.12506962.svg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b93c697.js",
+    "static/css/2.f42e59c9.chunk.css",
+    "static/js/2.f71079fb.chunk.js",
+    "static/css/main.8c500b36.chunk.css",
+    "static/js/main.fad07f9a.chunk.js"
+  ]
 }
