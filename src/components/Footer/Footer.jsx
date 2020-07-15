@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Flex, Header, breakpoint } from "@urkellabs/ucl";
 import styled from "@emotion/styled";
 import AllianceDesktopLogo from '../Logos/AllianceDesktopLogo';
