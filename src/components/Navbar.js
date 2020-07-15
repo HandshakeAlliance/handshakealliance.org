@@ -55,6 +55,7 @@ const Navbar = () => {
                 <NavBar.Item>Link</NavBar.Item>
               </NavBar.Dropdown>
             </NavBar.Item>
+            <NavBar.Item>Community</NavBar.Item>
           </NavBar.Start>
         </NavBar.Menu>
       </NavbarContainer>

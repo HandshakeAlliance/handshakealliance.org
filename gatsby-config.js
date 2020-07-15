@@ -38,7 +38,7 @@ let plugins = [
   {
     resolve: `gatsby-plugin-layout`,
     options: {
-      component: require.resolve(`./src/components/layout.js`)
+      component: require.resolve(`./src/components/gatsby/layout.js`)
     }
   },
   {
