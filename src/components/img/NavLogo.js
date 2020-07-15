@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const NavLogo = () => {
   const data = useStaticQuery(graphql`
@@ -13,9 +13,9 @@ const NavLogo = () => {
         }
       }
     }
-  `)
+  `);
 
-  return <Img fixed={data.file.childImageSharp.fixed} alt="HA Logo" />
+  return <Img fixed={data.file.childImageSharp.fixed} alt="HA Logo" />;
 }
 
-export default NavLogo
+export default NavLogo;

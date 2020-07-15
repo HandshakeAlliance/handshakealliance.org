@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { Header, Hidden } from "@urkellabs/ucl"
+import React from "react";
+import styled from "styled-components";
+import { Header, Hidden } from "@urkellabs/ucl";
 
 // Components
 import WorldMap from "components/img/WorldMap";
@@ -42,6 +42,6 @@ const Hero = () => {
       </TextWrapper>
     </Wrapper>
   )
-}
+};
 
-export default Hero
+export default Hero;

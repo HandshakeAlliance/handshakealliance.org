@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { NavBar, Flex, breakpoint } from "@urkellabs/ucl"
+import React from "react";
+import styled from "styled-components";
+import { NavBar, Flex, breakpoint } from "@urkellabs/ucl";
 
 // Components
-import NavLogo from "components/img/NavLogo"
+import NavLogo from "components/img/NavLogo";
 
 const Wrapper = styled(NavBar)`
   /* box-shadow: 0px 5px 10px 0px var(--color-gray-2); */
@@ -60,6 +60,6 @@ const Navbar = () => {
       </NavbarContainer>
     </Wrapper>
   )
-}
+};
 
-export default Navbar
+export default Navbar;
