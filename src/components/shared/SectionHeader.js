@@ -21,7 +21,7 @@ const Underline = styled.div`
 
 export default function SectionHeader({ children, title, align, ...rest }) {
   return (
-    <Flex columns align={align}>
+    <Flex columns align={align} mt={50} mb={50}>
       <StyledHeader {...rest}>{title}</StyledHeader>
       <Subtext>{children}</Subtext>
       <Underline />
