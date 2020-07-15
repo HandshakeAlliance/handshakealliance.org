@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { GlobalStyles } from "@urkellabs/ucl";
 
@@ -12,10 +12,25 @@ const Content = styled.main`
 `;
 
 const Layout = ({ children }) => {
+  const [boxShadow, setBoxShadow] = useState(false);
+
+  useEffect(() => {
+    if (window) {
+      const handleScroll = () => {
+        window.scrollY > 0 ? setBoxShadow(true) : setBoxShadow(false);
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, []);
+
   return (
     <>
       <GlobalStyles fontFamily="'Inter', sans-serf" lightColors={lightColors} />
-      <Navbar />
+      <Navbar boxShadow={boxShadow} />
       <Content>{children}</Content>
     </>
   )

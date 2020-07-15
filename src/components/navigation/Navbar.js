@@ -6,7 +6,7 @@ import { NavBar, Flex, breakpoint } from "@urkellabs/ucl";
 import NavLogo from "components/img/NavLogo";
 
 const Wrapper = styled(NavBar)`
-  /* box-shadow: 0px 5px 10px 0px var(--color-gray-2); */
+  box-shadow: ${props => props.boxShadow ? "0px 5px 10px 0px var(--color-gray-2)" : "none"};
   background: var(--color-gray-1);
   border-bottom: none;
   position: fixed;
@@ -28,9 +28,9 @@ const NavbarBrand = styled(NavBar.Brand)`
 `;
 
 // @TODO: get menu and links working
-const Navbar = () => {
+const Navbar = ({ boxShadow }) => {
   return (
-    <Wrapper height="75px">
+    <Wrapper height="75px" boxShadow={boxShadow}>
       <NavbarContainer>
         <NavbarBrand>
           <Flex align="center">
