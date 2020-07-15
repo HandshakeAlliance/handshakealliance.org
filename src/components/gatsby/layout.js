@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     if (window) {
       const handleScroll = () => {
-        window.scrollY > 0 ? setBoxShadow(true) : setBoxShadow(false);
+        window.scrollY > 10 ? setBoxShadow(true) : setBoxShadow(false);
       };
 
       window.addEventListener("scroll", handleScroll);
