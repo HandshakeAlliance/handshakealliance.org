@@ -1,15 +1,13 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import Img from "gatsby-image"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
+import Img from "gatsby-image";
 
 const HeroImage = styled(Img)`
-  width: 90%;
-  margin: 0 auto;
   min-height: 380px;
   background-size: cover;
-  background: no-repeat 50px;
-`
+  background: no-repeat;
+`;
 
 const WorldMap = () => {
   const data = useStaticQuery(graphql`
@@ -22,9 +20,9 @@ const WorldMap = () => {
         }
       }
     }
-  `)
+  `);
 
-  return <HeroImage fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <HeroImage fluid={data.placeholderImage.childImageSharp.fluid} />;
 }
 
-export default WorldMap
+export default WorldMap;
