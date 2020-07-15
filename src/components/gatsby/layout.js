@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { GlobalStyles } from "@urkellabs/ucl";
 
 // Components
-import Navbar from "components/Navbar";
+import Navbar from "components/navigation/Navbar";
 
 // @TODO: move to its own file and decide on final theme color palette
 const lightColors = css`
