@@ -6,29 +6,37 @@ import { NavBar, Flex, breakpoint } from "@urkellabs/ucl"
 import NavLogo from "components/img/NavLogo"
 
 const Wrapper = styled(NavBar)`
-  box-shadow: 0px 5px 10px 0px var(--color-gray-2);
+  /* box-shadow: 0px 5px 10px 0px var(--color-gray-2); */
+  background: var(--color-gray-1);
   border-bottom: none;
-`
+  position: fixed;
+  width: 100%;
+`;
 
 const NavbarContainer = styled(NavBar.Container)`
-  ${breakpoint.mobile} {
-    width: 100%;
+  width: 95%;
+  ${breakpoint.desktop} {
+    width: 95%;
   }
-`
+`;
 
 const NavbarBrand = styled(NavBar.Brand)`
   margin-right: 25px;
-`
+  ${breakpoint.upToDesktop} {
+    width: 100%;
+  }
+`;
 
+// @TODO: get menu and links working
 const Navbar = () => {
   return (
-    <Wrapper height="75px" >
+    <Wrapper height="75px">
       <NavbarContainer>
         <NavbarBrand>
           <Flex align="center">
             <NavLogo />
-            <NavBar.Burger />
           </Flex>
+          <NavBar.Burger />
         </NavbarBrand>
         <NavBar.Menu>
           <NavBar.Start>
