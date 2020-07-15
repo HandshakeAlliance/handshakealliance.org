@@ -20,12 +20,13 @@ const lightColors = css`
   --color-gray-9: hsl(0, 0%, 0%);
 `;
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles fontFamily="'Inter', sans-serf" lightColors={lightColors} />
       <Navbar />
       {/* @TODO: add content wrapper here for children */}
+      <main>{children}</main>
     </>
   )
 }
