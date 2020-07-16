@@ -4,6 +4,7 @@ import { GlobalStyles } from "@urkellabs/ucl";
 
 // Components
 import Navbar from "components/navigation/Navbar";
+import Footer from "components/navigation/Footer";
 import lightColors from "components/theme/lightColors";
 
 const Content = styled.main`
@@ -32,6 +33,7 @@ const Layout = ({ children }) => {
       <GlobalStyles fontFamily="'Inter', sans-serf" lightColors={lightColors} />
       <Navbar boxShadow={boxShadow} />
       <Content>{children}</Content>
+      <Footer />
     </>
   )
 };
