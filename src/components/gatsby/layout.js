@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { GlobalStyles } from "@urkellabs/ucl";
+import { GlobalStyles, breakpoint } from "@urkellabs/ucl";
 
 // Components
 import Navbar from "components/navigation/Navbar";
@@ -8,8 +8,12 @@ import Footer from "components/navigation/Footer";
 import lightColors from "components/theme/lightColors";
 
 const Content = styled.main`
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
+
+  ${breakpoint.desktop} {
+    width: 95%;
+  }
 `;
 
 const Layout = ({ children }) => {
@@ -30,7 +34,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <GlobalStyles fontFamily="'Inter', sans-serf" lightColors={lightColors} />
+      <GlobalStyles fontFamily="'Open Sans', sans-serf" lightColors={lightColors} />
       <Navbar boxShadow={boxShadow} />
       <Content>{children}</Content>
       <Footer />
