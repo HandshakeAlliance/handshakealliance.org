@@ -24,7 +24,7 @@ let plugins = [
       background_color: `#fff`,
       theme_color: `#693AFA`,
       display: `standalone`,
-      icon: `src/images/ha-logo.png`,
+      icon: `src/images/logo.png`,
     },
   },
   {
@@ -42,10 +42,14 @@ let plugins = [
     }
   },
   {
-    resolve: `gatsby-plugin-google-fonts`,
+    resolve: `gatsby-plugin-prefetch-google-fonts`,
     options: {
-      fonts: [`Inter:500,400,300`],
-      display: "swap"
+      fonts: [
+        {
+          family: `Open Sans`,
+          variants: [`600`, `500`, `400`]
+        }
+      ]
     }
   },
   {
