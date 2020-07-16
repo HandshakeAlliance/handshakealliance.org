@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { Header, Hidden } from "@urkellabs/ucl";
 
 // Components
-import WorldMap from "components/img/WorldMap";
+import Map from "components/img/Map";
 
 const Wrapper = styled.section`
   min-height: 380px;
-  padding: 100px 0 75px 0;
+  padding: 125px 0 75px 0;
   position: relative;
 `;
 
@@ -29,7 +29,7 @@ const Text = styled(Header)`
 const Hero = () => {
   return (
     <Wrapper>
-      <WorldMap />
+      <Map />
       <TextWrapper>
         <Hidden upToTablet>
           <Text large bold>Together, We Can</Text>

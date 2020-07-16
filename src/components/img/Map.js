@@ -9,10 +9,10 @@ const HeroImage = styled(Img)`
   background: no-repeat;
 `;
 
-const WorldMap = () => {
+const Map = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "world-map.png" }) {
+      placeholderImage: file(relativePath: { eq: "map.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -25,4 +25,4 @@ const WorldMap = () => {
   return <HeroImage fluid={data.placeholderImage.childImageSharp.fluid} />;
 }
 
-export default WorldMap;
+export default Map;
