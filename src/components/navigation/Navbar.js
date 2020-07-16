@@ -19,7 +19,8 @@ const CustomNavbar = styled(NavBar)`
 `;
 
 const NavbarContainer = styled(NavBar.Container)`
-  width: 95%;
+  width: 90%;
+  
   ${breakpoint.desktop} {
     width: 95%;
   }
@@ -32,9 +33,23 @@ const NavbarBrand = styled(NavBar.Brand)`
   }
 `;
 
+const NavbarItem = styled(NavBar.Item)`
+  &:hover {
+    color: var(--color-primary);
+  }
+`;
+
+const NavbarLinkDropdown = styled(NavBar.Item)`
+  &:hover {
+    & .link {
+      color: var(--color-primary);
+    }
+  }
+`;
+
 const Announcement = styled(Flex)`
   height: 25px;
-  background: #693AFA;
+  background: var(--color-primary);
   color: var(--color-gray-1);
   font-size: 12px;
   font-weight: 500;
@@ -46,7 +61,7 @@ const Navbar = ({ boxShadow }) => {
     <Wrapper>
       {/* @TODO: remove when all of the pages are navigable */}
       <Announcement justify="center" align="center">
-        <span>This website is still under construction. Some links and pages be fully functional yet</span>
+        <span>This site is under construction. Some features are not available yet</span>
       </Announcement>
       <CustomNavbar height="75px" boxShadow={boxShadow}>
         <NavbarContainer>
@@ -58,22 +73,22 @@ const Navbar = ({ boxShadow }) => {
           </NavbarBrand>
           <NavBar.Menu>
             <NavBar.Start>
-              <NavBar.Item>Handshake</NavBar.Item>
-              <NavBar.Item hoverable dropdown>
-                <NavBar.Link>Individuals</NavBar.Link>
+              <NavbarItem>Handshake</NavbarItem>
+              <NavbarLinkDropdown hoverable dropdown>
+                <NavBar.Link className="link">Individuals</NavBar.Link>
                 <NavBar.Dropdown>
-                  <NavBar.Item>Link</NavBar.Item>
-                  <NavBar.Item>Link</NavBar.Item>
+                  <NavbarItem>Link</NavbarItem>
+                  <NavbarItem>Link</NavbarItem>
                 </NavBar.Dropdown>
-              </NavBar.Item>
-              <NavBar.Item hoverable dropdown>
-                <NavBar.Link>Developers</NavBar.Link>
+              </NavbarLinkDropdown>
+              <NavbarLinkDropdown hoverable dropdown>
+                <NavBar.Link className="link">Developers</NavBar.Link>
                 <NavBar.Dropdown>
-                  <NavBar.Item>Link</NavBar.Item>
-                  <NavBar.Item>Link</NavBar.Item>
+                  <NavbarItem>Link</NavbarItem>
+                  <NavbarItem>Link</NavbarItem>
                 </NavBar.Dropdown>
-              </NavBar.Item>
-              <NavBar.Item>Community</NavBar.Item>
+              </NavbarLinkDropdown>
+              <NavbarItem>Community</NavbarItem>
             </NavBar.Start>
           </NavBar.Menu>
         </NavbarContainer>

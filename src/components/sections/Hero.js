@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Header, Hidden } from "@urkellabs/ucl";
+import { Header, Hidden, breakpoint } from "@urkellabs/ucl";
 
 // Components
 import Map from "components/img/Map";
@@ -18,8 +18,12 @@ const TextWrapper = styled.div`
   right: 0; 
   margin: 0 auto;
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 25%, rgba(255,255,255,0.5) 75%, rgba(255,255,255,0) 100%);
-  width: 500px;
+  width: 400px;
   text-align: center;
+
+  ${breakpoint.tablet} {
+    width: 500px;
+  }
 `;
 
 const Text = styled(Header)`

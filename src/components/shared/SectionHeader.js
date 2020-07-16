@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
-import { Flex, Header } from "@urkellabs/ucl";
+import { Flex, Header, breakpoint } from "@urkellabs/ucl";
 
 const StyledHeader = styled(Header)`
   margin: 0 0 16px;
   letter-spacing: 1px;
   font-weight: 500;
+  text-align: center;
 `;
 
 const Subtext = styled.div`
