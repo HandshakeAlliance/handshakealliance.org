@@ -3,21 +3,28 @@ import styled from "styled-components";
 import { Flex, Header } from "@urkellabs/ucl";
 
 const StyledHeader = styled(Header)`
-  font-size: 26px;
   margin: 0 0 16px;
   letter-spacing: 1px;
+  font-weight: 500;
+  text-align: center;
+`;
+
+const Subtext = styled.div`
+  max-width: 600px;
+  text-align: center;
 `;
 
 const Underline = styled.div`
-  border: 1px solid #693afa;
-  margin: 0 0 45px;
-  width: 60px;
+  border: 2px solid var(--color-primary-3);
+  margin-top: 50px;
+  width: 100px;
 `;
 
-export default function SectionHeader({ children }) {
+export default function SectionHeader({ children, title, align, ...rest }) {
   return (
-    <Flex columns align="center">
-      <StyledHeader small bold>{children}</StyledHeader>
+    <Flex columns align={align} mt={50} mb={50}>
+      <StyledHeader {...rest}>{title}</StyledHeader>
+      <Subtext>{children}</Subtext>
       <Underline />
     </Flex>
   );
