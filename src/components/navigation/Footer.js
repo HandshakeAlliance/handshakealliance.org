@@ -42,6 +42,7 @@ const Footer = () => {
             <StyledHeader bold>Individuals</StyledHeader>
             <FooterLink>What is Handshake?</FooterLink>
             <FooterLink>What is HNS?</FooterLink>
+            <FooterLink>Earn HNS</FooterLink>
             <FooterLink>Use Handshake</FooterLink>
             <FooterLink>Handshake Wallets</FooterLink>
             <FooterLink>Guides and Resources</FooterLink>
