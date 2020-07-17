@@ -91,15 +91,21 @@ const Navbar = ({ boxShadow }) => {
               <NavbarLinkDropdown hoverable dropdown>
                 <NavBar.Link className="link">Individuals</NavBar.Link>
                 <NavBar.Dropdown>
-                  <NavbarItem>Link</NavbarItem>
-                  <NavbarItem>Link</NavbarItem>
+                  <NavbarItem>What is Handshake?</NavbarItem>
+                  <NavbarItem>What is HNS?</NavbarItem>
+                  <NavbarItem>Earn HNS</NavbarItem>
+                  <NavbarItem>Use Handshake</NavbarItem>
+                  <NavbarItem>Handshake Wallets</NavbarItem>
+                  <NavbarItem>Guides and Resources</NavbarItem>
                 </NavBar.Dropdown>
               </NavbarLinkDropdown>
               <NavbarLinkDropdown hoverable dropdown>
                 <NavBar.Link className="link">Developers</NavBar.Link>
                 <NavBar.Dropdown>
-                  <NavbarItem>Link</NavbarItem>
-                  <NavbarItem>Link</NavbarItem>
+                  <NavbarItem>Get Started</NavbarItem>
+                  <NavbarItem>Developer Resources</NavbarItem>
+                  <NavbarItem>Handshake Whitepaper</NavbarItem>
+                  <NavbarItem>Developer Roadmap</NavbarItem>
                 </NavBar.Dropdown>
               </NavbarLinkDropdown>
               <NavbarItem>Community</NavbarItem>
