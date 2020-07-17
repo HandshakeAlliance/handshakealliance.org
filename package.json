@@ -29,9 +29,12 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "prettier": "^2.0.5"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d public",
     "build": "gatsby clean && gatsby build",
     "develop": "gatsby clean && gatsby develop",
     "start": "npm run develop",
