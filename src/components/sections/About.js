@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Col, Flex, Header, Spacer, breakpoint } from "@urkellabs/ucl";
+import { Row, Col, Flex, Header, Hidden, Spacer, breakpoint } from "@urkellabs/ucl";
 
 // Components
 import SectionHeader from "components/shared/SectionHeader";
@@ -16,7 +16,7 @@ const Wrapper = styled.section`
 
 const StyledHeader = styled(Header)`
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const SectionSubtext = styled(Header)`
@@ -25,9 +25,12 @@ const SectionSubtext = styled(Header)`
 
 const Subtext = styled(Header)`
   color: var(--color-gray-6);
+  margin-bottom: 25px;
+  max-width: 600px;
 
-  ${breakpoint.tablet} {
-    min-height: 150px;
+  ${breakpoint.onlyTablet} {
+    min-height: 100px;
+    margin-bottom: 0;
   }
 `;
 
@@ -35,6 +38,19 @@ const Subtext = styled(Header)`
 const StyledLink = styled.div`
   color: var(--color-primary);
   cursor: pointer;
+
+  &:hover {
+    color: var(--color-primary-dark);
+    & .arrow {
+      transform: translate(5px, 0);
+      transition: all 0.25s;
+    }
+  }
+`;
+
+const Arrow = styled.div`
+  display: inline-block;
+  padding-left: 5px;
 `;
 
 const About = () => {
@@ -45,50 +61,51 @@ const About = () => {
       </SectionHeader>
       <Spacer px={75} />
       <Row>
-        {/* @TODO: add call to actions for each category */}
-        <Col mobile={12} tablet mb={25} mt={25}>
+        <Col mobile={12} desktop mb={25} mt={25}>
           <Research />
           <Flex columns mt={50}>
             <StyledHeader xsmall bold>About Handshake</StyledHeader>
             <Spacer />
             <Subtext xsmall>
-              Suspendisse auctor velit sit amet odio vestibulum rutrum.
-              Morbi a neque at urna tincidunt varius nec sed mauris.
-              Nulla id ligula imperdiet, feugiat elit sit amet, vulputate enim.
-              In nec faucibus ex. Cras convallis a magna quis sodales.
+              Get to know the Handshake Protocol, why it was created, and how it would benefit
+              those using it
             </Subtext>
-            <Spacer />
-            <StyledLink>Get started with Handshake --></StyledLink>
+            <StyledLink>
+              Get started with Handshake
+              <Arrow className="arrow">&rarr;</Arrow>
+            </StyledLink>
           </Flex>
         </Col>
-        <Col mobile={12} tablet mb={25} mt={25}>
+        <Col mobile={12} desktop mb={25} mt={25}>
           <Developers />
           <Flex columns mt={50}>
             <StyledHeader xsmall bold>Developers</StyledHeader>
             <Spacer />
             <Subtext xsmall>
-              Suspendisse auctor velit sit amet odio vestibulum rutrum.
-              Morbi a neque at urna tincidunt varius nec sed mauris.
-              Nulla id ligula imperdiet, feugiat elit sit amet, vulputate enim.
-              In nec faucibus ex. Cras convallis a magna quis sodales.
+              Learn about the technical details of the Handshake Protocol and how you can help
             </Subtext>
-            <Spacer />
-            <StyledLink>Start building --></StyledLink>
+            <StyledLink>
+              <Flex>
+                Start building
+                <Arrow className="arrow">&rarr;</Arrow>
+              </Flex>
+            </StyledLink>
           </Flex>
         </Col>
-        <Col mobile={12} tablet mb={25} mt={25}>
+        <Col mobile={12} desktop mb={25} mt={25}>
           <Community />
           <Flex columns mt={50}>
             <StyledHeader xsmall bold>Community</StyledHeader>
             <Spacer />
             <Subtext xsmall>
-              Suspendisse auctor velit sit amet odio vestibulum rutrum.
-              Morbi a neque at urna tincidunt varius nec sed mauris.
-              Nulla id ligula imperdiet, feugiat elit sit amet, vulputate enim.
-              In nec faucibus ex. Cras convallis a magna quis sodales.
+              Making a positive impact requires the work of many. Join the conversation of a better internet
             </Subtext>
-            <Spacer />
-            <StyledLink>Explore the community --></StyledLink>
+            <StyledLink>
+              <Flex>
+                Explore the community
+                <Arrow className="arrow">&rarr;</Arrow>
+              </Flex>
+            </StyledLink>
           </Flex>
         </Col>
       </Row>
