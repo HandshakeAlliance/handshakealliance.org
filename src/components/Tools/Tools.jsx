@@ -23,7 +23,7 @@ export default function ToolsComponent() {
       <Tools.CardContainer>
         <Tools.Card href="https://hnscan.com" target="_blank">
           <Tools.Brand><HNScan /></Tools.Brand>
-            Explore what is happening on the Handshake blockcahin with HNScan
+            Explore what is happening on the Handshake blockchain with HNScan
           </Tools.Card>
 
         <Tools.Card href="https://github.com/kyokan/bob-wallet" target="_blank">
