@@ -40,9 +40,23 @@ const NavbarItem = styled(NavBar.Item)`
 `;
 
 const NavbarLinkDropdown = styled(NavBar.Item)`
+  a {
+    &::after {
+      border-color: var(--color-black);
+      border-width: 1.75px;
+      height: 0.5em;
+      width: 0.5em;
+    }
+  }
+
   &:hover {
     & .link {
       color: var(--color-primary);
+    }
+    a {
+      &::after {
+        border-color: var(--color-primary);
+      }
     }
   }
 `;
