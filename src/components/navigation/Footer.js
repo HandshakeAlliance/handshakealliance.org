@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Col, Flex, Header, Hidden, Spacer, breakpoint } from "@urkellabs/ucl";
+import { Row, Col, Header, breakpoint } from "@urkellabs/ucl";
 
 const StyledFooter = styled.footer`
   margin: 100px 0 25px 0;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Col, Flex, Header, Hidden, Spacer, breakpoint } from "@urkellabs/ucl";
+import { Row, Col, Flex, Header, Spacer, breakpoint } from "@urkellabs/ucl";
 
 // Components
 import SectionHeader from "components/shared/SectionHeader";
