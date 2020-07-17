@@ -15,6 +15,7 @@ const lightColors = css`
   --color-gray-9: hsl(0, 0%, 0%);
 
   /* Colors */
+  --color-primary-dark: hsl(255, 65%, 40%);
   --color-primary: hsl(255, 95%, 60%);
   --color-primary-1: hsl(255, 95%, 70%);
   --color-primary-2: hsl(255, 95%, 80%);
