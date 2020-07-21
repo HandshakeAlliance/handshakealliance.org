@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 import { Row, Col, Header, breakpoint } from "@urkellabs/ucl";
 
 const StyledFooter = styled.footer`
@@ -21,11 +22,12 @@ const StyledHeader = styled(Header)`
   margin-bottom: 15px;
 `;
 
-const FooterLink = styled(Header)`
+const FooterLink = styled(Link)`
   font-size: 14px;
   margin-bottom: 15px;
   cursor: pointer;
   color: var(--color-gray-6);
+  display: block;
 
   &:hover {
     color: var(--color-primary);
@@ -40,35 +42,35 @@ const Footer = () => {
         <Row>
           <Col mobile={12} tablet={6} desktop mb={25}>
             <StyledHeader bold>Individuals</StyledHeader>
-            <FooterLink>What is Handshake?</FooterLink>
-            <FooterLink>What is HNS?</FooterLink>
-            <FooterLink>Earn HNS</FooterLink>
-            <FooterLink>Use Handshake</FooterLink>
-            <FooterLink>Handshake Wallets</FooterLink>
-            <FooterLink>Guides and Resources</FooterLink>
+            <FooterLink to="/handshake">What is Handshake?</FooterLink>
+            <FooterLink to="/hns">What is HNS?</FooterLink>
+            <FooterLink to="/earn">Earn HNS</FooterLink>
+            <FooterLink to="/use">Use Handshake</FooterLink>
+            <FooterLink to="/wallets">Handshake Wallets</FooterLink>
+            <FooterLink to="/guides">Guides and Resources</FooterLink>
           </Col>
           <Col mobile={12} tablet={6} desktop mb={25}>
             <StyledHeader bold>Developers</StyledHeader>
-            <FooterLink>Get Started</FooterLink>
-            <FooterLink>Developer Resources</FooterLink>
-            <FooterLink>Handshake Whitepaper</FooterLink>
-            <FooterLink>Developer Roadmap</FooterLink>
+            <FooterLink to="/build">Get Started</FooterLink>
+            <FooterLink to="/resources">Developer Resources</FooterLink>
+            <FooterLink to="/whitepaper">Handshake Whitepaper</FooterLink>
+            <FooterLink to="/roadmap">Developer Roadmap</FooterLink>
           </Col>
           <Col mobile={12} tablet={6} desktop mb={25}>
             <StyledHeader bold>Community</StyledHeader>
-            <FooterLink>Blog</FooterLink>
-            <FooterLink>How Can I Help?</FooterLink>
-            <FooterLink>Developer Assets</FooterLink>
-            <FooterLink>Support</FooterLink>
+            <FooterLink to="/blog">Blog</FooterLink>
+            <FooterLink to="/help">How Can I Help?</FooterLink>
+            <FooterLink to="/assets">Developer Assets</FooterLink>
+            <FooterLink to="/support">Support</FooterLink>
           </Col>
           <Col mobile={12} tablet={6} desktop mb={25}>
             <StyledHeader bold>About Handshakealliance.org</StyledHeader>
-            <FooterLink>About Us</FooterLink>
-            <FooterLink>Language Support</FooterLink>
-            <FooterLink>Privacy Policy</FooterLink>
-            <FooterLink>Terms of Use</FooterLink>
-            <FooterLink>Cookie Policy</FooterLink>
-            <FooterLink>Contact</FooterLink>
+            <FooterLink to="/about">About Us</FooterLink>
+            <FooterLink to="/language">Language Support</FooterLink>
+            <FooterLink to="/privacy">Privacy Policy</FooterLink>
+            <FooterLink to="/terms">Terms of Use</FooterLink>
+            <FooterLink to="/cookies">Cookie Policy</FooterLink>
+            <FooterLink to="/contact">Contact</FooterLink>
           </Col>
         </Row>
       </Wrapper>
