@@ -108,7 +108,15 @@ const Navbar = ({ boxShadow }) => {
                   <NavbarItem>Developer Roadmap</NavbarItem>
                 </NavBar.Dropdown>
               </NavbarLinkDropdown>
-              <NavbarItem>Community</NavbarItem>
+              <NavbarLinkDropdown hoverable dropdown>
+                <NavBar.Link className="link">Community</NavBar.Link>
+                <NavBar.Dropdown>
+                  <NavbarItem>Blog</NavbarItem>
+                  <NavbarItem>How Can I Help?</NavbarItem>
+                  <NavbarItem>Developer Assets</NavbarItem>
+                  <NavbarItem>Support</NavbarItem>
+                </NavBar.Dropdown>
+              </NavbarLinkDropdown>
             </NavBar.Start>
           </NavBar.Menu>
         </NavbarContainer>
