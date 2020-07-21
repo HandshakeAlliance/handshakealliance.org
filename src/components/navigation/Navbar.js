@@ -93,29 +93,29 @@ const Navbar = ({ boxShadow }) => {
               <NavbarLinkDropdown hoverable dropdown>
                 <NavBar.Link className="link">Individuals</NavBar.Link>
                 <NavBar.Dropdown>
-                  <NavbarItem as={Link} to="/what-is-handshake">What is Handshake?</NavbarItem>
-                  <NavbarItem as={Link} to="/what-is-hns">What is HNS?</NavbarItem>
-                  <NavbarItem as={Link} to="/earn-hns">Earn HNS</NavbarItem>
-                  <NavbarItem as={Link} to="/use-handshake">Use Handshake</NavbarItem>
-                  <NavbarItem as={Link} to="/handshake-wallets">Handshake Wallets</NavbarItem>
-                  <NavbarItem as={Link} to="/guides-and-resources">Guides and Resources</NavbarItem>
+                  <NavbarItem as={Link} to="/handshake">What is Handshake?</NavbarItem>
+                  <NavbarItem as={Link} to="/hns">What is HNS?</NavbarItem>
+                  <NavbarItem as={Link} to="/earn">Earn HNS</NavbarItem>
+                  <NavbarItem as={Link} to="/use">Use Handshake</NavbarItem>
+                  <NavbarItem as={Link} to="/wallets">Handshake Wallets</NavbarItem>
+                  <NavbarItem as={Link} to="/guides">Guides and Resources</NavbarItem>
                 </NavBar.Dropdown>
               </NavbarLinkDropdown>
               <NavbarLinkDropdown hoverable dropdown>
                 <NavBar.Link className="link">Developers</NavBar.Link>
                 <NavBar.Dropdown>
-                  <NavbarItem as={Link} to="/get-started">Get Started</NavbarItem>
-                  <NavbarItem as={Link} to="/developer-resources">Developer Resources</NavbarItem>
-                  <NavbarItem as={Link} to="/handshake-whitepaper">Handshake Whitepaper</NavbarItem>
-                  <NavbarItem as={Link} to="/developer-roadmap">Developer Roadmap</NavbarItem>
+                  <NavbarItem as={Link} to="/build">Get Started</NavbarItem>
+                  <NavbarItem as={Link} to="/resources">Developer Resources</NavbarItem>
+                  <NavbarItem as={Link} to="/whitepaper">Handshake Whitepaper</NavbarItem>
+                  <NavbarItem as={Link} to="/roadmap">Developer Roadmap</NavbarItem>
                 </NavBar.Dropdown>
               </NavbarLinkDropdown>
               <NavbarLinkDropdown hoverable dropdown>
                 <NavBar.Link className="link">Community</NavBar.Link>
                 <NavBar.Dropdown>
                   <NavbarItem as={Link} to="/blog">Blog</NavbarItem>
-                  <NavbarItem as={Link} to="/how-can-i-help">How Can I Help?</NavbarItem>
-                  <NavbarItem as={Link} to="/developer-assets">Developer Assets</NavbarItem>
+                  <NavbarItem as={Link} to="/help">How Can I Help?</NavbarItem>
+                  <NavbarItem as={Link} to="/assets">Developer Assets</NavbarItem>
                   <NavbarItem as={Link} to="/support">Support</NavbarItem>
                 </NavBar.Dropdown>
               </NavbarLinkDropdown>
