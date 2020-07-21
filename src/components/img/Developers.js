@@ -21,7 +21,7 @@ const Developers = () => {
     }
   `);
 
-  return <Image fluid={data.placeholderImage.childImageSharp.fluid} />;
+  return <Image fluid={data.placeholderImage.childImageSharp.fluid} draggable={false} />;
 }
 
 export default Developers;

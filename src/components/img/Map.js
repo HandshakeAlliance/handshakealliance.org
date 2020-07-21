@@ -22,7 +22,7 @@ const Map = () => {
     }
   `);
 
-  return <HeroImage fluid={data.placeholderImage.childImageSharp.fluid} />;
+  return <HeroImage fluid={data.placeholderImage.childImageSharp.fluid} draggable={false} />;
 }
 
 export default Map;

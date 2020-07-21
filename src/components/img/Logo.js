@@ -15,7 +15,7 @@ const Logo = () => {
     }
   `);
 
-  return <Img fixed={data.file.childImageSharp.fixed} alt="HA Logo" />;
+  return <Img fixed={data.file.childImageSharp.fixed} alt="HA Logo" draggable={false} />;
 }
 
 export default Logo;
