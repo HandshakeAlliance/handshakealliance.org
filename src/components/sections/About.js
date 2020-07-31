@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 import { Row, Col, Flex, Header, Spacer, breakpoint } from "@urkellabs/ucl";
 
 // Components
@@ -35,7 +36,7 @@ const Subtext = styled(Header)`
 `;
 
 // @TODO: replace with Gatsby Link
-const StyledLink = styled.div`
+const StyledLink = styled(Link)`
   color: var(--color-primary);
   cursor: pointer;
 
@@ -70,7 +71,7 @@ const About = () => {
               Get to know the Handshake Protocol, why it was created, and how it would benefit
               those using it
             </Subtext>
-            <StyledLink>
+            <StyledLink to={"/handshake"}>
               Get started with Handshake
               <Arrow className="arrow">&rarr;</Arrow>
             </StyledLink>
@@ -84,7 +85,7 @@ const About = () => {
             <Subtext xsmall>
               Learn about the technical details of the Handshake Protocol and how you can help
             </Subtext>
-            <StyledLink>
+            <StyledLink to={"/build"}>
               <Flex>
                 Start building
                 <Arrow className="arrow">&rarr;</Arrow>
@@ -100,7 +101,7 @@ const About = () => {
             <Subtext xsmall>
               Making a positive impact requires the work of many. Join the conversation of a better internet
             </Subtext>
-            <StyledLink>
+            <StyledLink to={"/support"}>
               <Flex>
                 Explore the community
                 <Arrow className="arrow">&rarr;</Arrow>
