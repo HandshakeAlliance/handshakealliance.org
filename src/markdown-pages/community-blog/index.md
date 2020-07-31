@@ -1,6 +1,6 @@
 ---
 slug: "/blog"
-title: "Handshake Thoughts and Stories"
+title: "Handshake Blog"
 ---
 
 ### First HTML Heading

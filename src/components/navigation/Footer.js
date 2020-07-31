@@ -58,10 +58,10 @@ const Footer = () => {
           </Col>
           <Col mobile={12} tablet={6} desktop mb={25}>
             <StyledHeader bold>Community</StyledHeader>
-            <FooterLink to="/blog">Blog</FooterLink>
-            <FooterLink to="/help">How Can I Help?</FooterLink>
-            <FooterLink to="/assets">Developer Assets</FooterLink>
             <FooterLink to="/support">Support</FooterLink>
+            <FooterLink to="/help">How Can I Help?</FooterLink>
+            <FooterLink to="/blog">Blog</FooterLink>
+            <FooterLink to="/assets">Developer Assets</FooterLink>
           </Col>
           <Col mobile={12} tablet={6} desktop mb={25}>
             <StyledHeader bold>About Handshakealliance.org</StyledHeader>
