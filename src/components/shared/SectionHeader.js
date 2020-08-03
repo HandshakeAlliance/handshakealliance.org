@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import { Flex, Header, Spacer, breakpoint } from "@urkellabs/ucl";
+import { Flex, Header, Spacer } from "@urkellabs/ucl";
 
 const StyledHeader = styled(Header)`
   margin: 0 0 16px;
