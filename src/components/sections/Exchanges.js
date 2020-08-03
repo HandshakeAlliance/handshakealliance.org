@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
 import { Row, Col, Flex, Header, Hidden, Spacer, breakpoint } from "@urkellabs/ucl";
 
 // Components
@@ -18,7 +17,7 @@ const Wrapper = styled.section`
   margin: 100px 0;
 `;
 
-const ImageWrapper = styled(Link)`
+const ImageWrapper = styled.a`
   height: 200px;
   width: 200px;
   display: flex;
