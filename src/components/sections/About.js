@@ -27,7 +27,8 @@ const SectionSubtext = styled(Header)`
 const Subtext = styled(Header)`
   color: var(--color-gray-6);
   margin-bottom: 25px;
-  max-width: 600px;
+  max-width: 450px;
+  text-align: center;
 
   ${breakpoint.onlyTablet} {
     min-height: 100px;
@@ -35,7 +36,6 @@ const Subtext = styled(Header)`
   }
 `;
 
-// @TODO: replace with Gatsby Link
 const StyledLink = styled(Link)`
   color: var(--color-primary);
   cursor: pointer;
@@ -60,11 +60,11 @@ const About = () => {
       <SectionHeader small align="center" title="Handshake is a decentralized, permissionless naming protocol">
         <SectionSubtext xsmall>every peer on the network validates and manages the root DNS naming zone for an alternative to existing certificate authorities and naming systems</SectionSubtext>
       </SectionHeader>
-      <Spacer px={75} />
+      <Spacer px={50} />
       <Row>
-        <Col mobile={12} desktop mb={25} mt={25}>
+        <Col mobile={12} desktop mb={50} mt={50}>
           <Research />
-          <Flex columns mt={50}>
+          <Flex columns align="center" mt={50}>
             <StyledHeader xsmall bold>About Handshake</StyledHeader>
             <Spacer />
             <Subtext xsmall>
@@ -77,9 +77,9 @@ const About = () => {
             </StyledLink>
           </Flex>
         </Col>
-        <Col mobile={12} desktop mb={25} mt={25}>
+        <Col mobile={12} desktop mb={50} mt={50}>
           <Developers />
-          <Flex columns mt={50}>
+          <Flex columns align="center" mt={50}>
             <StyledHeader xsmall bold>Developers</StyledHeader>
             <Spacer />
             <Subtext xsmall>
@@ -93,9 +93,9 @@ const About = () => {
             </StyledLink>
           </Flex>
         </Col>
-        <Col mobile={12} desktop mb={25} mt={25}>
+        <Col mobile={12} desktop mb={50} mt={50}>
           <Community />
-          <Flex columns mt={50}>
+          <Flex columns align="center" mt={50}>
             <StyledHeader xsmall bold>Community</StyledHeader>
             <Spacer />
             <Subtext xsmall>
