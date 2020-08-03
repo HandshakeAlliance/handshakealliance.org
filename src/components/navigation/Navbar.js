@@ -89,7 +89,6 @@ const Navbar = ({ boxShadow }) => {
           </NavbarBrand>
           <NavBar.Menu>
             <NavBar.Start>
-              <NavbarItem as={Link} to="/">Handshake</NavbarItem>
               <NavbarLinkDropdown hoverable dropdown>
                 <NavBar.Link className="link">Individuals</NavBar.Link>
                 <NavBar.Dropdown>
@@ -119,6 +118,7 @@ const Navbar = ({ boxShadow }) => {
                   <NavbarItem as={Link} to="/support">Support</NavbarItem>
                 </NavBar.Dropdown>
               </NavbarLinkDropdown>
+              <NavbarItem as={Link} to="/blog">Blog</NavbarItem>
             </NavBar.Start>
           </NavBar.Menu>
         </NavbarContainer>
