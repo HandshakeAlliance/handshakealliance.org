@@ -71,6 +71,24 @@ const Announcement = styled(Flex)`
   font-weight: 500;
 `;
 
+const MeetingLink = styled.a`
+  margin: 0;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  color: var(--color-primary);
+  cursor: pointer;
+  font-weight: 525;
+
+  &:hover {
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+  }
+`;
+
 // @TODO: get menu and links working
 const Navbar = ({ boxShadow }) => {
   return (
@@ -118,8 +136,18 @@ const Navbar = ({ boxShadow }) => {
                   <NavbarItem as={Link} to="/support">Support</NavbarItem>
                 </NavBar.Dropdown>
               </NavbarLinkDropdown>
-              <NavbarItem as={Link} to="/blog">Blog</NavbarItem>
             </NavBar.Start>
+            <NavBar.End>
+              <Flex justify="center" align="center">
+                <MeetingLink
+                  href="https://calendar.google.com/calendar/b/0?cid=YW9odjY1NjMwYmNvYW1pazdsMWQ3Y25sNjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+                  target="_blank"
+                  rel="noopener referrer"
+                >
+                  Monthly Meeting
+              </MeetingLink>
+              </Flex>
+            </NavBar.End>
           </NavBar.Menu>
         </NavbarContainer>
       </CustomNavbar>
