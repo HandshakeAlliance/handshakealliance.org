@@ -6,6 +6,7 @@ import Img from "gatsby-image";
 const Image = styled(Img)`
   max-width: 250px;  
   min-height: 150px;
+  margin: 0 auto;
 `;
 
 const Research = () => {
