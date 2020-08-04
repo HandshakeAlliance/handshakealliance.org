@@ -8,7 +8,6 @@ let plugins = [
   `gatsby-transformer-sharp`,
   `gatsby-plugin-sharp`,
   `gatsby-plugin-styled-components`,
-  `gatsby-transformer-remark`,
   {
     resolve: `gatsby-source-filesystem`,
     options: {
@@ -36,11 +35,11 @@ let plugins = [
     },
   },
   {
-    resolve: "gatsby-plugin-root-import",
+    resolve: `gatsby-plugin-root-import`,
     options: {
-      src: path.join(__dirname, "src"),
-      components: path.join(__dirname, "src/components"),
-      images: path.join(__dirname, "src/images")
+      src: path.join(__dirname, `src`),
+      components: path.join(__dirname, `src/components`),
+      images: path.join(__dirname, `src/images`)
     }
   },
   {
@@ -61,17 +60,30 @@ let plugins = [
     }
   },
   {
-    resolve: 'gatsby-plugin-html-attributes',
+    resolve: `gatsby-plugin-html-attributes`,
     options: {
-      'data-theme': 'light'
+      'data-theme': `light`
     }
-  }
+  },
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-autolink-headers`,
+          options: {
+            icon: false
+          },
+        },
+      ],
+    },
+  },
 ]
 
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
-    title: "Handshakealliance.org",
+    title: `Handshakealliance.org`,
     description: `Handshake is a decentralized naming and certificate authority where every peer is validating and in charge of managing the root DNS naming zone`,
     url: `https://handshakealliance.org`,
     siteUrl: `https://handshakealliance.org`,
