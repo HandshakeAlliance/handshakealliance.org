@@ -1,16 +1,42 @@
 import React from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
-import { Row, Col } from "@urkellabs/ucl";
+import { Row, Col, Flex } from "@urkellabs/ucl";
 
 const Wrapper = styled.section`
   min-height: 380px;
   padding: 125px 0 75px 0;
 `;
 
+const SideNavigation = styled.div`
+  border-left: 2px solid var(--color-gray-2);
+  padding: 10px;
+  margin-top: 20px;
+  min-height: 100px;
+`;
+
+const SideNavLink = styled.a`
+  border-left: 2px solid transparent;
+  margin-left: -12px;
+  padding: 5px 0 5px 10px;
+  color: var(--color-gray-5);
+
+  &:hover {
+    border-color: var(--color-primary-2);
+  }
+`;
+
 export default function Template({ data }) {
   const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const { frontmatter, headings, html } = markdownRemark;
+
+  const BuildSideNavigation = () => {
+    return headings.map((head, i) => (
+      <React.Fragment key={i}>
+        <SideNavLink href="#">{head.value}</SideNavLink>
+      </React.Fragment>
+    ));
+  }
 
   return (
     <Wrapper>
@@ -21,7 +47,11 @@ export default function Template({ data }) {
         </Col>
         {/* @TODO: Hidden up to desktop */}
         <Col desktop={2.5}>
-          Side Navigation
+          <SideNavigation>
+            <Flex columns>
+              <BuildSideNavigation />
+            </Flex>
+          </SideNavigation>
         </Col>
       </Row>
     </Wrapper>
@@ -35,6 +65,10 @@ export const pageQuery = graphql`
       frontmatter {
         slug
         title
+      }
+      headings {
+        value
+        depth
       }
     }
   }
