@@ -66,17 +66,19 @@ let plugins = [
     }
   },
   {
-    resolve: `gatsby-transformer-remark`,
+    resolve: `gatsby-plugin-mdx`,
     options: {
-      plugins: [
+      extensions: [`.mdx`, `.md`],
+      gatsbyRemarkPlugins: [
         {
           resolve: `gatsby-remark-autolink-headers`,
           options: {
-            icon: false
-          },
-        },
-      ],
-    },
+            icon: false,
+            className: `header-anchor`,
+          }
+        }
+      ]
+    }
   },
 ]
 

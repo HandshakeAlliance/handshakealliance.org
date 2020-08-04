@@ -3,7 +3,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const markdownPageTemplate = require.resolve(`./src/templates/markdown-page-template.js`);
   const result = await graphql(`
     {
-      allMarkdownRemark {
+      allMdx {
         edges {
           node {
             frontmatter {
@@ -20,7 +20,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.slug,
       component: markdownPageTemplate,
