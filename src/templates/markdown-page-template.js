@@ -37,23 +37,38 @@ const Sidenav = styled.aside`
 `;
 
 const SidebarLink = styled(Link)`
-  border-left: 2px solid transparent;
   margin-left: -12px;
   padding: 5px 0 5px 10px;
   color: var(--color-gray-5);
   font-size: 14px;
 
   &:hover {
-    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  &.active {
+    color: var(--color-primary);
   }
 `;
 
+const BuildSidebarLink = ({ item }) => {
+  let active;
+
+  if (typeof window !== `undefined`) {
+    window.location.hash === item.url && (active += " active");
+  }
+
+  return (
+    <SidebarLink to={item.url} className={active}>
+      {item.title}
+    </SidebarLink>
+  );
+}
+
 const BuildSidenavItems = ({ items }) => {
-  return items.map((item, i) => (
-    <React.Fragment key={i}>
-      <SidebarLink to={item.url}>{item.title}</SidebarLink>
-    </React.Fragment>
-  ));
+  return items.map((item, i) =>
+    <BuildSidebarLink key={i} item={item} />
+  );
 };
 
 export default function Template({ data }) {

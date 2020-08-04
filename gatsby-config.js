@@ -74,7 +74,6 @@ let plugins = [
           resolve: `gatsby-remark-autolink-headers`,
           options: {
             icon: false,
-            className: `header-anchor`,
           }
         }
       ]
