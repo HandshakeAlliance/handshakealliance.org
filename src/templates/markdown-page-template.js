@@ -21,7 +21,8 @@ const Wrapper = styled.section`
 `;
 
 const MarkdownBody = styled.div`
-  padding-right: 50px;
+  max-width: 75%;
+  margin: 0 auto;
 `;
 
 const Sidenav = styled.aside`
