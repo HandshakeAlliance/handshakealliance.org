@@ -107,7 +107,8 @@ const Navbar = ({ boxShadow }) => {
           </NavbarBrand>
           <NavBar.Menu>
             <NavBar.Start>
-              <NavbarLinkDropdown hoverable dropdown>
+              <NavbarItem as={Link} to="/individuals">Individuals</NavbarItem>
+              {/* <NavbarLinkDropdown hoverable dropdown>
                 <NavBar.Link className="link">Individuals</NavBar.Link>
                 <NavBar.Dropdown>
                   <NavbarItem as={Link} to="/handshake">What is Handshake?</NavbarItem>
@@ -117,8 +118,9 @@ const Navbar = ({ boxShadow }) => {
                   <NavbarItem as={Link} to="/wallets">Handshake Wallets</NavbarItem>
                   <NavbarItem as={Link} to="/guides">Guides and Resources</NavbarItem>
                 </NavBar.Dropdown>
-              </NavbarLinkDropdown>
-              <NavbarLinkDropdown hoverable dropdown>
+              </NavbarLinkDropdown> */}
+              <NavbarItem as={Link} to="/developers">Developers</NavbarItem>
+              {/* <NavbarLinkDropdown hoverable dropdown>
                 <NavBar.Link className="link">Developers</NavBar.Link>
                 <NavBar.Dropdown>
                   <NavbarItem as={Link} to="/build">Get Started</NavbarItem>
@@ -126,8 +128,9 @@ const Navbar = ({ boxShadow }) => {
                   <NavbarItem as={Link} to="/whitepaper">Handshake Whitepaper</NavbarItem>
                   <NavbarItem as={Link} to="/roadmap">Developer Roadmap</NavbarItem>
                 </NavBar.Dropdown>
-              </NavbarLinkDropdown>
-              <NavbarLinkDropdown hoverable dropdown>
+              </NavbarLinkDropdown> */}
+              <NavbarItem as={Link} to="/community">Community</NavbarItem>
+              {/* <NavbarLinkDropdown hoverable dropdown>
                 <NavBar.Link className="link">Community</NavBar.Link>
                 <NavBar.Dropdown>
                   <NavbarItem as={Link} to="/blog">Blog</NavbarItem>
@@ -135,14 +138,14 @@ const Navbar = ({ boxShadow }) => {
                   <NavbarItem as={Link} to="/assets">Developer Assets</NavbarItem>
                   <NavbarItem as={Link} to="/support">Support</NavbarItem>
                 </NavBar.Dropdown>
-              </NavbarLinkDropdown>
+              </NavbarLinkDropdown> */}
             </NavBar.Start>
             <NavBar.End>
               <Flex justify="center" align="center">
                 <MeetingLink
                   href="https://calendar.google.com/calendar/b/0?cid=YW9odjY1NjMwYmNvYW1pazdsMWQ3Y25sNjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
                   target="_blank"
-                  rel="noopener referrer"
+                  rel="noopener noreferrer"
                 >
                   Monthly Meeting
               </MeetingLink>

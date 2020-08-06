@@ -51,12 +51,12 @@ const Footer = () => {
           <Col mobile={12} tablet={6} desktop mb={50}>
             <Flex columns align="center">
               <StyledHeader bold>Individuals</StyledHeader>
-              <FooterLink to="/handshake">What is Handshake?</FooterLink>
-              <FooterLink to="/hns">What is HNS?</FooterLink>
-              <FooterLink to="/earn">Earn HNS</FooterLink>
-              <FooterLink to="/use">Use Handshake</FooterLink>
-              <FooterLink to="/wallets">Handshake Wallets</FooterLink>
-              <FooterLink to="/guides">Guides and Resources</FooterLink>
+              <FooterLink to="/individuals">What is Handshake?</FooterLink>
+              <FooterLink to="/individuals/#the-handshake-coin">Handshake Coin (HNS)</FooterLink>
+              <FooterLink to="/individuals/#earn-hns">Earn HNS</FooterLink>
+              <FooterLink to="/individuals/#purchase-hns">Purchase HNS</FooterLink>
+              <FooterLink to="/individuals/#handshake-wallets">Handshake Wallets</FooterLink>
+              {/* <FooterLink to="/guides">Guides and Resources</FooterLink> */}
             </Flex>
           </Col>
           <Col mobile={12} tablet={6} desktop mb={50}>
@@ -78,7 +78,7 @@ const Footer = () => {
               <FooterExternalLink
                 href="https://calendar.google.com/calendar/b/0?cid=YW9odjY1NjMwYmNvYW1pazdsMWQ3Y25sNjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
                 target="_blank"
-                rel="noopener referrer"
+                rel="noopener noreferrer"
               >
                 Monthly Meeting
             </FooterExternalLink>
