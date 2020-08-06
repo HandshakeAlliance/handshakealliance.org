@@ -63,13 +63,13 @@ const NavbarItem = styled(NavBar.Item)`
 //   }
 // `;
 
-const Announcement = styled(Flex)`
-  height: 25px;
-  background: var(--color-primary);
-  color: var(--color-gray-1);
-  font-size: 12px;
-  font-weight: 500;
-`;
+// const Announcement = styled(Flex)`
+//   height: 25px;
+//   background: var(--color-primary);
+//   color: var(--color-gray-1);
+//   font-size: 12px;
+//   font-weight: 500;
+// `;
 
 const MeetingLink = styled.a`
   margin: 0;
@@ -94,9 +94,9 @@ const Navbar = ({ boxShadow }) => {
   return (
     <Wrapper>
       {/* @TODO: remove when all of the pages are navigable */}
-      <Announcement justify="center" align="center">
+      {/* <Announcement justify="center" align="center">
         <span>This site is under construction. Some features are not available yet</span>
-      </Announcement>
+      </Announcement> */}
       <CustomNavbar height="75px" boxShadow={boxShadow}>
         <NavbarContainer>
           <NavbarBrand>
