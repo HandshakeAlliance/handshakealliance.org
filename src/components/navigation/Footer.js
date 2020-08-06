@@ -62,10 +62,10 @@ const Footer = () => {
           <Col mobile={12} tablet={6} desktop mb={50}>
             <Flex columns align="center">
               <StyledHeader bold>Developers</StyledHeader>
-              <FooterLink to="/build">Get Started</FooterLink>
-              <FooterLink to="/resources">Developer Resources</FooterLink>
-              <FooterLink to="/whitepaper">Handshake Whitepaper</FooterLink>
-              <FooterLink to="/roadmap">Developer Roadmap</FooterLink>
+              <FooterLink to="/developers/#getting-started-with-handshake">Get Started</FooterLink>
+              {/* <FooterLink to="/resources">Developer Resources</FooterLink> */}
+              <FooterLink to="/developers/#handshake-whitepaper">Handshake Whitepaper</FooterLink>
+              <FooterLink to="/developers/#developer-roadmap">Developer Roadmap</FooterLink>
             </Flex>
           </Col>
           <Col mobile={12} tablet={6} desktop mb={50}>

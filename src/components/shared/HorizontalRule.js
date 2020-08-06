@@ -6,7 +6,7 @@ const StyledHorizontalRule = styled.hr`
   border-width: ${props => props.borderWidth}px;
   border-style: solid;
   border-color: var(--color-gray-2);
-  margin: 50px 0;
+  margin: 75px 0;
 `;
 
 export default function HorizontalRule({ borderWidth }) {
