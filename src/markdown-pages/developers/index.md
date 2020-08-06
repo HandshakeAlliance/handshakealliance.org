@@ -6,7 +6,7 @@ title: "Handshake Developers"
 <!-- Component Imports -->
 import HorizontalRule from "components/shared/HorizontalRule";
 
-All are welcome and encouraged to participate. Open an issue, comment on code reviews, and join the community. The new internet depends on us.
+Open an issue, participate in code reviews, and build a tool for the network. The new internet depends on us.
 
 <HorizontalRule borderWidth={2} />
 
