@@ -7,6 +7,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.16",
+    "@mdx-js/react": "^1.6.16",
     "@urkellabs/ucl": "^0.1.113",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.24.2",
